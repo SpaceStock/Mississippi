@@ -1,0 +1,101 @@
+{
+	"order" : 9,
+	"name" : "Admin able to Edit Unit Primary Buy",
+	"description" : "As a Admin able to Edit Unit Primary Buy\n\n\n",
+	"request" : {
+		"url" : "https://stg-satpam.spacestock.com/1.0/complex/apartment/{newComplexup.data.id}/tower/{newTowerUp.data.id}/unit/{unitNew.data.id}",
+		"method" : "PATCH",
+		"headers" : {
+			"Authorization" : "{auth.idToken}"
+		},
+		"payload" : {
+			"data" : {
+				"attributes" : {
+					"bathroom" : 2,
+					"create_at" : 1575875813,
+					"pic_name" : "Gracia Timothy",
+					"sell_comm" : 2,
+					"category" : "Apartment",
+					"price_sell" : 3500000000,
+					"code" : "CP05DE20001",
+					"complex_id" : "5de8ad88e94755ecc1fc2f26",
+					"minimum_lease_term" : 0,
+					"ownership" : "Primary",
+					"size" : "1500",
+					"complex" : {
+						"address_city" : "JAKARTA SELATAN",
+						"id" : "5de8ad88e94755ecc1fc2f26",
+						"name" : "Complex05DecUp",
+						"primary_area" : {
+							
+						}
+					},
+					"inactive_period_rent" : {
+						"end_date" : 0,
+						"start_date" : 0
+					},
+					"tower" : {
+						"id" : "5dede818d73e920b6644e8bd",
+						"include_scsf" : false,
+						"name" : "Tower09Decup"
+					},
+					"amenities" : [
+						"Kitchen Set",
+						"Dining Table",
+						"Refrigerator",
+						"Oven",
+						"Microwave",
+						"Gas Stove",
+						"Electric Stove",
+						"Sofa",
+						"Bed",
+						"TV",
+						"Wardrobe",
+						"Washing Machine",
+						"Drying Machine",
+						"AC",
+						"Water Heater"
+					],
+					"id" : "5dedf4e5d73e920b6644e8c1",
+					"other_pricing" : [ ],
+					"pic" : "5d626f2d86b640fdb4c7d870",
+					"pic_type" : "Agent",
+					"certificate" : "AJB",
+					"internal_agent_email" : "anna.liffey@spacestock.com",
+					"zone" : "Mid",
+					"create_by" : "anna.liffey@spacestock.com",
+					"fee_component" : [
+						{
+							"for" : "Rent",
+							"from" : "price_rent",
+							"percentage" : 0
+						},
+						{
+							"for" : "Sell",
+							"from" : "price_sell",
+							"percentage" : 4
+						}
+					],
+					"listing_type" : "Sell",
+					"published_state" : "Unpublished",
+					"type" : "2BR",
+					"unit_no" : "Unit09Decup",
+					"acknowledgement_status" : "Unverified",
+					"tower_id" : "5dede818d73e920b6644e8bd"
+				},
+				"id" : "5dedf4e5d73e920b6644e8c1",
+				"type" : "unit"
+			}
+		}
+	},
+	"expect" : {
+		"status_code" : 200,
+		"headers" : null,
+		"evaluate" : [ ]
+	},
+	"pipeline" : {
+		"cache" : true,
+		"cache_as" : "updateprim",
+		"on_failure" : "exit"
+	}
+}

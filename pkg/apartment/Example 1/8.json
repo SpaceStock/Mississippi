@@ -1,0 +1,74 @@
+{
+	"order" : 8,
+	"name" : "Admin able to Add Unit Primary Buy into Tower09Decup",
+	"description" : "As a Admin able to Add Unit Primary Buy into Tower09Decup",
+	"request" : {
+		"url" : "https://stg-satpam.spacestock.com/1.0/complex/apartment/{newComplexup.data.id}/tower/{newTowerUp.data.id}/unit",
+		"method" : "POST",
+		"headers" : {
+			"Authorization" : "{auth.idToken}"
+		},
+		"payload" : {
+			"data" : {
+				"attributes" : {
+					"certificate" : "AJB",
+					"size" : "1500",
+					"tower_id" : "5dede818d73e920b6644e8bd",
+					"price_sell" : 3500000000,
+					"type" : "2BR",
+					"zone" : "Mid",
+					"amenities" : [
+						"Kitchen Set",
+						"Dining Table",
+						"Refrigerator",
+						"Oven",
+						"Microwave",
+						"Gas Stove",
+						"Electric Stove",
+						"Sofa",
+						"Bed",
+						"TV",
+						"Wardrobe",
+						"Washing Machine",
+						"Drying Machine",
+						"AC",
+						"Water Heater"
+					],
+					"bathroom" : 2,
+					"complex_id" : "5de8ad88e94755ecc1fc2f26",
+					"pic_name" : "Gracia Timothy",
+					"listing_type" : "Sell",
+					"ownership" : "Primary",
+					"pic" : "5d626f2d86b640fdb4c7d870",
+					"pic_type" : "Agent",
+					"unit_no" : "Unit09Dec",
+					"fee_component" : [
+						{
+							"percentage" : 0,
+							"for" : "Rent",
+							"from" : "price_rent"
+						},
+						{
+							"from" : "price_sell",
+							"percentage" : 4,
+							"for" : "Sell"
+						}
+					],
+					"internal_agent_email" : "anna.liffey@spacestock.com",
+					"other_pricing" : [ ],
+					"sell_comm" : 2
+				}
+			}
+		}
+	},
+	"expect" : {
+		"status_code" : 201,
+		"headers" : null,
+		"evaluate" : [ ]
+	},
+	"pipeline" : {
+		"cache" : true,
+		"cache_as" : "unitNew",
+		"on_failure" : "exit"
+	}
+}
