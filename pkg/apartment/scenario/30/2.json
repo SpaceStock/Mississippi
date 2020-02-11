@@ -1,0 +1,21 @@
+{
+    "order" : 2,
+    "name" : "User able to click one of any Apartments",
+    "description" : "As a User, I able to to choose one of any apartments\ne.g: Complex Complete",
+    "request" : {
+        "url" : "https://staging-web.spacestock.com/api/discovery/1.0/unit?size=999&page=1&complex_id=5d7f3ddd846c84bc61bc5d3e",
+        "method" : "GET",
+        "headers" : null,
+        "payload" : null
+    },
+    "expect" : {
+        "status_code" : 200,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "",
+        "on_failure" : "exit"
+    }
+}

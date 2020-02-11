@@ -1,0 +1,21 @@
+{
+    "order" : 3,
+    "name" : "User able to click one of any \"Apartments Baru\"",
+    "description" : "As a User, able to click one of any \"Apartment Baru\"",
+    "request" : {
+        "url" : "https://staging-web.spacestock.com/api/discovery/1.0/tower?complex_id=5d8209e764b561d7c42bc817&building_type=primary",
+        "method" : "GET",
+        "headers" : null,
+        "payload" : null
+    },
+    "expect" : {
+        "status_code" : 200,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "",
+        "on_failure" : "exit"
+    }
+}

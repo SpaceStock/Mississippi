@@ -1,0 +1,120 @@
+{
+    "order" : 2,
+    "name" : "Add Tower",
+    "description" : "",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/1.0/complex/apartment/5d611768e7ae43ccb6f85fd1/tower",
+        "method" : "POST",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data" : {
+                "attributes" : {
+                    "description" : {
+                        "en" : "<p>Charm, space and views! Located in the middle of BSD City, it offers a comfortable place to stay. </p>",
+                        "id" : "<p>Pesona, ruang, dan pemandangan! Berada di tengah BSD City  ini menawarkan kenyamanan tempat tinggal. </p>"
+                    },
+                    "internet" : [ 
+                        "Indihome", 
+                        "Biznet"
+                    ],
+                    "is_leads_agent" : false,
+                    "certificate" : "AJB",
+                    "include_scsf" : true,
+                    "rent_commission" : 3.0,
+                    "images" : {
+                        "images_360" : null,
+                        "images_banner" : null,
+                        "images_brochure" : null,
+                        "images_developer" : null,
+                        "images_exterior" : null,
+                        "images_floorplan" : null,
+                        "images_interior" : null,
+                        "video_link" : null
+                    },
+                    "service_charge" : 1500000.0,
+                    "total_unit_primary" : 11.0,
+                    "unit_total" : 20.0,
+                    "fee_component" : [ 
+                        {
+                            "for" : "Rent",
+                            "from" : "price_rent",
+                            "percentage" : 1.54
+                        }, 
+                        {
+                            "for" : "Sell",
+                            "from" : "price_sell",
+                            "percentage" : 2.49
+                        }
+                    ],
+                    "name" : "Tower Pinus",
+                    "sinking_fund" : 1000000.0,
+                    "architect" : "Art-chitect Team",
+                    "building_type" : [ 
+                        "Strata Buy", 
+                        "Strata Rent", 
+                        "Developer Buy", 
+                        "Developer Rent"
+                    ],
+                    "sell_commission" : 5.0,
+                    "selling_point" : {
+                        "id" : [ 
+                            {
+                                "title" : "Kemudahan Akses",
+                                "description" : "Akses ke mana saja mudah, baik menggunakan transportasi umum ataupun pribadi. Bebas macet!"
+                            }
+                        ]
+                    },
+                    "unit_rent_count" : 0.0,
+                    "category" : "Apartment",
+                    "construction_year" : 1486771200.0,
+                    "lift" : [ 
+                        {
+                            "count" : 15.0,
+                            "name" : "Passenger",
+                            "serving" : ""
+                        }, 
+                        {
+                            "count" : 2.0,
+                            "name" : "Service",
+                            "serving" : ""
+                        }
+                    ],
+                    "auto_description" : true,
+                    "completion_year" : 1558414030.0,
+                    "parking" : [ 
+                        {
+                            "type" : "Car",
+                            "capacity" : 40.0,
+                            "name" : "Car Parking",
+                            "payment_term" : "Annually",
+                            "price" : 5000000.0
+                        }, 
+                        {
+                            "capacity" : 8.0,
+                            "name" : "Motorcycle Parking",
+                            "payment_term" : "Annually",
+                            "price" : 1400000.0,
+                            "type" : "Motorcycle"
+                        }
+                    ],
+                    "unit_sell_count" : 0.0,
+                    "completed_estimation_year" : 1558414097.0,
+                    "contractor" : "PT. Tana Indonesia",
+                    "floor_count" : 18.0
+                }
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 201,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "tower",
+        "on_failure" : "exit"
+    }
+}

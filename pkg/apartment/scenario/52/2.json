@@ -1,0 +1,99 @@
+{
+    "order" : 2,
+    "name" : "Admin able to Add Tower into Complex 17112019",
+    "description" : "As Admin, able to Add Tower into Complex 17112019",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/1.0/complex/apartment/5dd130d5bd387b29ae73cec7/tower",
+        "method" : "POST",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data" : {
+                "attributes" : {
+                    "construction_year" : null,
+                    "fee_component" : [ 
+                        {
+                            "for" : "Rent",
+                            "from" : "price_rent",
+                            "percentage" : 1.0
+                        }, 
+                        {
+                            "for" : "Sell",
+                            "from" : "price_sell",
+                            "percentage" : 1.0
+                        }
+                    ],
+                    "parking" : [ 
+                        {
+                            "capacity" : 1.0,
+                            "name" : "Car Parking",
+                            "payment_term" : "Quarterly",
+                            "price" : 300000.0,
+                            "type" : "Car"
+                        }, 
+                        {
+                            "capacity" : 1.0,
+                            "name" : "Motorcycle Parking",
+                            "payment_term" : "Quarterly",
+                            "price" : 250000.0,
+                            "type" : "Motorcycle"
+                        }
+                    ],
+                    "rent_commission" : 4.0,
+                    "sell_commission" : 4.0,
+                    "building_type" : [ 
+                        "Developer Buy", 
+                        "Strata Buy", 
+                        "Developer Rent", 
+                        "Strata Rent"
+                    ],
+                    "completed_estimation_year" : 1459443600.0,
+                    "service_charge" : 1300000.0,
+                    "completion_year" : null,
+                    "selling_point" : {
+                        "id" : [ 
+                            {
+                                "title" : "Bagus title",
+                                "description" : "Kondisi Bagus, Seperti Baru, Fasilitas Lengkap"
+                            }
+                        ]
+                    },
+                    "description" : {
+                        "en" : "",
+                        "id" : ""
+                    },
+                    "floor_count" : 65.0,
+                    "internet" : [ 
+                        "Indihome"
+                    ],
+                    "lift" : [ 
+                        {
+                            "count" : 10.0,
+                            "name" : "Passenger"
+                        }, 
+                        {
+                            "count" : 2.0,
+                            "name" : "Service"
+                        }
+                    ],
+                    "name" : "Tower 1942",
+                    "renovation_year" : null,
+                    "auto_description" : true,
+                    "certificate" : "AJB",
+                    "unit_total" : 50.0
+                }
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 201,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "newComTower",
+        "on_failure" : "exit"
+    }
+}

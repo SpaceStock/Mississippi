@@ -16,13 +16,7 @@
         "status_code": 200,
         "headers": null,
         "evaluate": [
-            {
-                "object": "",
-                "prop": "idToken",
-                "operator": "!=",
-                "value": "",
-                "description": ""
-            }
+            "idToken != ''"
         ]
     },
     "pipeline": {

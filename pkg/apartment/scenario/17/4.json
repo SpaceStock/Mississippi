@@ -1,0 +1,97 @@
+{
+    "order" : 4,
+    "name" : "Update Blank Unit",
+    "description" : "",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/office/writer/1.0/unit/{unit2.data.id}",
+        "method" : "PATCH",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data" : {
+                "condition" : "Bare",
+                "fee" : {
+                    "full_rent" : 3.23,
+                    "full_sell" : 2.32
+                },
+                "status" : 0.0,
+                "unit_size" : 13130.0,
+                "commision" : {
+                    "rent" : 1.31,
+                    "sell" : 1.33
+                },
+                "images" : {
+                    "images_brochure" : null,
+                    "images_exterior" : null,
+                    "images_floorplan" : null,
+                    "images_interior" : null,
+                    "video_link" : null,
+                    "virtual_reality" : null,
+                    "images_360" : null
+                },
+                "internal_referral_email" : "",
+                "zone" : "Low",
+                "branches" : null,
+                "office_type" : "Standard Office",
+                "price" : {
+                    "payment_term" : "Semi-Anually",
+                    "sell_price" : 52000000.0,
+                    "service_charge" : 234240.0,
+                    "base_rent" : 1200000.0
+                },
+                "other_rooms" : [ 
+                    "Manager/Supervisor Room"
+                ],
+                "rent_size_available" : 1200.0,
+                "unit_number" : "235",
+                "last_update_at" : 1.56988609040291e+18,
+                "last_update_by_uid" : "sean.dempsey@spacestock.com",
+                "level" : "3",
+                "pic" : {
+                    "uid" : "5d8990cf4aafa17a1e92ae7d",
+                    "fee" : 0.0,
+                    "name" : " Kala Senja",
+                    "phone" : "",
+                    "type" : "Owner"
+                },
+                "rent_fee_type" : "Annual In Advance",
+                "create_at" : 1.56988609040291e+18,
+                "id" : "5d928f8a44218e39df5a29dc",
+                "internal_agent_email" : "sean.dempsey@spacestock.com",
+                "tower" : {
+                    "id" : "5d88c0d78a72ff95ed47b431",
+                    "name" : "Tower Sherlock"
+                },
+                "unit_type" : "Strata Title",
+                "facing" : [ 
+                    "North"
+                ],
+                "view" : [ 
+                    "Pool"
+                ],
+                "certificate" : "AJB",
+                "complex" : {
+                    "id" : "5d79fe213a3c5f709521770f",
+                    "name" : "Smart Office"
+                },
+                "create_by_uid" : "sean.dempsey@spacestock.com",
+                "published_state" : "",
+                "inactive_reason" : "",
+                "listing_type" : "Rent & Sell",
+                "published_at" : 0.0,
+                "published_by" : ""
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 201,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "unit2",
+        "on_failure" : "exit"
+    }
+}

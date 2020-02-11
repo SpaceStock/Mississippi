@@ -1,0 +1,35 @@
+{
+    "order" : 4,
+    "name" : "Assign",
+    "description" : "",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/1.0/inquiries/{inqcreated.data.id}/assign",
+        "method" : "POST",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data" : {
+                "branch" : {
+                    "assignee_id" : "janggala.one@spacestock.com",
+                    "assignee_name" : "Janggala One",
+                    "id" : "5d6325dff47e63d3eaa78929",
+                    "name" : "Branch Mataram"
+                },
+                "state" : "Open"
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 200,
+        "headers" : null,
+        "evaluate" : [ 
+            "data.state === 'Assigned'"
+        ]
+    },
+    "pipeline" : {
+        "cache" : false,
+        "cache_as" : "",
+        "on_failure" : "exit"
+    }
+}

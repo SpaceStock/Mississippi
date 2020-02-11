@@ -1,0 +1,21 @@
+{
+    "order" : 1,
+    "name" : "list complex apartement",
+    "description" : "menampilkan semua list complex apartement",
+    "request" : {
+        "url" : "https://spacestock.com/api/discovery/1.0/complex",
+        "method" : "GEt",
+        "headers" : null,
+        "payload" : null
+    },
+    "expect" : {
+        "status_code" : 200,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "",
+        "on_failure" : "exit"
+    }
+}

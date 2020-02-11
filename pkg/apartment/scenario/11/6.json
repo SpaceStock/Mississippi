@@ -1,0 +1,138 @@
+{
+    "order" : 6,
+    "name" : "Update Unit With Complex-Cluster ",
+    "description" : "",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/housing/writer/1.0/unit/{createdWithComp.data.id}?create_by_uid=anna.liffey@spacestock.com",
+        "method" : "PATCH",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data" : {
+                "bathroom" : 1.0,
+                "category" : "Housing",
+                "certificate" : "AJB",
+                "geo_location" : {
+                    "coordinates" : [ 
+                        -6.13689939832638, 
+                        106.888272179177
+                    ],
+                    "type" : "Point"
+                },
+                "road_width_car" : 4.0,
+                "address" : {
+                    "sector" : "6",
+                    "city" : "JAKARTA UTARA",
+                    "district" : "TANJUNG PRIOK",
+                    "province" : "DKI JAKARTA",
+                    "street" : "Jalan Jayakarta",
+                    "subdistrict" : "KEBON BAWANG",
+                    "zip_code" : "14320",
+                    "block" : "A",
+                    "number" : "12"
+                },
+                "electricity" : 15000.0,
+                "land_size" : 80.0,
+                "parking_capacity" : 2.0,
+                "dimension" : {
+                    "length" : 6.0,
+                    "width" : 10.0
+                },
+                "description" : {
+                    "en" : "<p>lorem ipsum dolor sit amet</p>",
+                    "id" : "<p>Lorem ipsum dolor sit amet</p>"
+                },
+                "fee_component" : [ 
+                    {
+                        "percentage" : 5.0,
+                        "billing" : "",
+                        "commission" : 3.0,
+                        "for" : "Sell"
+                    }, 
+                    {
+                        "billing" : "",
+                        "commission" : 0.0,
+                        "for" : "Rent",
+                        "percentage" : 0.0
+                    }
+                ],
+                "primary_area" : [ 
+                    "Bisnis Park"
+                ],
+                "complex" : {
+                    "name" : "Watu Inggil",
+                    "id" : "5d71fcd9f1625191fad73d62"
+                },
+                "stories" : 2.0,
+                "water" : [ 
+                    "Air Tanah"
+                ],
+                "condition" : "Semi Furnished",
+                "building_type" : "60",
+                "completion_date" : 1359651600.0,
+                "facing" : [ 
+                    "East"
+                ],
+                "road_width_meter" : 3.0,
+                "amenities" : [ 
+                    "Oven", 
+                    "Microwave", 
+                    "Gas Stove", 
+                    "Washing Machine", 
+                    "Drying Machine", 
+                    "AC", 
+                    "Water Heater"
+                ],
+                "internal_agent_email" : "sean.dempsey@spacestock.com",
+                "other_rooms" : [ 
+                    "Maid Room"
+                ],
+                "pic" : {
+                    "type" : "Owner",
+                    "uid" : "5d626b2886b640fdb4c7d86b",
+                    "name" : "Brian Yulianto",
+                    "phone" : "+6284123000002"
+                },
+                "pricing" : [ 
+                    {
+                        "amount" : 0.0,
+                        "currency" : "IDR",
+                        "for" : "Rent",
+                        "term" : "Yearly"
+                    }, 
+                    {
+                        "amount" : 1120000000.0,
+                        "currency" : "IDR",
+                        "for" : "Sell",
+                        "term" : ""
+                    }
+                ],
+                "views" : [ 
+                    "Sea"
+                ],
+                "house_size" : 60.0,
+                "listing_type" : "Sell",
+                "building_condition" : "Like New",
+                "cluster" : {
+                    "id" : "5d7a3049c8fab93721d5b94c",
+                    "name" : "Cluster Breksit"
+                },
+                "surrounding_area" : [ 
+                    "Arjuna Utara"
+                ],
+                "bedroom" : 2.0
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 200,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : false,
+        "cache_as" : "",
+        "on_failure" : "exit"
+    }
+}

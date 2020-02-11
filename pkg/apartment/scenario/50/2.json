@@ -1,0 +1,28 @@
+{
+    "order" : 2,
+    "name" : "Create Building Option",
+    "description" : "",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/office/writer/1.0/buildingoption",
+        "method" : "POST",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data" : {
+                "number" : "WF191129#7FEDE25",
+                "requester_organization" : "PT Indonesia Abadi"
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 201,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "newBo",
+        "on_failure" : "exit"
+    }
+}

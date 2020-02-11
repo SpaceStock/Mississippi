@@ -1,0 +1,21 @@
+{
+    "order" : 2,
+    "name" : "User able to filter Apartments rent \"Z-A\"",
+    "description" : "As a User, able to filter Apartments rent by \"Z-A\"",
+    "request" : {
+        "url" : "https://staging-web.spacestock.com/api/discovery/1.0/complex?size=12&page=1&sort=desc(name)&listing_type=rent",
+        "method" : "GET",
+        "headers" : null,
+        "payload" : null
+    },
+    "expect" : {
+        "status_code" : 200,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : false,
+        "cache_as" : "",
+        "on_failure" : "exit"
+    }
+}

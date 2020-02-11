@@ -1,0 +1,21 @@
+{
+    "order" : 2,
+    "name" : "User able to filter apartments by \"Terbaru\"",
+    "description" : "As a User, able to filter apartments by \"Terbaru\"",
+    "request" : {
+        "url" : "https://staging-web.spacestock.com/api/discovery/1.0/complex?size=12&page=1&listing_type=rent",
+        "method" : "GET",
+        "headers" : null,
+        "payload" : null
+    },
+    "expect" : {
+        "status_code" : 200,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "",
+        "on_failure" : "exit"
+    }
+}

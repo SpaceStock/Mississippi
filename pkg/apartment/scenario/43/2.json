@@ -1,0 +1,21 @@
+{
+    "order" : 2,
+    "name" : "User able to Filter Apartment Baru \"A-Z\" ",
+    "description" : "As a User, able to Filter \"A-Z\" on Apartment Baru",
+    "request" : {
+        "url" : "https://staging-web.spacestock.com/api/discovery/1.0/complex?size=12&page=1&sort=asc(name)&facilities=gym,restaurant&listing_type=buy&price=range(10000000,1000000000)&tower_type=primary",
+        "method" : "GET",
+        "headers" : null,
+        "payload" : null
+    },
+    "expect" : {
+        "status_code" : 200,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "",
+        "on_failure" : "exit"
+    }
+}

@@ -1,0 +1,53 @@
+{
+    "order" : 5,
+    "name" : "Create Inquiry Housing negative case ",
+    "description" : "",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/1.1/inquiries",
+        "method" : "POST",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data" : {
+                "requester_organization" : "",
+                "requester_phone" : "",
+                "required_at" : "4 Month",
+                "type" : [],
+                "category" : [ 
+                    "Housing"
+                ],
+                "preference" : {
+                    "area" : [],
+                    "budget" : {
+                        "max" : null
+                    },
+                    "building_size" : {
+                        "max" : 20.0,
+                        "min" : 100.0
+                    },
+                    "land_size" : {
+                        "max" : 20.0,
+                        "min" : 100.0
+                    },
+                    "unit_size" : 48.0
+                },
+                "requester_name" : "Aisyah",
+                "requester_message" : "test",
+                "channel" : "Web Form",
+                "interests" : [],
+                "requester_email" : ""
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 201,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "inq",
+        "on_failure" : "exit"
+    }
+}

@@ -1,0 +1,192 @@
+{
+    "order" : 4,
+    "name" : "Update Building Option",
+    "description" : "Endpoint untuk menambahkan unit-unit suatu tower ke building option",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/office/writer/1.0/buildingoption/{newBo.data.id}",
+        "method" : "PATCH",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data" : {
+                "tower_options" : [ 
+                    {
+                        "id" : "5d36ace03d9e3cdf0fe66427",
+                        "name" : "Mayapada Tower 1",
+                        "units" : [ 
+                            {
+                                "unit_size" : 20000.0,
+                                "zone" : "Mid",
+                                "certificate" : "AJB",
+                                "id" : "5d36b407ba51aab606319aa4",
+                                "internal_agent_email" : "superadmin@spacestock.com",
+                                "unit_number" : "100",
+                                "level" : "0",
+                                "listing_type" : "Rent",
+                                "office_type" : "Coworking Office",
+                                "rent_fee_type" : "Annual In Advance",
+                                "condition" : "Full Furnished",
+                                "internal_referral_email" : "",
+                                "price" : {
+                                    "sell_price" : 0.0,
+                                    "service_charge" : 200000.0,
+                                    "base_rent" : 10340000.0,
+                                    "gross_rent" : 0.0,
+                                    "payment_term" : "Annually"
+                                },
+                                "commision" : {
+                                    "rent" : 1.3,
+                                    "sell" : 3.1
+                                },
+                                "fee" : {
+                                    "full_rent" : 3.5,
+                                    "full_sell" : 5.5
+                                },
+                                "unit_type" : "Developer"
+                            }, 
+                            {
+                                "certificate" : "AJB",
+                                "unit_type" : "Developer",
+                                "id" : "5d36b408ba51aab606319aa6",
+                                "internal_agent_email" : "superadmin@spacestock.com",
+                                "listing_type" : "Rent",
+                                "office_type" : "Coworking Office",
+                                "rent_fee_type" : "Annual In Advance",
+                                "unit_number" : "100",
+                                "condition" : "Full Furnished",
+                                "fee" : {
+                                    "full_rent" : 3.5,
+                                    "full_sell" : 5.5
+                                },
+                                "unit_size" : 20000.0,
+                                "level" : "0",
+                                "price" : {
+                                    "service_charge" : 200000.0,
+                                    "base_rent" : 10340000.0,
+                                    "gross_rent" : 0.0,
+                                    "payment_term" : "Annually",
+                                    "sell_price" : 0.0
+                                },
+                                "zone" : "Mid",
+                                "commision" : {
+                                    "rent" : 1.3,
+                                    "sell" : 3.1
+                                },
+                                "internal_referral_email" : ""
+                            }, 
+                            {
+                                "price" : {
+                                    "base_rent" : 10340000.0,
+                                    "gross_rent" : 0.0,
+                                    "payment_term" : "Annually",
+                                    "sell_price" : 0.0,
+                                    "service_charge" : 200000.0
+                                },
+                                "zone" : "Mid",
+                                "id" : "5d36b408ba51aab606319aa8",
+                                "internal_referral_email" : "",
+                                "office_type" : "Coworking Office",
+                                "rent_fee_type" : "Annual In Advance",
+                                "unit_size" : 20000.0,
+                                "unit_type" : "Developer",
+                                "condition" : "Full Furnished",
+                                "fee" : {
+                                    "full_rent" : 3.5,
+                                    "full_sell" : 5.5
+                                },
+                                "commision" : {
+                                    "sell" : 3.1,
+                                    "rent" : 1.3
+                                },
+                                "unit_number" : "100",
+                                "level" : "0",
+                                "listing_type" : "Rent",
+                                "certificate" : "AJB",
+                                "internal_agent_email" : "superadmin@spacestock.com"
+                            }, 
+                            {
+                                "certificate" : "AJB",
+                                "condition" : "Full Furnished",
+                                "internal_referral_email" : "",
+                                "unit_type" : "Developer",
+                                "level" : "0",
+                                "office_type" : "Coworking Office",
+                                "unit_number" : "100",
+                                "zone" : "Mid",
+                                "price" : {
+                                    "payment_term" : "Annually",
+                                    "sell_price" : 0.0,
+                                    "service_charge" : 200000.0,
+                                    "base_rent" : 10340000.0,
+                                    "gross_rent" : 0.0
+                                },
+                                "rent_fee_type" : "Annual In Advance",
+                                "unit_size" : 20000.0,
+                                "commision" : {
+                                    "rent" : 1.3,
+                                    "sell" : 3.1
+                                },
+                                "fee" : {
+                                    "full_rent" : 3.5,
+                                    "full_sell" : 5.5
+                                },
+                                "id" : "5d36b408ba51aab606319aaa",
+                                "internal_agent_email" : "superadmin@spacestock.com",
+                                "listing_type" : "Rent"
+                            }, 
+                            {
+                                "name" : "Mayapada Tower 2",
+                                "units" : [ 
+                                    {
+                                        "level" : "0",
+                                        "price" : {
+                                            "gross_rent" : 0.0,
+                                            "payment_term" : "Annually",
+                                            "sell_price" : 0.0,
+                                            "service_charge" : 200000.0,
+                                            "base_rent" : 10340000.0
+                                        },
+                                        "condition" : "Full Furnished",
+                                        "internal_referral_email" : "",
+                                        "unit_size" : 20000.0,
+                                        "zone" : "Mid",
+                                        "certificate" : "AJB",
+                                        "listing_type" : "Rent",
+                                        "rent_fee_type" : "Annual In Advance",
+                                        "unit_type" : "Developer",
+                                        "commision" : {
+                                            "rent" : 1.3,
+                                            "sell" : 3.1
+                                        },
+                                        "fee" : {
+                                            "full_rent" : 3.5,
+                                            "full_sell" : 5.5
+                                        },
+                                        "id" : "5d36b409ba51aab606319aae",
+                                        "internal_agent_email" : "superadmin@spacestock.com",
+                                        "office_type" : "Coworking Office",
+                                        "unit_number" : "100"
+                                    }
+                                ],
+                                "id" : "5d36ace23d9e3cdf0fe66429"
+                            }
+                        ]
+                    }
+                ],
+                "number" : "WF191129#7FEDE25",
+                "requester_organization" : "PT Indonesia Abadi"
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 201,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : false,
+        "cache_as" : "",
+        "on_failure" : "exit"
+    }
+}

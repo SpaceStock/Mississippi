@@ -1,0 +1,21 @@
+{
+    "order" : 2,
+    "name" : "User able to click one of any Apartments",
+    "description" : "As a User, I able to to choose one of any apartments\ne.g: Safari Indah Pratama",
+    "request" : {
+        "url" : "https://staging-web.spacestock.com/api/discovery/1.0/complex/5d6c5bd57da21ca8f84bbaca",
+        "method" : "GET",
+        "headers" : null,
+        "payload" : null
+    },
+    "expect" : {
+        "status_code" : 200,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "",
+        "on_failure" : "exit"
+    }
+}

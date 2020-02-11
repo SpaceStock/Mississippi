@@ -1,0 +1,80 @@
+{
+    "order" : 2,
+    "name" : "Create Complete Unit",
+    "description" : "",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/office/writer/1.0/unit",
+        "method" : "POST",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data" : {
+                "office_type" : "Smart Office Exclusive A",
+                "other_rooms" : [ 
+                    "Storage"
+                ],
+                "rent_size_available" : 332.32,
+                "tower" : {
+                    "id" : "5d88c0d78a72ff95ed47b431",
+                    "name" : "Tower Sherlock"
+                },
+                "view" : [ 
+                    "City", 
+                    "Park"
+                ],
+                "commision" : {
+                    "rent" : 3.23,
+                    "sell" : 2.32
+                },
+                "complex" : {
+                    "id" : "5d79fe213a3c5f709521770f",
+                    "name" : "Smart Office"
+                },
+                "fee" : {
+                    "full_rent" : 5.32,
+                    "full_sell" : 2.32
+                },
+                "zone" : "Mid",
+                "unit_size" : 13000.53,
+                "condition" : "Bare",
+                "internal_referral_email" : "",
+                "rent_fee_type" : "Semi Annual In Advance",
+                "unit_number" : "SHER-32",
+                "unit_type" : "Strata Title",
+                "certificate" : "AJB",
+                "internal_agent_email" : "sean.dempsey@spacestock.com",
+                "price" : {
+                    "payment_term" : "Semi-Anually",
+                    "sell_price" : 12345678.0,
+                    "service_charge" : 1200000.0,
+                    "base_rent" : 7890434.0
+                },
+                "pic" : {
+                    "name" : " Kristina Pristine",
+                    "type" : "Owner",
+                    "uid" : "5d78a9da2adb0fc952310412"
+                },
+                "facing" : [ 
+                    "North East"
+                ],
+                "level" : "6",
+                "listing_type" : "Rent"
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 201,
+        "headers" : null,
+        "evaluate" : [ 
+            "data.listing_type === 'Rent'",
+            "data.condition === 'Bare'",
+            "data.certificate === 'AJB'"
+        ]
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "unit1",
+        "on_failure" : "exit"
+    }
+}

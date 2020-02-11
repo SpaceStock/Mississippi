@@ -1,0 +1,56 @@
+{
+    "order" : 2,
+    "name" : "Create Office Inquiry",
+    "description" : "",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/1.1/inquiries",
+        "method" : "POST",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data" : {
+                "requester_message" : "ok",
+                "required_at" : "Immediately",
+                "interests" : [ 
+                    {
+                        "tower" : {
+                            "id" : "5d36abbf3d9e3cdf0fe66363",
+                            "name" : "Menara Bidakara 1"
+                        }
+                    }
+                ],
+                "preference" : {
+                    "area" : [],
+                    "office_type" : "Virtual Office",
+                    "unit_size" : 90000.0
+                },
+                "requester_email" : "",
+                "rent_period" : 12.0,
+                "requester_name" : "Baymax",
+                "requester_organization" : "SpaceStock Sahid",
+                "requester_phone" : "0874676476434",
+                "type" : [ 
+                    "Rent"
+                ],
+                "budget" : {
+                    "max" : null
+                },
+                "category" : [ 
+                    "Office"
+                ],
+                "channel" : "Handphone"
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 201,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "inq",
+        "on_failure" : "exit"
+    }
+}

@@ -1,0 +1,122 @@
+{
+    "order" : 4,
+    "name" : "edit type from rent to sell",
+    "description" : "",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/housing/writer/1.0/unit/{hou1.data.id}?internal_agent_email=sean.dempsey@spacestock.com",
+        "method" : "PATCH",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data" : {
+                "cluster" : {},
+                "fee_component" : [ 
+                    {
+                        "commission" : 1.0,
+                        "for" : "Sell",
+                        "percentage" : 1.0,
+                        "billing" : ""
+                    }, 
+                    {
+                        "billing" : "",
+                        "commission" : 0.0,
+                        "for" : "Rent",
+                        "percentage" : 0.0
+                    }
+                ],
+                "service_type" : "SignaturePlus",
+                "stories" : 2.0,
+                "amenities" : [ 
+                    "Kitchen Set", 
+                    "Dining Table", 
+                    "Refrigerator", 
+                    "Oven", 
+                    "Microwave", 
+                    "Gas Stove", 
+                    "Electric Stove", 
+                    "Sofa", 
+                    "Bed", 
+                    "TV", 
+                    "Wardrobe", 
+                    "Washing Machine", 
+                    "Drying Machine", 
+                    "AC", 
+                    "Water Heater"
+                ],
+                "condition" : "Full Furnished",
+                "internal_agent_email" : "sean.dempsey@spacestock.com",
+                "position" : "Hook",
+                "bathroom" : 2.0,
+                "complex" : {},
+                "acknowledgement_status" : "unverified",
+                "bedroom" : 2.0,
+                "category" : "Housing",
+                "certificate" : "HPL",
+                "description" : {},
+                "house_size" : 100.0,
+                "other_rooms" : [ 
+                    "Maid Room"
+                ],
+                "surrounding_area" : [],
+                "building_condition" : "Newly Built",
+                "dimension" : {
+                    "width" : 10.0,
+                    "length" : 10.0
+                },
+                "parking_capacity" : 3.0,
+                "pic" : {
+                    "uid" : "5d626ee586b640fdb4c7d86e",
+                    "name" : "Ellie Vidya",
+                    "phone" : "+6284123000005",
+                    "type" : "Owner"
+                },
+                "pricing" : [ 
+                    {
+                        "amount" : null,
+                        "currency" : "IDR",
+                        "for" : "Rent",
+                        "term" : "Yearly"
+                    }, 
+                    {
+                        "amount" : 1230000000.0,
+                        "currency" : "IDR",
+                        "for" : "Sell",
+                        "term" : ""
+                    }
+                ],
+                "completion_date" : null,
+                "geo_location" : {
+                    "coordinates" : [ 
+                        -6.17783265264056, 
+                        106.808729171462
+                    ],
+                    "type" : "Point"
+                },
+                "land_size" : 120.0,
+                "listing_type" : "Sell",
+                "address" : {
+                    "block" : "A",
+                    "city" : "JAKARTA SELATAN",
+                    "district" : "KEBAYORAN BARU",
+                    "number" : "12",
+                    "province" : "DKI JAKARTA",
+                    "street" : "Jl. Jayakarta",
+                    "subdistrict" : "KRAMAT PELA",
+                    "zip_code" : "12130"
+                },
+                "road_width_car" : 2.0
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 200,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "houedit",
+        "on_failure" : "exit"
+    }
+}

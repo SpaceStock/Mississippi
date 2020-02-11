@@ -1,0 +1,149 @@
+{
+    "order" : 5,
+    "name" : "Create Unit 4",
+    "description" : "",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/1.0/complex/apartment/5d6cc03278348f309a8cb30f/tower/5d611c2de7ae43ccb6f85fe3/unit",
+        "method" : "POST",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data" : {
+                "attributes" : {
+                    "price_rent_yearly" : 55000000.0,
+                    "size" : "30",
+                    "unit_no" : "MER-23",
+                    "certificate" : "SHG",
+                    "facing" : [ 
+                        "West"
+                    ],
+                    "internal_agent_email" : "singa.satu@spacestock.com",
+                    "pic_name" : "Farhan Unggul",
+                    "zone" : "Low",
+                    "bathroom" : 1.0,
+                    "complex_id" : "5d6cc03278348f309a8cb30f",
+                    "ownership" : "Secondary",
+                    "views" : [ 
+                        "None"
+                    ],
+                    "sell_comm" : 2.4,
+                    "tower_id" : "5d611c2de7ae43ccb6f85fe3",
+                    "amenities" : [ 
+                        "Kitchen Set", 
+                        "Dining Table", 
+                        "Refrigerator", 
+                        "Oven", 
+                        "Microwave", 
+                        "Gas Stove", 
+                        "Electric Stove", 
+                        "Sofa", 
+                        "Bed", 
+                        "TV", 
+                        "Wardrobe", 
+                        "Washing Machine", 
+                        "Drying Machine", 
+                        "AC", 
+                        "Water Heater"
+                    ],
+                    "condition" : "Semi Furnished",
+                    "images" : {
+                        "images_interior" : [ 
+                            {
+                                "alternate_text" : "Living Room",
+                                "priority" : 1.0,
+                                "url" : "building/205"
+                            }, 
+                            {
+                                "alternate_text" : "Master Bedroom",
+                                "priority" : 3.0,
+                                "url" : "building/202"
+                            }, 
+                            {
+                                "alternate_text" : "Master Bathroom",
+                                "priority" : 3.0,
+                                "url" : "building/203"
+                            }, 
+                            {
+                                "url" : "building/202",
+                                "alternate_text" : "Bedroom",
+                                "priority" : 3.0
+                            }, 
+                            {
+                                "alternate_text" : "Kitchen",
+                                "priority" : 3.0,
+                                "url" : "building/204"
+                            }
+                        ],
+                        "video_link" : null,
+                        "images_360" : null,
+                        "images_brochure" : null,
+                        "images_exterior" : [ 
+                            {
+                                "priority" : 1.0,
+                                "url" : "building/008",
+                                "alternate_text" : "Living Room"
+                            }, 
+                            {
+                                "alternate_text" : "Master Bedroom",
+                                "priority" : 3.0,
+                                "url" : "building/001"
+                            }, 
+                            {
+                                "alternate_text" : "Master Bathroom",
+                                "priority" : 3.0,
+                                "url" : "building/003"
+                            }, 
+                            {
+                                "alternate_text" : "Bedroom",
+                                "priority" : 3.0,
+                                "url" : "building/005"
+                            }, 
+                            {
+                                "url" : "building/002",
+                                "alternate_text" : "Kitchen",
+                                "priority" : 3.0
+                            }
+                        ],
+                        "images_floorplan" : null
+                    },
+                    "pic" : "5d626f1886b640fdb4c7d86f",
+                    "pic_type" : "Owner",
+                    "price_sell" : 723000000.0,
+                    "type" : "1BR",
+                    "rent_comm_type" : "Full In Advance",
+                    "fee_component" : [ 
+                        {
+                            "percentage" : 3.0,
+                            "for" : "Rent",
+                            "from" : "price_rent"
+                        }, 
+                        {
+                            "for" : "Sell",
+                            "from" : "price_sell",
+                            "percentage" : 5.0
+                        }
+                    ],
+                    "listing_type" : "Rent & Sell",
+                    "other_pricing" : "[]",
+                    "price_rent" : 5000000.0,
+                    "rent_comm" : 1.4,
+                    "minimum_lease_term" : 12.0,
+                    "other_rooms" : [ 
+                        "None"
+                    ]
+                }
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 201,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : false,
+        "cache_as" : "",
+        "on_failure" : "exit"
+    }
+}

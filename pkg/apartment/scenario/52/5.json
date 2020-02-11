@@ -1,0 +1,44 @@
+{
+    "order" : 5,
+    "name" : "Admin able to select PIC Contact",
+    "description" : "As a Admin, able to select PIC contact",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/contact/5d626b2886b640fdb4c7d86b",
+        "method" : "PUT",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data" : {
+                "create_at" : 1566731048.0,
+                "name" : "Brian Yulianto",
+                "towers_developer" : [ 
+                    "5d611b2ee7ae43ccb6f85fdb", 
+                    "5d611768e7ae43ccb6f85fd3", 
+                    "5d66389e983bfe288fb097c3", 
+                    "5db95e778863b397752778c3", 
+                    "5dd1415ebd387b29ae73cece"
+                ],
+                "last_update_by_uid" : "superadmin@spacestock.com",
+                "mobile_phone" : "+62812867386837",
+                "office_phone" : "+62",
+                "category" : "Residential",
+                "complexCov" : [],
+                "create_by_uid" : "sean.dempsey@spacestock.com",
+                "id" : "5d626b2886b640fdb4c7d86b",
+                "last_update_at" : 1573007239.0,
+                "title" : "Mister"
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 201,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "",
+        "on_failure" : "exit"
+    }
+}

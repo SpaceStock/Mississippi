@@ -1,0 +1,48 @@
+{
+    "order" : 2,
+    "name" : "Admin able  to Create Add Complex with Fill the only Mandatory Fields",
+    "description" : "Admin able  to Create Add Complex with Fill the only Mandatory Fields",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/1.0/complex/apartment",
+        "method" : "POST",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data" : {
+                "attributes" : {
+                    "address" : "Kebayoran Lama",
+                    "country" : "Indonesia",
+                    "developer_name" : "December",
+                    "coordinate" : "-6.243886,106.7798594",
+                    "name" : "Complex05Dec",
+                    "urban" : "PONDOK PINANG",
+                    "facilites" : [ 
+                        "playground", 
+                        "atm_center", 
+                        "bbq_pit", 
+                        "drug_store", 
+                        "basketball_court"
+                    ],
+                    "premium_listing_available" : false,
+                    "zip_code" : "12310",
+                    "sub_district" : "KEBAYORAN LAMA",
+                    "city" : "JAKARTA SELATAN",
+                    "code" : "CP05DE",
+                    "developer_legal_name" : "PT. December",
+                    "province" : "DKI JAKARTA"
+                }
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 201,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "newComplex",
+        "on_failure" : "exit"
+    }
+}

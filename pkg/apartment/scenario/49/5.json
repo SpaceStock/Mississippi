@@ -1,0 +1,78 @@
+{
+    "order" : 5,
+    "name" : "Admin able Add Primary Unit Tower",
+    "description" : "As a Admin, able to Add Primary Unit Tower",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/1.0/complex/apartment/5dc2c1b63acf307ee0e824b5/tower/5dca6eda5be646abedce5bf1/unit",
+        "method" : "POST",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data" : {
+                "attributes" : {
+                    "amenities" : [ 
+                        "Kitchen Set", 
+                        "Dining Table", 
+                        "Refrigerator", 
+                        "Oven", 
+                        "Microwave", 
+                        "Gas Stove", 
+                        "Electric Stove", 
+                        "Sofa", 
+                        "Bed", 
+                        "TV", 
+                        "Wardrobe", 
+                        "Washing Machine", 
+                        "Drying Machine", 
+                        "AC", 
+                        "Water Heater"
+                    ],
+                    "pic" : "5d626ee586b640fdb4c7d86e",
+                    "pic_name" : "Ellie Vidya",
+                    "price_sell" : 1090289290.0,
+                    "tower_id" : "5dca6eda5be646abedce5bf1",
+                    "condition" : "Full Furnished",
+                    "listing_type" : "Sell",
+                    "other_pricing" : [],
+                    "other_rooms" : [ 
+                        "Study Room"
+                    ],
+                    "size" : "1500",
+                    "certificate" : "AJB",
+                    "pic_type" : "Agent",
+                    "zone" : "Mid",
+                    "unit_no" : "Unit 13 November",
+                    "bathroom" : 2.0,
+                    "complex_id" : "5dc2c1b63acf307ee0e824b5",
+                    "fee_component" : [ 
+                        {
+                            "for" : "Rent",
+                            "from" : "price_rent",
+                            "percentage" : 0.0
+                        }, 
+                        {
+                            "for" : "Sell",
+                            "from" : "price_sell",
+                            "percentage" : 1.0
+                        }
+                    ],
+                    "internal_agent_email" : "anna.liffey@spacestock.com",
+                    "ownership" : "Primary",
+                    "sell_comm" : 3.0,
+                    "type" : "2BR"
+                }
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 201,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "",
+        "on_failure" : "exit"
+    }
+}

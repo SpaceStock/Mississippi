@@ -1,0 +1,68 @@
+{
+    "order" : 3,
+    "name" : "Create Blank Unit",
+    "description" : "",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/office/writer/1.0/unit",
+        "method" : "POST",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data" : {
+                "unit_number" : "",
+                "price" : {
+                    "base_rent" : null,
+                    "payment_term" : "",
+                    "sell_price" : null,
+                    "service_charge" : null
+                },
+                "unit_type" : "",
+                "internal_referral_email" : "",
+                "listing_type" : "",
+                "office_type" : "",
+                "pic" : {
+                    "type" : "",
+                    "uid" : "5d8990cf4aafa17a1e92ae7d",
+                    "name" : " Kala Senja"
+                },
+                "rent_fee_type" : "",
+                "tower" : {
+                    "id" : "5d88c0d78a72ff95ed47b431",
+                    "name" : "Tower Sherlock"
+                },
+                "unit_size" : null,
+                "view" : [],
+                "commision" : {
+                    "rent" : null,
+                    "sell" : null
+                },
+                "level" : "0",
+                "other_rooms" : [],
+                "fee" : {
+                    "full_rent" : null,
+                    "full_sell" : null
+                },
+                "internal_agent_email" : "",
+                "rent_size_available" : null,
+                "zone" : "",
+                "complex" : {
+                    "id" : "5d79fe213a3c5f709521770f",
+                    "name" : "Smart Office"
+                },
+                "condition" : "",
+                "facing" : []
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 201,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "unit2",
+        "on_failure" : "exit"
+    }
+}

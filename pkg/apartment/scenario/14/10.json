@@ -1,0 +1,41 @@
+{
+    "order" : 10,
+    "name" : "Update State 2 (Contacted to Scheduled)",
+    "description" : "",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/1.0/inquiries/{inqcreated.data.id}/next?branch.id=5d6325dff47e63d3eaa78929&branch.assignee_id=janggala.one@spacestock.com",
+        "method" : "POST",
+        "headers" : {
+            "Authorization" : "{authMark.idToken}"
+        },
+        "payload" : {
+            "data" : {
+                "schedule" : {
+                    "date" : 1565947398.0,
+                    "end_time" : "3000",
+                    "start_time" : "2410",
+                    "units" : [ 
+                        {
+                            "size" : "60.65",
+                            "type" : "3BR",
+                            "id" : "5d65c5531ac2284844d1667f",
+                            "number" : "CASS-67"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 200,
+        "headers" : null,
+        "evaluate" : [ 
+            "data.state === 'Scheduled'"
+        ]
+    },
+    "pipeline" : {
+        "cache" : false,
+        "cache_as" : "",
+        "on_failure" : "exit"
+    }
+}

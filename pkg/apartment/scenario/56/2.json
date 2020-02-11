@@ -1,0 +1,77 @@
+{
+    "order" : 2,
+    "name" : "Create Inquiry",
+    "description" : "",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/1.1/inquiries",
+        "method" : "POST",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data" : {
+                "category" : [ 
+                    "Housing"
+                ],
+                "interests" : [ 
+                    {
+                        "category" : "Housing",
+                        "cluster" : {
+                            "id" : "5dad5225b1a5d1934dfd63ad",
+                            "name" : "Red Flag A"
+                        },
+                        "complex" : {
+                            "area" : [ 
+                                "KAYU PUTIH"
+                            ],
+                            "id" : "5dad51c9b1a5d1934dfd63ab",
+                            "name" : "Colorful Days"
+                        },
+                        "unit" : {
+                            "code" : "JT#C13-001D",
+                            "id" : "5daec3250e971d3d9f11e105",
+                            "number" : "13",
+                            "size" : 120.0,
+                            "type" : ""
+                        }
+                    }
+                ],
+                "rent_period" : 1.0,
+                "requester_email" : "",
+                "requester_message" : "ok",
+                "requester_name" : "Baru",
+                "requester_organization" : "",
+                "requester_phone" : "6285861961085",
+                "budget" : {
+                    "max" : 1230000000.0
+                },
+                "channel" : "Handphone",
+                "preference" : {
+                    "area" : [ 
+                        "Kalideres"
+                    ],
+                    "building_size" : {},
+                    "land_size" : {},
+                    "unit_size" : 120.0
+                },
+                "required_at" : "2 Month",
+                "type" : [ 
+                    "Rent"
+                ]
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 201,
+        "headers" : null,
+        "evaluate" : [ 
+            "data.state === 'Assigned'",
+            "data.branch.assignee_id === 'matt1@spacestock.com'"
+        ]
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "inqCreated",
+        "on_failure" : "exit"
+    }
+}

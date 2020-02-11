@@ -1,0 +1,115 @@
+{
+    "order" : 2,
+    "name" : "create unit housing no complex rent & buy",
+    "description" : "",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/housing/writer/1.0/unit",
+        "method" : "POST",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data" : {
+                "bathroom" : 1.0,
+                "condition" : "Full Furnished",
+                "fee_component" : [ 
+                    {
+                        "commission" : 2.0,
+                        "for" : "Sell",
+                        "percentage" : 10.0
+                    }, 
+                    {
+                        "commission" : 1.0,
+                        "for" : "Rent",
+                        "percentage" : 5.0
+                    }
+                ],
+                "complex" : {},
+                "internal_agent_email" : "anna.liffey@spacestock.com",
+                "address" : {
+                    "province" : "JAWA BARAT",
+                    "street" : "Jl. test rent& buy",
+                    "subdistrict" : "BANTARJATI",
+                    "zip_code" : "16153",
+                    "city" : "BOGOR",
+                    "district" : "BOGOR UTARA - KOTA",
+                    "number" : "1arb"
+                },
+                "building_condition" : "Newly Built",
+                "cluster" : {},
+                "road_width_meter" : 2.0,
+                "stories" : 1.0,
+                "category" : "Housing",
+                "certificate" : "HGB",
+                "road_width_car" : 1.0,
+                "house_size" : 110.0,
+                "land_size" : 130.0,
+                "amenities" : [ 
+                    "Refrigerator", 
+                    "Wardrobe", 
+                    "Microwave", 
+                    "Electric Stove", 
+                    "Washing Machine", 
+                    "Bed", 
+                    "AC", 
+                    "TV", 
+                    "Oven", 
+                    "Gas Stove", 
+                    "Sofa", 
+                    "Drying Machine", 
+                    "Water Heater", 
+                    "Kitchen Set", 
+                    "Dining Table"
+                ],
+                "dimension" : {},
+                "geo_location" : {
+                    "coordinates" : [ 
+                        -6.5725992, 
+                        106.8084991
+                    ],
+                    "type" : "Point"
+                },
+                "pricing" : [ 
+                    {
+                        "term" : "Yearly",
+                        "amount" : 13000000.0,
+                        "currency" : "IDR",
+                        "for" : "Rent"
+                    }, 
+                    {
+                        "amount" : 1300000000.0,
+                        "currency" : "IDR",
+                        "for" : "Sell"
+                    }
+                ],
+                "parking_capacity" : 1.0,
+                "listing_type" : "Rent & Sell",
+                "other_rooms" : [ 
+                    "Maid Room"
+                ],
+                "acknowledged_at" : 0.0,
+                "acknowledgement_status" : "unverified",
+                "bedroom" : 3.0,
+                "service_type" : "Regular",
+                "acknowledged_by" : "",
+                "acknowledgement_notes" : "",
+                "pic" : {
+                    "uid" : "5d60260d86b640fdb4c7d868",
+                    "name" : "Tari Safitri",
+                    "phone" : "+6281234",
+                    "type" : "Agent"
+                }
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 201,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "",
+        "on_failure" : "exit"
+    }
+}

@@ -1,0 +1,118 @@
+{
+    "order" : 3,
+    "name" : "Create Tower",
+    "description" : "",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/1.0/complex/apartment/{newComplex.data.id}/tower",
+        "method" : "POST",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data" : {
+                "attributes" : {
+                    "description" : {
+                        "en" : "<p>Charm, space and views! Located in the middle of BSD City, it offers a comfortable place to stay. </p>",
+                        "id" : "<p>Pesona, ruang, dan pemandangan! Berada di tengah BSD City  ini menawarkan kenyamanan tempat tinggal. </p>"
+                    },
+                    "images" : {
+                        "images_developer" : null,
+                        "images_exterior" : null,
+                        "images_floorplan" : null,
+                        "images_interior" : null,
+                        "video_link" : null,
+                        "images_360" : null,
+                        "images_banner" : null,
+                        "images_brochure" : null
+                    },
+                    "sinking_fund" : 1000000.0,
+                    "auto_description" : true,
+                    "completion_year" : 1558414030.0,
+                    "construction_year" : 1486771200.0,
+                    "contractor" : "PT. Tana Indonesia",
+                    "unit_sell_count" : 0.0,
+                    "unit_total" : 20.0,
+                    "certificate" : "AJB",
+                    "completed_estimation_year" : 1558414097.0,
+                    "is_leads_agent" : false,
+                    "service_charge" : 1500000.0,
+                    "architect" : "Art-chitect Team",
+                    "building_type" : [ 
+                        "Strata Buy", 
+                        "Strata Rent", 
+                        "Developer Buy", 
+                        "Developer Rent"
+                    ],
+                    "internet" : [ 
+                        "Indihome", 
+                        "Biznet"
+                    ],
+                    "selling_point" : {
+                        "id" : [ 
+                            {
+                                "description" : "Akses ke mana saja mudah, baik menggunakan transportasi umum ataupun pribadi. Bebas macet!",
+                                "title" : "Kemudahan Akses"
+                            }
+                        ]
+                    },
+                    "name" : "Tower Ice Bear",
+                    "parking" : [ 
+                        {
+                            "payment_term" : "Annually",
+                            "price" : 5000000.0,
+                            "type" : "Car",
+                            "capacity" : 40.0,
+                            "name" : "Car Parking"
+                        }, 
+                        {
+                            "price" : 1400000.0,
+                            "type" : "Motorcycle",
+                            "capacity" : 8.0,
+                            "name" : "Motorcycle Parking",
+                            "payment_term" : "Annually"
+                        }
+                    ],
+                    "rent_commission" : 3.0,
+                    "sell_commission" : 5.0,
+                    "category" : "Apartment",
+                    "fee_component" : [ 
+                        {
+                            "for" : "Rent",
+                            "from" : "price_rent",
+                            "percentage" : 1.54
+                        }, 
+                        {
+                            "from" : "price_sell",
+                            "percentage" : 2.49,
+                            "for" : "Sell"
+                        }
+                    ],
+                    "floor_count" : 18.0,
+                    "lift" : [ 
+                        {
+                            "count" : 15.0,
+                            "name" : "Passenger",
+                            "serving" : ""
+                        }, 
+                        {
+                            "name" : "Service",
+                            "serving" : "",
+                            "count" : 2.0
+                        }
+                    ],
+                    "unit_rent_count" : 0.0
+                }
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 201.0,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "newTower",
+        "on_failure" : "exit"
+    }
+}

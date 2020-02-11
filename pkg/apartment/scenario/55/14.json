@@ -1,0 +1,21 @@
+{
+    "order" : 14,
+    "name" : "Verify Data Discovery Unit",
+    "description" : "",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/discovery/1.0/unit/{updateprim.data.id}",
+        "method" : "GET",
+        "headers" : null,
+        "payload" : null
+    },
+    "expect" : {
+        "status_code" : 200,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : false,
+        "cache_as" : "",
+        "on_failure" : "exit"
+    }
+}

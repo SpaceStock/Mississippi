@@ -1,0 +1,90 @@
+{
+    "order" : 2,
+    "name" : "Create Cluster Housing without IPL",
+    "description" : "",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/housing/writer/1.0/cluster",
+        "method" : "POST",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data" : {
+                "ipl" : [],
+                "general_specification" : {
+                    "installation" : "ok",
+                    "sanitation" : "ok",
+                    "electricity" : "1200",
+                    "water" : "PDAM",
+                    "lamp" : "ok"
+                },
+                "types" : [ 
+                    "primary"
+                ],
+                "facilities" : [ 
+                    "access_card", 
+                    "basketball_court", 
+                    "bbq_pit"
+                ],
+                "completion_date" : 1546275600.0,
+                "construction_date" : 1262278800.0,
+                "geo_location" : {
+                    "type" : "Point",
+                    "coordinates" : [ 
+                        -6.17589897007066, 
+                        106.814017295837
+                    ]
+                },
+                "building_specification" : {
+                    "foundation" : "ok",
+                    "roof_truss" : "ok",
+                    "roof_tile" : "ok",
+                    "paint" : "ok",
+                    "wall" : "ok",
+                    "floor" : "ok",
+                    "door" : "ok",
+                    "window" : "ok",
+                    "roof" : "ok",
+                    "ceiling" : "ok"
+                },
+                "certificate" : "PPJB",
+                "name" : "Browny Bar",
+                "address" : {
+                    "city" : "JAKARTA UTARA",
+                    "district" : "TANJUNG PRIOK",
+                    "subdistrict" : "KEBON BAWANG",
+                    "street" : "Jalan Gondangdia",
+                    "zip_code" : "14320",
+                    "province" : "DKI JAKARTA"
+                },
+                "auto_description" : true,
+                "description" : {
+                    "id" : "<p>ok</p>",
+                    "en" : "<p>ok</p>"
+                },
+                "selling_point" : {
+                    "id" : [ 
+                        {
+                            "title" : "ok",
+                            "description" : "ok"
+                        }
+                    ]
+                },
+                "complex" : {
+                    "id" : "5dad51c9b1a5d1934dfd63ab",
+                    "name" : "Colorful Days"
+                }
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 201.0,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "cluster",
+        "on_failure" : "exit"
+    }
+}

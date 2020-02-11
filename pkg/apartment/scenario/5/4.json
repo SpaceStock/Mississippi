@@ -1,0 +1,39 @@
+{
+    "order" : 4,
+    "name" : "Assign",
+    "description" : "",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/1.0/inquiries/{inqcreated.data.id}/assign",
+        "method" : "POST",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data" : {
+                "branch" : {
+                    "id" : "5d6325dff47e63d3eaa78929",
+                    "name" : "Branch Mataram",
+                    "assignee_id" : "matt1@spacestock.com",
+                    "assignee_name" : "Mataram Satu"
+                },
+                "state" : "Open"
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 200,
+        "headers" : null,
+        "evaluate" : [ 
+            "data.state === 'Assigned'",
+            "data.branch.assignee_id === 'matt1@spacestock.com'",
+            "data.branch.assignee_name === 'Mataram Satu'",
+            "data.branch.id === '5d6325dff47e63d3eaa78929'",
+            "data.branch.name === 'Branch Mataram'"
+        ]
+    },
+    "pipeline" : {
+        "cache" : false,
+        "cache_as" : "",
+        "on_failure" : "exit"
+    }
+}

@@ -1,0 +1,139 @@
+{
+    "order" : 4,
+    "name" : "Create Unit 3",
+    "description" : "",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/1.0/complex/apartment/5d6cc03278348f309a8cb30f/tower/5d611c2de7ae43ccb6f85fe3/unit",
+        "method" : "POST",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data" : {
+                "attributes" : {
+                    "price_sell" : 723000000.0,
+                    "amenities" : [ 
+                        "Sofa", 
+                        "Bed", 
+                        "TV", 
+                        "Wardrobe", 
+                        "Washing Machine", 
+                        "Drying Machine", 
+                        "AC", 
+                        "Water Heater"
+                    ],
+                    "complex_id" : "5d6cc03278348f309a8cb30f",
+                    "images" : {
+                        "video_link" : null,
+                        "images_360" : null,
+                        "images_brochure" : null,
+                        "images_exterior" : [ 
+                            {
+                                "url" : "building/008",
+                                "alternate_text" : "Living Room",
+                                "priority" : 1.0
+                            }, 
+                            {
+                                "alternate_text" : "Master Bedroom",
+                                "priority" : 3.0,
+                                "url" : "building/009"
+                            }, 
+                            {
+                                "alternate_text" : "Master Bathroom",
+                                "priority" : 3.0,
+                                "url" : "building/003"
+                            }, 
+                            {
+                                "alternate_text" : "Bedroom",
+                                "priority" : 3.0,
+                                "url" : "building/004"
+                            }, 
+                            {
+                                "alternate_text" : "Kitchen",
+                                "priority" : 3.0,
+                                "url" : "building/005"
+                            }
+                        ],
+                        "images_floorplan" : null,
+                        "images_interior" : [ 
+                            {
+                                "alternate_text" : "Living Room",
+                                "priority" : 1.0,
+                                "url" : "building/202"
+                            }, 
+                            {
+                                "alternate_text" : "Master Bedroom",
+                                "priority" : 3.0,
+                                "url" : "building/203"
+                            }, 
+                            {
+                                "alternate_text" : "Master Bathroom",
+                                "priority" : 3.0,
+                                "url" : "building/202"
+                            }, 
+                            {
+                                "priority" : 3.0,
+                                "url" : "building/203",
+                                "alternate_text" : "Bedroom"
+                            }, 
+                            {
+                                "alternate_text" : "Kitchen",
+                                "priority" : 3.0,
+                                "url" : "building/202"
+                            }
+                        ]
+                    },
+                    "listing_type" : "Sell",
+                    "ownership" : "Secondary",
+                    "pic" : "5d6269be86b640fdb4c7d869",
+                    "pic_name" : "Aldira Zia",
+                    "rent_comm" : 0.0,
+                    "sell_comm" : 2.4,
+                    "certificate" : "SHM",
+                    "other_pricing" : "[]",
+                    "other_rooms" : [ 
+                        "None"
+                    ],
+                    "size" : "30",
+                    "tower_id" : "5d611c2de7ae43ccb6f85fe3",
+                    "unit_no" : "MER-56",
+                    "condition" : "Staged",
+                    "facing" : [ 
+                        "North"
+                    ],
+                    "fee_component" : [ 
+                        {
+                            "percentage" : 3.0,
+                            "for" : "Rent",
+                            "from" : "price_rent"
+                        }, 
+                        {
+                            "percentage" : 5.0,
+                            "for" : "Sell",
+                            "from" : "price_sell"
+                        }
+                    ],
+                    "internal_agent_email" : "singa.satu@spacestock.com",
+                    "pic_type" : "Agent",
+                    "type" : "1BR",
+                    "views" : [ 
+                        "Lake"
+                    ],
+                    "bathroom" : 1.0,
+                    "minimum_lease_term" : 0.0,
+                    "zone" : "High"
+                }
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 201,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : false,
+        "cache_as" : "",
+        "on_failure" : "exit"
+    }
+}

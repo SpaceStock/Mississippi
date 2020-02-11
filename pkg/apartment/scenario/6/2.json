@@ -1,0 +1,74 @@
+{
+    "order" : 2,
+    "name" : "Create Complex",
+    "description" : "",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/1.0/complex/apartment",
+        "method" : "POST",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data" : {
+                "attributes" : {
+                    "images" : {
+                        "images_360" : null,
+                        "images_banner" : null,
+                        "images_brochure" : null,
+                        "images_developer" : null,
+                        "images_exterior" : null,
+                        "images_floorplan" : null,
+                        "images_interior" : null,
+                        "video_link" : null
+                    },
+                    "name" : "Bear Hut",
+                    "sub_district" : "KEMBANGAN",
+                    "urban" : "JOGLO",
+                    "country" : "Indonesia",
+                    "developer_name" : "Tanah Air Group",
+                    "surrounding_area" : [ 
+                        "Joglo", 
+                        "Taman Palem"
+                    ],
+                    "developer_legal_name" : "PT Tana Indonesia",
+                    "facilites" : [ 
+                        "gym", 
+                        "salon", 
+                        "swimming_pool", 
+                        "playground", 
+                        "drug_store", 
+                        "function_hall", 
+                        "restaurant", 
+                        "soccer_field", 
+                        "movie_theater", 
+                        "access_card", 
+                        "sauna", 
+                        "super_market"
+                    ],
+                    "land_size" : 19000.0,
+                    "tower_total" : 0.0,
+                    "unit_rent_total" : 0.0,
+                    "address" : "Jl. Taman Alfa Indah A5",
+                    "city" : "JAKARTA BARAT",
+                    "coordinate" : "-6.2188698,106.7477795",
+                    "zip_code" : "11640",
+                    "area" : [ 
+                        "Alfa Indah"
+                    ],
+                    "province" : "DKI JAKARTA",
+                    "unit_sell_total" : 0.0
+                }
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 201,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "newComplex",
+        "on_failure" : "exit"
+    }
+}

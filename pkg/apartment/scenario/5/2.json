@@ -1,0 +1,59 @@
+{
+    "order" : 2,
+    "name" : "Create",
+    "description" : "",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/1.1/inquiries",
+        "method" : "POST",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data" : {
+                "budget" : {
+                    "max" : 1200000000.0,
+                    "min" : 0.0,
+                    "term" : ""
+                },
+                "channel" : "Phone",
+                "preference" : {
+                    "area" : [ 
+                        "BSD"
+                    ],
+                    "unit_size" : 120.0,
+                    "unit_type" : "3BR"
+                },
+                "rent_period" : 12.0,
+                "requester_name" : "Grizz",
+                "requester_phone" : "+6281527024850",
+                "category" : [ 
+                    "Apartment", 
+                    "Office", 
+                    "Housing", 
+                    "Ruko"
+                ],
+                "requester_email" : "test@me.com",
+                "required_at" : "12 Month",
+                "type" : [ 
+                    "Buy", 
+                    "Rent", 
+                    "For Sell", 
+                    "For Rent"
+                ]
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 201,
+        "headers" : null,
+        "evaluate" : [ 
+            "data.administration === 'admin.inquiry@spacestock.com'",
+            "data.state === 'Handled'"
+        ]
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "inqcreated",
+        "on_failure" : "exit"
+    }
+}

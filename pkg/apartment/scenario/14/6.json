@@ -1,0 +1,27 @@
+{
+    "order" : 6,
+    "name" : "Update State 1 (Assigned to Contacted)",
+    "description" : "",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/1.0/inquiries/{inqcreated.data.id}/next?branch.id=5d6325dff47e63d3eaa78929&branch.assignee_id=janggala.one@spacestock.com",
+        "method" : "POST",
+        "headers" : {
+            "Authorization" : "{authMark.idToken}"
+        },
+        "payload" : {
+            "data" : {}
+        }
+    },
+    "expect" : {
+        "status_code" : 200,
+        "headers" : null,
+        "evaluate" : [ 
+            "data.state === 'Contacted'"
+        ]
+    },
+    "pipeline" : {
+        "cache" : false,
+        "cache_as" : "",
+        "on_failure" : "exit"
+    }
+}

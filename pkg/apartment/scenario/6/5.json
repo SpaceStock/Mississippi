@@ -1,0 +1,77 @@
+{
+    "order" : 5,
+    "name" : "Create Unit",
+    "description" : "",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/1.0/complex/apartment/{newComplex.data.id}/tower/{newTower.data.id}/unit",
+        "method" : "POST",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data" : {
+                "attributes" : {
+                    "fee_component" : [ 
+                        {
+                            "for" : "Rent",
+                            "from" : "price_rent",
+                            "percentage" : 0.0
+                        }, 
+                        {
+                            "for" : "Sell",
+                            "from" : "price_sell",
+                            "percentage" : 5.0
+                        }
+                    ],
+                    "other_rooms" : [ 
+                        "Maid Room"
+                    ],
+                    "sell_comm" : 2.4,
+                    "size" : "60.65",
+                    "bathroom" : 3.0,
+                    "complex_id" : "{newComplex.data.id}",
+                    "condition" : "Semi Furnished",
+                    "internal_agent_email" : "franchise.one@spacestock.com",
+                    "level" : "10",
+                    "other_pricing" : [],
+                    "ownership" : "Secondary",
+                    "pic_type" : "Representative",
+                    "type" : "3BR",
+                    "unit_no" : "ICE-18",
+                    "amenities" : [ 
+                        "Kitchen Set", 
+                        "Dining Table", 
+                        "Refrigerator", 
+                        "Oven", 
+                        "Microwave", 
+                        "Gas Stove"
+                    ],
+                    "facing" : [ 
+                        "West", 
+                        "North"
+                    ],
+                    "pic" : "5d626f4786b640fdb4c7d871",
+                    "price_sell" : 3125000000.0,
+                    "views" : [ 
+                        "City"
+                    ],
+                    "zone" : "Mid",
+                    "certificate" : "PPJB",
+                    "listing_type" : "Sell",
+                    "pic_name" : "Harry Simanjuntak",
+                    "tower_id" : "{newTower.data.id}"
+                }
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 201,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "newUnit2",
+        "on_failure" : "exit"
+    }
+}

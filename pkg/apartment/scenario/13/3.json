@@ -1,0 +1,86 @@
+{
+    "order" : 3,
+    "name" : "Create Blank Filled Unit Landed House",
+    "description" : "",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/housing/writer/1.0/unit",
+        "method" : "POST",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data" : {
+                "address" : {
+                    "zip_code" : ""
+                },
+                "amenities" : [],
+                "completion_date" : null,
+                "description" : {},
+                "dimension" : {
+                    "length" : 0.0,
+                    "width" : 0.0
+                },
+                "fee_component" : [ 
+                    {
+                        "billing" : "",
+                        "commission" : 0.0,
+                        "for" : "Sell",
+                        "percentage" : 0.0
+                    }, 
+                    {
+                        "billing" : "",
+                        "commission" : 0.0,
+                        "for" : "Rent",
+                        "percentage" : 0.0
+                    }
+                ],
+                "internal_agent_email" : "superadmin@spacestock.com",
+                "pic" : {
+                    "name" : "Steven Bari",
+                    "phone" : "+628332211002",
+                    "uid" : "5d78ab3d2adb0fc952310414"
+                },
+                "pricing" : [ 
+                    {
+                        "amount" : null,
+                        "currency" : "IDR",
+                        "for" : "Rent",
+                        "term" : "Yearly"
+                    }, 
+                    {
+                        "amount" : null,
+                        "currency" : "IDR",
+                        "for" : "Sell",
+                        "term" : ""
+                    }
+                ],
+                "surrounding_area" : [],
+                "cluster" : {
+                    "id" : "5d609f47dfdc436a9d39473f",
+                    "name" : "Libra"
+                },
+                "complex" : {
+                    "name" : "Complex Bintang",
+                    "id" : "5d609011dfdc436a9d394739"
+                },
+                "geo_location" : {
+                    "coordinates" : [ 
+                        -6.1753942, 
+                        106.827183
+                    ],
+                    "type" : "Point"
+                }
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 400,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "createdNeg1",
+        "on_failure" : "exit"
+    }
+}

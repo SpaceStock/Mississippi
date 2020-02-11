@@ -1,0 +1,84 @@
+{
+    "order" : 2,
+    "name" : "Create Complex Apartment",
+    "description" : "",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/1.0/complex/apartment",
+        "method" : "POST",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data" : {
+                "attributes" : {
+                    "urban" : "SAMPORA",
+                    "zip_code" : "15345",
+                    "city" : "TANGERANG",
+                    "images" : {
+                        "images_developer" : null,
+                        "images_exterior" : null,
+                        "images_floorplan" : null,
+                        "images_interior" : null,
+                        "video_link" : null,
+                        "images_360" : null,
+                        "images_banner" : null,
+                        "images_brochure" : null
+                    },
+                    "name" : "Alam Asri",
+                    "sub_district" : "KEBAYORAN BARU",
+                    "surrounding_area" : [ 
+                        "BSD City", 
+                        "BSD The Park", 
+                        "Cisauk"
+                    ],
+                    "tower_total" : 0.0,
+                    "area" : [ 
+                        "BSD"
+                    ],
+                    "developer_legal_name" : "PT Tana Indonesia",
+                    "developer_name" : "Tanah Air Group",
+                    "unit_rent_total" : 0.0,
+                    "country" : "Indonesia",
+                    "facilites" : [ 
+                        "mini_golf", 
+                        "basketball_court", 
+                        "tennis_court", 
+                        "laundry", 
+                        "private_lift", 
+                        "mini_market", 
+                        "jogging_track", 
+                        "atm_center", 
+                        "bbq_pit", 
+                        "gym", 
+                        "salon", 
+                        "swimming_pool", 
+                        "playground", 
+                        "drug_store", 
+                        "function_hall", 
+                        "restaurant", 
+                        "soccer_field", 
+                        "movie_theater", 
+                        "access_card", 
+                        "sauna", 
+                        "super_market"
+                    ],
+                    "unit_sell_total" : 0.0,
+                    "address" : "Jalan BSD Raya Bar. 24, Sampora",
+                    "coordinate" : "-6.305054,106.652592",
+                    "land_size" : 9000.0,
+                    "province" : "BANTEN"
+                }
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 201,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "newApt",
+        "on_failure" : "exit"
+    }
+}

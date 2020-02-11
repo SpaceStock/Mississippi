@@ -1,0 +1,27 @@
+{
+    "order" : 5,
+    "name" : "Firebase Authorization Marketing",
+    "description" : "",
+    "request" : {
+        "url" : "https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyD-HHHsWb82AFmdXtm0t86Nb9uoMJutrU0",
+        "method" : "POST",
+        "headers" : null,
+        "payload" : {
+            "email" : "janggala.one@spacestock.com",
+            "password" : "12345678",
+            "returnSecureToken" : true
+        }
+    },
+    "expect" : {
+        "status_code" : 200,
+        "headers" : null,
+        "evaluate" : [
+            "idToken != ''"
+        ]
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "authMark",
+        "on_failure" : "exit"
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "order" : 3,
+    "name" : "Descending Create At",
+    "description" : "",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/1.0/inquiries?sort=desc(create_at)",
+        "method" : "GET",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : null
+    },
+    "expect" : {
+        "status_code" : 200,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : false,
+        "cache_as" : "",
+        "on_failure" : "exit"
+    }
+}

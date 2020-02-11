@@ -1,0 +1,23 @@
+{
+    "order" : 5,
+    "name" : "Get One Contact",
+    "description" : "",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/contact/{newContact.data.id}",
+        "method" : "GET",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : null
+    },
+    "expect" : {
+        "status_code" : 200,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : false,
+        "cache_as" : "",
+        "on_failure" : "exit"
+    }
+}

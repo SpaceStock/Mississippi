@@ -1,0 +1,56 @@
+{
+    "order" : 3,
+    "name" : "User able to inquiries apartments",
+    "description" : "As a User, I able to inquiries apartments",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/1.1/inquiries",
+        "method" : "POST",
+        "headers" : null,
+        "payload" : {
+            "data" : {
+                "url_referrer" : "https://staging-web.spacestock.com/kompleks-apartemen/complex-complete-di-pulo-gadung-jakarta-timur-5d7f3ddd846c84bc61bc5d3e",
+                "channel" : "Web Form",
+                "interests" : [ 
+                    {
+                        "complex" : {
+                            "id" : "5d7f3ddd846c84bc61bc5d3e",
+                            "name" : "Complex Complete"
+                        },
+                        "tower" : {},
+                        "unit" : {}
+                    }
+                ],
+                "rent_period" : 12.0,
+                "requester_message" : "thanks",
+                "type" : [ 
+                    "Buy", 
+                    "Rent"
+                ],
+                "required_at" : "1 Month",
+                "category" : [ 
+                    "Apartment"
+                ],
+                "preference" : {
+                    "area" : [ 
+                        "Jakarta Timur", 
+                        "Pulo Gadung", 
+                        "Kayu Putih"
+                    ]
+                },
+                "requester_email" : "tesst@gmail.com",
+                "requester_name" : "tessts",
+                "requester_phone" : "098099789"
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 201,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "",
+        "on_failure" : "exit"
+    }
+}

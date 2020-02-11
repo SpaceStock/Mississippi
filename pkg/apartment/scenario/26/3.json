@@ -1,0 +1,21 @@
+{
+    "order" : 3,
+    "name" : "User able to Filter Price Only Field Minimum Buy Apartements",
+    "description" : "As a User, able to Filter Price only Field Minimum Buy Apartment",
+    "request" : {
+        "url" : "https://staging-web.spacestock.com/api/discovery/1.0/complex?size=12&page=1&listing_type=buy&price=range(0,5000000)",
+        "method" : "GET",
+        "headers" : null,
+        "payload" : null
+    },
+    "expect" : {
+        "status_code" : 200,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "",
+        "on_failure" : "exit"
+    }
+}

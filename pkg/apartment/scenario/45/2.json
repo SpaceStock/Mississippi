@@ -1,0 +1,21 @@
+{
+    "order" : 2,
+    "name" : "User able to filter price and 1 facilities",
+    "description" : "As a User, able to Filter price and 1 Facilities",
+    "request" : {
+        "url" : "https://staging-web.spacestock.com/api/discovery/1.0/complex?size=12&page=1&facilities=soccer_field&listing_type=buy&price=range(50000000,867400900",
+        "method" : "GET",
+        "headers" : null,
+        "payload" : null
+    },
+    "expect" : {
+        "status_code" : 200,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "",
+        "on_failure" : "exit"
+    }
+}

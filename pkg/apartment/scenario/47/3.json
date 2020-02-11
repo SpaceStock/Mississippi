@@ -1,0 +1,30 @@
+{
+    "order" : 3,
+    "name" : "Update",
+    "description" : "",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/1.0/inquiries/{inq.data.id}",
+        "method" : "PATCH",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data" : {
+                "requester_phone" : "087467647632",
+                "required_at" : "Immediately",
+                "requester_name" : "Sugar",
+                "requester_organization" : "PT Amazing World"
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 200,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : false,
+        "cache_as" : "inq",
+        "on_failure" : "exit"
+    }
+}

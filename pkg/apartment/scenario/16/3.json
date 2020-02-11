@@ -1,0 +1,55 @@
+{
+    "order" : 3,
+    "name" : "Create Inquiry 2",
+    "description" : "",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/1.1/inquiries",
+        "method" : "POST",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data" : {
+                "budget" : {
+                    "max" : 1200000000.0,
+                    "min" : 0.0,
+                    "term" : ""
+                },
+                "channel" : "Phone",
+                "requester_email" : "siti.aisyah@spacestock.com",
+                "requester_phone" : "+6281527024850",
+                "type" : [ 
+                    "Buy", 
+                    "Rent", 
+                    "For Sell", 
+                    "For Rent"
+                ],
+                "category" : [ 
+                    "Apartment", 
+                    "Office", 
+                    "Housing", 
+                    "Ruko"
+                ],
+                "preference" : {
+                    "area" : [ 
+                        "Gandaria"
+                    ],
+                    "unit_size" : 80.0,
+                    "unit_type" : "3BR"
+                },
+                "rent_period" : 12.0,
+                "requester_name" : "SAisyah"
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 201,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : false,
+        "cache_as" : "",
+        "on_failure" : "exit"
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "order" : 1),
+    "name" : "Admin able to ACK Unit09Decup",
+    "description" : "As a Admin able to ACK Unit09Decup",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/1.0/complex/apartment/5de8ad88e94755ecc1fc2f26/tower/5dede818d73e920b6644e8bd/unit/5dedf4e5d73e920b6644e8c1/ack",
+        "method" : "POST",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : null
+    },
+    "expect" : {
+        "status_code" : 200,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "",
+        "on_failure" : "exit"
+    }
+}

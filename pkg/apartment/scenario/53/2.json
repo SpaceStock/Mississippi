@@ -1,0 +1,23 @@
+{
+    "order" : 2,
+    "name" : "GET Propar",
+    "description" : "",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/office/reader/1.0/buildingoption/5de77f1290fd5e933372cf7e/tower/5d36ace03d9e3cdf0fe66427",
+        "method" : "GET",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : null
+    },
+    "expect" : {
+        "status_code" : 200,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : false,
+        "cache_as" : "",
+        "on_failure" : "exit"
+    }
+}

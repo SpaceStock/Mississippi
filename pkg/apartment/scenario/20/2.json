@@ -1,0 +1,139 @@
+{
+    "order" : 2,
+    "name" : "Create unit ",
+    "description" : "",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/housing/writer/1.0/unit",
+        "method" : "POST",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data" : {
+                "description" : {},
+                "land_size" : 120.0,
+                "minimum_lease_term" : 12.0,
+                "bathroom" : 3.0,
+                "cluster" : {
+                    "id" : "5df8959cdfac18b70796712e",
+                    "name" : "Cluster Stale"
+                },
+                "acknowledgement_status" : "unverified",
+                "completion_date" : null,
+                "surrounding_area" : [],
+                "views" : [ 
+                    "City"
+                ],
+                "address" : {
+                    "district" : "KEBAYORAN BARU",
+                    "number" : "12",
+                    "province" : "DKI JAKARTA",
+                    "street" : "Jl. Jayakarta",
+                    "subdistrict" : "KRAMAT PELA",
+                    "zip_code" : "12130",
+                    "block" : "A",
+                    "city" : "JAKARTA SELATAN"
+                },
+                "complex" : {
+                    "id" : "5df89465dfac18b70796712b",
+                    "name" : "Complex  Stale"
+                },
+                "fee_component" : [ 
+                    {
+                        "billing" : "",
+                        "commission" : 0.0,
+                        "for" : "Sell",
+                        "percentage" : 0.0
+                    }, 
+                    {
+                        "billing" : "",
+                        "commission" : 4.0,
+                        "for" : "Rent",
+                        "percentage" : 5.0
+                    }
+                ],
+                "geo_location" : {
+                    "coordinates" : [ 
+                        -6.17339061661498, 
+                        106.814265250869
+                    ],
+                    "type" : "Point"
+                },
+                "road_width_car" : 3.0,
+                "building_condition" : "Newly Built",
+                "category" : "Housing",
+                "certificate" : "HPL",
+                "facing" : [ 
+                    "North East"
+                ],
+                "listing_type" : "Rent",
+                "pic" : {
+                    "name" : "Cindy Xie",
+                    "phone" : "+6284123000003",
+                    "type" : "Owner",
+                    "uid" : "5d626e7986b640fdb4c7d86c"
+                },
+                "water" : [ 
+                    "PDAM"
+                ],
+                "amenities" : [ 
+                    "Kitchen Set", 
+                    "Dining Table", 
+                    "Refrigerator", 
+                    "Oven", 
+                    "Microwave", 
+                    "Gas Stove", 
+                    "Electric Stove", 
+                    "Sofa", 
+                    "Bed", 
+                    "TV", 
+                    "Wardrobe", 
+                    "Washing Machine", 
+                    "Drying Machine", 
+                    "AC", 
+                    "Water Heater"
+                ],
+                "electricity" : 3500.0,
+                "internal_agent_email" : "sean.dempsey@spacestock.com",
+                "service_type" : "SignaturePlus",
+                "stories" : 3.0,
+                "dimension" : {
+                    "length" : 10.0,
+                    "width" : 10.0
+                },
+                "parking_capacity" : 2.0,
+                "pricing" : [ 
+                    {
+                        "currency" : "IDR",
+                        "for" : "Rent",
+                        "term" : "Yearly",
+                        "amount" : 123456780.0
+                    }, 
+                    {
+                        "amount" : null,
+                        "currency" : "IDR",
+                        "for" : "Sell",
+                        "term" : ""
+                    }
+                ],
+                "other_rooms" : [ 
+                    "Storage"
+                ],
+                "condition" : "Full Furnished",
+                "house_size" : 100.0,
+                "position" : "Hook",
+                "bedroom" : 3.0
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 200,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "",
+        "on_failure" : "exit"
+    }
+}
