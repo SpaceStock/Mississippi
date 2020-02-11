@@ -1,0 +1,4 @@
+{
+    "name" : "Test Inquiry Movement States From Assigned to Reject",
+    "description" : "Notes\n\nButuh Tambahan:\n1. Re-assign to a branch\n2. Update endpoint\n3. Action endpoints from `Assigned` to `Deal`\n3. Action endpoints to No Continuation"
+}

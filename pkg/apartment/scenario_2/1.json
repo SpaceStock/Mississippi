@@ -1,0 +1,27 @@
+{
+    "order" : 1,
+    "name" : "Firebase Auth",
+    "description" : "",
+    "request" : {
+        "url" : "https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyD-HHHsWb82AFmdXtm0t86Nb9uoMJutrU0",
+        "method" : "POST",
+        "headers" : null,
+        "payload" : {
+            "email" : "sean.dempsey@spacestock.com",
+            "password" : "sean.dempsey",
+            "returnSecureToken" : true
+        }
+    },
+    "expect" : {
+        "status_code" : 200,
+        "headers" : null,
+        "evaluate" : [ 
+            "!idToken"
+        ]
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "auth",
+        "on_failure" : "exit"
+    }
+}

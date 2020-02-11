@@ -1,0 +1,49 @@
+{
+    "order" : 2,
+    "name" : "Admin able to Add Complex",
+    "description" : "As a Admin, able to add New Complex",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/1.0/complex/apartment",
+        "method" : "POST",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data" : {
+                "attributes" : {
+                    "code" : "927387",
+                    "coordinate" : "-6.1625465,106.856884484615",
+                    "developer_name" : "Shabat",
+                    "facilites" : [ 
+                        "sauna", 
+                        "basketball_court", 
+                        "atm_center"
+                    ],
+                    "land_size" : "1000",
+                    "province" : "DKI JAKARTA",
+                    "address" : "Jl. Kemayoran",
+                    "city" : "JAKARTA PUSAT",
+                    "sub_district" : "KEMAYORAN",
+                    "zip_code" : "10610",
+                    "developer_legal_name" : "PT. Sahabat Selamanya",
+                    "name" : "Complex 06112019",
+                    "country" : "Indonesia",
+                    "premium_listing_available" : false,
+                    "urban" : "GUNUNG SAHARI SELATAN"
+                }
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 201,
+        "headers" : null,
+        "evaluate" : [ 
+            "!data.id"
+        ]
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "id Complex",
+        "on_failure" : "exit"
+    }
+}

@@ -1,0 +1,48 @@
+{
+    "order" : 12,
+    "name" : "Update State 4 (Site Visited to 1st Offered) ",
+    "description" : "",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/1.0/inquiries/{inqcreated.data.id}/next?branch.id=5d6325dff47e63d3eaa78929&branch.assignee_id=janggala.one@spacestock.com",
+        "method" : "POST",
+        "headers" : {
+            "Authorization" : "{authMark.idToken}"
+        },
+        "payload" : {
+            "data" : {
+                "offer" : {
+                    "date" : 1565447398.0,
+                    "units" : [ 
+                        {
+                            "id" : "5d71bed7f073ad7a1c76bf04",
+                            "number" : "Prim-01",
+                            "price" : 70524996.0,
+                            "size" : 199.0,
+                            "type" : "2BR"
+                        }, 
+                        {
+                            "id" : "5d80715c63be1f4002c7d7d0",
+                            "number" : "TRMB-43",
+                            "price" : 723000000.0,
+                            "size" : 76.5,
+                            "type" : "3BR"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 200,
+        "headers" : null,
+        "evaluate" : [ 
+            "data.state === 'Offered'",
+            "data.offer.count === 1"
+        ]
+    },
+    "pipeline" : {
+        "cache" : false,
+        "cache_as" : "",
+        "on_failure" : "exit"
+    }
+}

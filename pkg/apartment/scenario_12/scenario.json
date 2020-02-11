@@ -1,0 +1,4 @@
+{
+    "name" : "NSQ Publish Topic Example",
+    "description" : "Skenario test ini gunanya untuk mem-publish message ke NSQ"
+}
