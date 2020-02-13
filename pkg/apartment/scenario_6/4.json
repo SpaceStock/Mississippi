@@ -72,6 +72,7 @@
     "pipeline" : {
         "cache" : true,
         "cache_as" : "newUnit",
-        "on_failure" : "exit"
+        "on_failure" : "exit",
+        "delay": "0s"
     }
 }

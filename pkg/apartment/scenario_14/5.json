@@ -22,6 +22,7 @@
     "pipeline" : {
         "cache" : true,
         "cache_as" : "authMark",
-        "on_failure" : "exit"
+        "on_failure" : "exit",
+        "delay": "0s"
     }
 }

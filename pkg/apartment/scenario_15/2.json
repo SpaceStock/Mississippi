@@ -1,216 +1,217 @@
 {
     "order" : 2,
-            "name" : "Create Tower Office",
-            "description" : "",
-            "request" : {
-                "url" : "https://stg-satpam.spacestock.com/office/writer/1.0/tower",
-                "method" : "POST",
-                "headers" : {
-                    "Authorization" : "{auth.idToken}"
+    "name" : "Create Tower Office",
+    "description" : "",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/office/writer/1.0/tower",
+        "method" : "POST",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data" : {
+                "description" : {
+                    "en" : "<p>&nbsp;lorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsum</p>",
+                    "id" : "<p>&nbsp;lorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsum</p>"
                 },
-                "payload" : {
-                    "data" : {
-                        "description" : {
-                            "en" : "<p>&nbsp;lorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsum</p>",
-                            "id" : "<p>&nbsp;lorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsumlorem ipsum lorem ipsum</p>"
-                        },
-                        "lift" : [ 
-                            {
-                                "count" : 2.0,
-                                "name" : "Passenger Lift",
-                                "serving" : "01-20"
-                            }, 
-                            {
-                                "count" : 2.0,
-                                "name" : "Low Zone",
-                                "serving" : "GF-10"
-                            }, 
-                            {
-                                "count" : 3.0,
-                                "name" : "Medium Zone",
-                                "serving" : "10-20"
-                            }
-                        ],
-                        "max_zone_per_floor" : 12.0,
-                        "occupancy_rate" : 90.86,
-                        "office_types" : [ 
-                            "Standard Office"
-                        ],
-                        "tower_condition" : "Available in Market",
-                        "tower_type" : "Strata & Lease",
-                        "fee" : {
-                            "full_rent" : 3.0,
-                            "full_sell" : 4.0
-                        },
-                        "monthly_rent_price" : 12345678.0,
-                        "year_renovation" : 2017.0,
-                        "commercial_terms" : {
-                            "sinking_fund" : 345677777.0,
-                            "deposit" : 3.0,
-                            "min_lease_term" : 12.0,
-                            "payment_term" : "Monthly",
-                            "phone_deposit" : 67892982482.0,
-                            "phone_installation" : 5678765455.0,
-                            "phone_international_deposit" : 2376232389.0,
-                            "service_charge" : 376543456.0
-                        },
-                        "facilities" : {
-                            "main_facilities" : [ 
-                                "Restaurant", 
-                                "Canteen", 
-                                "ATM"
-                            ],
-                            "other_facilities" : [ 
-                                "bbq_pit", 
-                                "access_card", 
-                                "basketball_court", 
-                                "atm_center", 
-                                "drug_store"
-                            ]
-                        },
-                        "floor_count" : 29.0,
-                        "internet" : [ 
-                            "CBN"
-                        ],
-                        "name" : "Tower Yummeh",
-                        "parking_terms" : [ 
-                            {
-                                "capacity" : 0.0,
-                                "price" : 0.0,
-                                "term" : "Free",
-                                "type" : "Free Parking"
-                            }, 
-                            {
-                                "term" : "Daily",
-                                "type" : "Unreserved Motorcycle Parking",
-                                "capacity" : 4.0,
-                                "count" : 0.0,
-                                "name" : "",
-                                "price" : 45000.0,
-                                "serving" : ""
-                            }, 
-                            {
-                                "count" : 0.0,
-                                "name" : "",
-                                "price" : 4565555.0,
-                                "serving" : "",
-                                "term" : "Bi Weekly",
-                                "type" : "Reserved Overnight Car Parking",
-                                "capacity" : 4.0
-                            }
-                        ],
-                        "average_floor_plate" : 120.0,
-                        "fire_safety" : {
-                            "heat_detector" : true,
-                            "smoke_detector" : false,
-                            "sprinkler" : false
-                        },
-                        "land_size" : 12349.0,
-                        "certificate" : "AJB",
-                        "commission" : {
-                            "rent" : 5.0,
-                            "sell" : 3.0
-                        },
-                        "office_hours" : {
-                            "available_24h" : true,
-                            "saturday" : {
-                                "closing_hour" : "",
-                                "is_open" : false,
-                                "opening_hour" : ""
-                            },
-                            "sunday" : {
-                                "closing_hour" : "",
-                                "is_open" : false,
-                                "opening_hour" : ""
-                            },
-                            "weekday" : {
-                                "closing_hour" : "20:37",
-                                "is_open" : true,
-                                "opening_hour" : "13:47"
-                            }
-                        },
-                        "parking" : {
-                            "basement_level" : 45.0,
-                            "number_of_parking_lot" : 67.0,
-                            "tower_parking_ratio" : "1 : 100"
-                        },
-                        "toilet" : {
-                            "executive_toilet" : 13.0,
-                            "female_cubicle" : 13.0,
-                            "male_cubicle" : 12.0,
-                            "male_urinal" : 12.0
-                        },
-                        "electricity" : {
-                            "options" : {
-                                "office_hour_charge" : {
-                                    "ac" : {
-                                        "price" : 73617383.0,
-                                        "type" : "Separately Metered"
-                                    },
-                                    "lighting" : {
-                                        "price" : 73617383.0,
-                                        "type" : "Inclusive"
-                                    }
-                                },
-                                "overtime_charge" : {
-                                    "public_area" : [ 
-                                        {
-                                            "price" : 51561569.0,
-                                            "type" : "Per Hour Per Half Floor"
-                                        }, 
-                                        {
-                                            "price" : 61636367.0,
-                                            "type" : "Per Hour Per SQM"
-                                        }
-                                    ],
-                                    "ac" : [ 
-                                        {
-                                            "price" : 372736287.0,
-                                            "type" : "Separately Metered"
-                                        }, 
-                                        {
-                                            "price" : 37736726.0,
-                                            "type" : "Per Hour Per Tenant"
-                                        }
-                                    ],
-                                    "lighting" : [ 
-                                        {
-                                            "type" : "Separately Metered",
-                                            "price" : 16353613.0
-                                        }, 
-                                        {
-                                            "price" : 13536535.0,
-                                            "type" : "Per Hour Per Half Floor"
-                                        }
-                                    ]
-                                }
-                            },
-                            "special_request" : "lorem ipsum dolor sit amet lorem ipsum dolor sit ametlorem ipsum dolor sit amet lorem ipsum dolor sit ametlorem ipsum dolor sit amet lorem ipsum dolor sit ametlorem ipsum dolor sit amet lorem ipsum dolor sit ametlorem ipsum dolor sit amet lorem ipsum dolor sit ametlorem ipsum dolor sit amet lorem ipsum dolor sit ametlorem ipsum dolor sit amet lorem ipsum dolor sit ametlorem ipsum dolor sit amet lorem ipsum dolor sit ametlorem ipsum dolor sit amet lorem ipsum dolor sit ametlorem ipsum dolor sit amet lorem ipsum dolor sit amet"
-                        },
-                        "sell_price" : 423457.0,
-                        "semi_gross_area" : 12390.98,
-                        "tower_grade" : "Premium",
-                        "ceiling_height" : 3.0,
-                        "complex" : {
-                            "id" : "5d79fe213a3c5f709521770f",
-                            "name" : "Smart Office"
-                        },
-                        "power_line" : {
-                            "backup" : 87.0,
-                            "primary" : 121313.0
-                        },
-                        "year_completion" : 2012.0
+                "lift" : [ 
+                    {
+                        "count" : 2.0,
+                        "name" : "Passenger Lift",
+                        "serving" : "01-20"
+                    }, 
+                    {
+                        "count" : 2.0,
+                        "name" : "Low Zone",
+                        "serving" : "GF-10"
+                    }, 
+                    {
+                        "count" : 3.0,
+                        "name" : "Medium Zone",
+                        "serving" : "10-20"
                     }
-                }
-            },
-            "expect" : {
-                "status_code" : 201,
-                "headers" : null,
-                "evaluate" : []
-            },
-            "pipeline" : {
-                "cache" : true,
-                "cache_as" : "auth",
-                "on_failure" : "exit"
+                ],
+                "max_zone_per_floor" : 12.0,
+                "occupancy_rate" : 90.86,
+                "office_types" : [ 
+                    "Standard Office"
+                ],
+                "tower_condition" : "Available in Market",
+                "tower_type" : "Strata & Lease",
+                "fee" : {
+                    "full_rent" : 3.0,
+                    "full_sell" : 4.0
+                },
+                "monthly_rent_price" : 12345678.0,
+                "year_renovation" : 2017.0,
+                "commercial_terms" : {
+                    "sinking_fund" : 345677777.0,
+                    "deposit" : 3.0,
+                    "min_lease_term" : 12.0,
+                    "payment_term" : "Monthly",
+                    "phone_deposit" : 67892982482.0,
+                    "phone_installation" : 5678765455.0,
+                    "phone_international_deposit" : 2376232389.0,
+                    "service_charge" : 376543456.0
+                },
+                "facilities" : {
+                    "main_facilities" : [ 
+                        "Restaurant", 
+                        "Canteen", 
+                        "ATM"
+                    ],
+                    "other_facilities" : [ 
+                        "bbq_pit", 
+                        "access_card", 
+                        "basketball_court", 
+                        "atm_center", 
+                        "drug_store"
+                    ]
+                },
+                "floor_count" : 29.0,
+                "internet" : [ 
+                    "CBN"
+                ],
+                "name" : "Tower Yummeh",
+                "parking_terms" : [ 
+                    {
+                        "capacity" : 0.0,
+                        "price" : 0.0,
+                        "term" : "Free",
+                        "type" : "Free Parking"
+                    }, 
+                    {
+                        "term" : "Daily",
+                        "type" : "Unreserved Motorcycle Parking",
+                        "capacity" : 4.0,
+                        "count" : 0.0,
+                        "name" : "",
+                        "price" : 45000.0,
+                        "serving" : ""
+                    }, 
+                    {
+                        "count" : 0.0,
+                        "name" : "",
+                        "price" : 4565555.0,
+                        "serving" : "",
+                        "term" : "Bi Weekly",
+                        "type" : "Reserved Overnight Car Parking",
+                        "capacity" : 4.0
+                    }
+                ],
+                "average_floor_plate" : 120.0,
+                "fire_safety" : {
+                    "heat_detector" : true,
+                    "smoke_detector" : false,
+                    "sprinkler" : false
+                },
+                "land_size" : 12349.0,
+                "certificate" : "AJB",
+                "commission" : {
+                    "rent" : 5.0,
+                    "sell" : 3.0
+                },
+                "office_hours" : {
+                    "available_24h" : true,
+                    "saturday" : {
+                        "closing_hour" : "",
+                        "is_open" : false,
+                        "opening_hour" : ""
+                    },
+                    "sunday" : {
+                        "closing_hour" : "",
+                        "is_open" : false,
+                        "opening_hour" : ""
+                    },
+                    "weekday" : {
+                        "closing_hour" : "20:37",
+                        "is_open" : true,
+                        "opening_hour" : "13:47"
+                    }
+                },
+                "parking" : {
+                    "basement_level" : 45.0,
+                    "number_of_parking_lot" : 67.0,
+                    "tower_parking_ratio" : "1 : 100"
+                },
+                "toilet" : {
+                    "executive_toilet" : 13.0,
+                    "female_cubicle" : 13.0,
+                    "male_cubicle" : 12.0,
+                    "male_urinal" : 12.0
+                },
+                "electricity" : {
+                    "options" : {
+                        "office_hour_charge" : {
+                            "ac" : {
+                                "price" : 73617383.0,
+                                "type" : "Separately Metered"
+                            },
+                            "lighting" : {
+                                "price" : 73617383.0,
+                                "type" : "Inclusive"
+                            }
+                        },
+                        "overtime_charge" : {
+                            "public_area" : [ 
+                                {
+                                    "price" : 51561569.0,
+                                    "type" : "Per Hour Per Half Floor"
+                                }, 
+                                {
+                                    "price" : 61636367.0,
+                                    "type" : "Per Hour Per SQM"
+                                }
+                            ],
+                            "ac" : [ 
+                                {
+                                    "price" : 372736287.0,
+                                    "type" : "Separately Metered"
+                                }, 
+                                {
+                                    "price" : 37736726.0,
+                                    "type" : "Per Hour Per Tenant"
+                                }
+                            ],
+                            "lighting" : [ 
+                                {
+                                    "type" : "Separately Metered",
+                                    "price" : 16353613.0
+                                }, 
+                                {
+                                    "price" : 13536535.0,
+                                    "type" : "Per Hour Per Half Floor"
+                                }
+                            ]
+                        }
+                    },
+                    "special_request" : "lorem ipsum dolor sit amet lorem ipsum dolor sit ametlorem ipsum dolor sit amet lorem ipsum dolor sit ametlorem ipsum dolor sit amet lorem ipsum dolor sit ametlorem ipsum dolor sit amet lorem ipsum dolor sit ametlorem ipsum dolor sit amet lorem ipsum dolor sit ametlorem ipsum dolor sit amet lorem ipsum dolor sit ametlorem ipsum dolor sit amet lorem ipsum dolor sit ametlorem ipsum dolor sit amet lorem ipsum dolor sit ametlorem ipsum dolor sit amet lorem ipsum dolor sit ametlorem ipsum dolor sit amet lorem ipsum dolor sit amet"
+                },
+                "sell_price" : 423457.0,
+                "semi_gross_area" : 12390.98,
+                "tower_grade" : "Premium",
+                "ceiling_height" : 3.0,
+                "complex" : {
+                    "id" : "5d79fe213a3c5f709521770f",
+                    "name" : "Smart Office"
+                },
+                "power_line" : {
+                    "backup" : 87.0,
+                    "primary" : 121313.0
+                },
+                "year_completion" : 2012.0
             }
+        }
+    },
+    "expect" : {
+        "status_code" : 201,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "auth",
+        "on_failure" : "exit",
+        "delay": "0s"
+    }
 }

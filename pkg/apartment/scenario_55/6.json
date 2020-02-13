@@ -102,6 +102,7 @@
     "pipeline" : {
         "cache" : true,
         "cache_as" : "newTowerUp",
-        "on_failure" : "exit"
+        "on_failure" : "exit",
+        "delay": "0s"
     }
 }
