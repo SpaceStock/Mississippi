@@ -1,0 +1,21 @@
+{
+	"order" : 13,
+	"name" : "Verify Discovery Tower",
+	"description" : "",
+	"request" : {
+		"url" : "https://staging-web.spacestock.com/api/discovery/1.0/tower/{newTowerUp.data.id}",
+		"method" : "GET",
+		"headers" : null,
+		"payload" : null
+	},
+	"expect" : {
+		"status_code" : 200,
+		"headers" : null,
+		"evaluate" : [ ]
+	},
+	"pipeline" : {
+		"cache" : true,
+		"cache_as" : "",
+		"on_failure" : "exit"
+	}
+}

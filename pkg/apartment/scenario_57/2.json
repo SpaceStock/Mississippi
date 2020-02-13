@@ -1,0 +1,78 @@
+{
+    "order" : 2,
+    "name" : "Create Inquiry",
+    "description" : "",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/1.1/inquiries",
+        "method" : "POST",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data" : {
+                "channel" : "Web Form",
+                "interests" : [ 
+                    {
+                        "category" : "Apartment",
+                        "complex" : {
+                            "id" : "5dbaae2b31668f31112abdef",
+                            "name" : "Mayora Jaya",
+                            "area" : [ 
+                                "JAKARTA SELATAN"
+                            ]
+                        },
+                        "tower" : {
+                            "id" : "5dd4da5669645d367a41010c",
+                            "name" : "Turqouise Land"
+                        },
+                        "unit" : {
+                            "number" : "TQ-002",
+                            "size" : 120.0,
+                            "type" : "4BR+",
+                            "code" : "JAYA40004",
+                            "id" : "5dd4e33b69645d367a410116"
+                        }
+                    }
+                ],
+                "preference" : {
+                    "unit_size" : 40.0,
+                    "unit_type" : "studio",
+                    "area" : [ 
+                        "Jakarta Selatan"
+                    ],
+                    "building_size" : {},
+                    "land_size" : {}
+                },
+                "requester_name" : "Auto Assign Marketing Agent",
+                "type" : [ 
+                    "Buy"
+                ],
+                "budget" : {
+                    "max" : 1234567000.0
+                },
+                "category" : [ 
+                    "Apartment"
+                ],
+                "requester_organization" : "",
+                "requester_phone" : "6285861961085",
+                "required_at" : "Immediately",
+                "requester_email" : "siti.aisyah@spacestock.com",
+                "requester_message" : "ok"
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 201,
+        "headers" : null,
+        "evaluate" : [ 
+            "data.state === 'Asigned'",
+            "data.administration.assignee_id === 'janggala.one@spacestock.com'"
+        ]
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "inqCreated",
+        "on_failure" : "exit",
+        "delay": "0s"
+    }
+}

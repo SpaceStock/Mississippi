@@ -1,0 +1,146 @@
+{
+    "order" : 2,
+    "name" : "Create Unit 1",
+    "description" : "",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/1.0/complex/apartment/5d6cc03278348f309a8cb30f/tower/5d611c2de7ae43ccb6f85fe3/unit",
+        "method" : "POST",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data" : {
+                "attributes" : {
+                    "condition" : "Staged",
+                    "price_rent" : 1200000.0,
+                    "unit_no" : "MER-07",
+                    "zone" : "Low",
+                    "ownership" : "Secondary",
+                    "pic" : "5d626ee586b640fdb4c7d86e",
+                    "views" : [ 
+                        "Sea"
+                    ],
+                    "bathroom" : 1.0,
+                    "listing_type" : "Rent & Sell",
+                    "minimum_lease_term" : 6.0,
+                    "price_rent_yearly" : 12500000.0,
+                    "web_price" : null,
+                    "amenities" : [ 
+                        "Kitchen Set", 
+                        "Dining Table", 
+                        "Refrigerator", 
+                        "Oven", 
+                        "Microwave", 
+                        "Gas Stove", 
+                        "Electric Stove", 
+                        "Sofa"
+                    ],
+                    "complex_id" : "5d6cc03278348f309a8cb30f",
+                    "fee_component" : [ 
+                        {
+                            "for" : "Rent",
+                            "from" : "price_rent",
+                            "percentage" : 3.0
+                        }, 
+                        {
+                            "for" : "Sell",
+                            "from" : "price_sell",
+                            "percentage" : 5.0
+                        }
+                    ],
+                    "other_pricing" : "[]",
+                    "size" : "60",
+                    "type" : "2BR",
+                    "facing" : [ 
+                        "South West"
+                    ],
+                    "internal_agent_email" : "singa.satu@spacestock.com",
+                    "pic_name" : "Ellie Vidya",
+                    "sell_comm" : 2.4,
+                    "rent_comm_type" : "Full In Advance",
+                    "service_type" : "Signature",
+                    "other_rooms" : [ 
+                        "None"
+                    ],
+                    "pic_type" : "Owner",
+                    "price_sell" : 523000000.0,
+                    "rent_comm" : 1.4,
+                    "installment" : null,
+                    "certificate" : "PPJB",
+                    "images" : {
+                        "video_link" : null,
+                        "images_360" : null,
+                        "images_brochure" : null,
+                        "images_exterior" : [ 
+                            {
+                                "priority" : 1.0,
+                                "url" : "building/009",
+                                "alternate_text" : "Living Room"
+                            }, 
+                            {
+                                "alternate_text" : "Master Bedroom",
+                                "priority" : 3.0,
+                                "url" : "building/002"
+                            }, 
+                            {
+                                "alternate_text" : "Master Bathroom",
+                                "priority" : 3.0,
+                                "url" : "building/002"
+                            }, 
+                            {
+                                "alternate_text" : "Bedroom",
+                                "priority" : 3.0,
+                                "url" : "building/002"
+                            }, 
+                            {
+                                "url" : "building/003",
+                                "alternate_text" : "Kitchen",
+                                "priority" : 3.0
+                            }
+                        ],
+                        "images_floorplan" : null,
+                        "images_interior" : [ 
+                            {
+                                "alternate_text" : "Living Room",
+                                "priority" : 1.0,
+                                "url" : "building/204"
+                            }, 
+                            {
+                                "alternate_text" : "Master Bedroom",
+                                "priority" : 3.0,
+                                "url" : "building/205"
+                            }, 
+                            {
+                                "alternate_text" : "Master Bathroom",
+                                "priority" : 3.0,
+                                "url" : "building/201"
+                            }, 
+                            {
+                                "alternate_text" : "Bedroom",
+                                "priority" : 3.0,
+                                "url" : "building/204"
+                            }, 
+                            {
+                                "alternate_text" : "Kitchen",
+                                "priority" : 3.0,
+                                "url" : "building/204"
+                            }
+                        ]
+                    },
+                    "tower_id" : "5d611c2de7ae43ccb6f85fe3"
+                }
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 201,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : false,
+        "cache_as" : "",
+        "on_failure" : "exit",
+        "delay": "0s"
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "order" : 2,
+    "name" : "User able to Filter Apartment Baru by \"Harga Tertinggi\"",
+    "description" : "As a User, able to Filter Apartment Baru by \"Harga Tertinggi\"",
+    "request" : {
+        "url" : "https://staging-web.spacestock.com/api/discovery/1.0/complex?size=12&page=1&sort=desc(price)&facilities=swimming_pool,tennis_court,restaurant,playground,mini_market,movie_theater,mini_golf,drug_store,bbq_pit,basketball_court,atm_center&listing_type=buy&tower_type=primary",
+        "method" : "GET",
+        "headers" : null,
+        "payload" : null
+    },
+    "expect" : {
+        "status_code" : 200,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "",
+        "on_failure" : "exit",
+        "delay": "0s"
+    }
+}

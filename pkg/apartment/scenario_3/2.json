@@ -1,0 +1,33 @@
+{
+    "order" : 2,
+    "name" : "Create Contact ",
+    "description" : "",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/contact",
+        "method" : "POST",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data" : {
+                "office_name" : "Indie Group Property",
+                "contact_notes" : "Nomor lain hubungi +628810121399",
+                "mobile_phone" : "+6284123000010",
+                "office_phone" : "+6221992120",
+                "title" : "Mister",
+                "name" : "Juan Quinto"
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 201,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : false,
+        "cache_as" : "",
+        "on_failure" : "exit",
+        "delay": "0s"
+    }
+}

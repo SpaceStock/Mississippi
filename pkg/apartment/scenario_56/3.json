@@ -1,0 +1,28 @@
+{
+    "order" : 3,
+    "name" : "NoContinuation",
+    "description" : "",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/1.0/inquiries/{inqCreated.data.id}/discontinue",
+        "method" : "POST",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data" : {
+                "discontinue_reason" : "test discontinue"
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 200,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "",
+        "on_failure" : "exit",
+        "delay": "0s"
+    }
+}

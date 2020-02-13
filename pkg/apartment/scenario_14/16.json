@@ -1,0 +1,50 @@
+{
+    "order" : 16,
+    "name" : "Update State 6 (Booking to Deal)",
+    "description" : "",
+    "request" : {
+        "url" : "xhttps://stg-satpam.spacestock.com/1.0/inquiries/{inqcreated.data.id}/next?branch.id=5d6325dff47e63d3eaa78929&branch.assignee_id=janggala.one@spacestock.com",
+        "method" : "POST",
+        "headers" : {
+            "Authorization" : "{authMark.idToken}"
+        },
+        "payload" : {
+            "data" : {
+                "deal" : {
+                    "payment" : {
+                        "installment" : "",
+                        "method" : "KPR",
+                        "partner" : "BCA",
+                        "tenor" : 48.0
+                    },
+                    "price" : 525000000.0,
+                    "unit" : {
+                        "code" : "UX01FA",
+                        "id" : "UNIT-1",
+                        "number" : "10A",
+                        "size" : "48",
+                        "type" : "2BR"
+                    },
+                    "date" : 1565947398.0,
+                    "flags" : {
+                        "AJB" : false,
+                        "PPJB" : true
+                    }
+                }
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 200,
+        "headers" : null,
+        "evaluate" : [ 
+            "data.state === 'Deal'"
+        ]
+    },
+    "pipeline" : {
+        "cache" : false,
+        "cache_as" : "",
+        "on_failure" : "exit",
+        "delay": "0s"
+    }
+}

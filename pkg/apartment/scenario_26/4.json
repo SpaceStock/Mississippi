@@ -1,0 +1,22 @@
+{
+    "order" : 4,
+    "name" : "User able to filter price only field maximum buy apartement",
+    "description" : "As a User, able to Filter Price only Field Maximum Buy Apartment",
+    "request" : {
+        "url" : "https://staging-web.spacestock.com/api/discovery/1.0/complex?size=12&page=1&listing_type=buy&price=range(1000000000000,1000000000000)",
+        "method" : "GET",
+        "headers" : null,
+        "payload" : null
+    },
+    "expect" : {
+        "status_code" : 200,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "",
+        "on_failure" : "exit",
+        "delay": "0s"
+    }
+}

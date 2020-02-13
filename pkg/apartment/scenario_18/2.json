@@ -1,0 +1,22 @@
+{
+    "order" : 2,
+    "name" : "mengambil apartemen",
+    "description" : "mengambil salah satu list di apartemen",
+    "request" : {
+        "url" : "https://spacestock.com/api/discovery/1.0/complex",
+        "method" : "get",
+        "headers" : null,
+        "payload" : null
+    },
+    "expect" : {
+        "status_code" : 200,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "",
+        "on_failure" : "exit",
+        "delay": "0s"
+    }
+}

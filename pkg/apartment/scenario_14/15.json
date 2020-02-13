@@ -1,0 +1,51 @@
+{
+    "order" : 15,
+    "name" : "Update State 5 (Offered to Booking)",
+    "description" : "",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/1.0/inquiries/{inqcreated.data.id}/next?branch.id=5d6325dff47e63d3eaa78929&branch.assignee_id=janggala.one@spacestock.com",
+        "method" : "POST",
+        "headers" : {
+            "Authorization" : "{authMark.idToken}"
+        },
+        "payload" : {
+            "data" : {
+                "booking" : {
+                    "payment" : {
+                        "method" : "KPR",
+                        "partner" : "BCA",
+                        "tenor" : 48.0,
+                        "installment" : ""
+                    },
+                    "price" : 525000000.0,
+                    "unit" : {
+                        "type" : "2BR",
+                        "code" : "UX01FA",
+                        "id" : "UNIT-1",
+                        "number" : "10A",
+                        "size" : "48"
+                    },
+                    "date" : 1565947398.0,
+                    "flags" : {
+                        "AJB" : false,
+                        "PPJB" : true
+                    },
+                    "is_brokered" : false
+                }
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 200,
+        "headers" : null,
+        "evaluate" : [ 
+            "data.state === 'Booked'"
+        ]
+    },
+    "pipeline" : {
+        "cache" : false,
+        "cache_as" : "",
+        "on_failure" : "exit",
+        "delay": "0s"
+    }
+}

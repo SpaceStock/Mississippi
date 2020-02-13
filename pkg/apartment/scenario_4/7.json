@@ -1,0 +1,149 @@
+{
+    "order" : 7,
+    "name" : "Create Unit 6",
+    "description" : "",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/1.0/complex/apartment/5d6cc03278348f309a8cb30f/tower/5d611c2de7ae43ccb6f85fe3/unit",
+        "method" : "POST",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data" : {
+                "attributes" : {
+                    "minimum_lease_term" : 0.0,
+                    "pic" : "5d626f1886b640fdb4c7d86f",
+                    "pic_name" : "Farhan Unggul",
+                    "zone" : "Mid",
+                    "condition" : "Standard",
+                    "facing" : [ 
+                        "East"
+                    ],
+                    "rent_comm" : 0.0,
+                    "type" : "3BR",
+                    "views" : [ 
+                        "Lake"
+                    ],
+                    "amenities" : [ 
+                        "Kitchen Set", 
+                        "Dining Table", 
+                        "Refrigerator", 
+                        "Oven", 
+                        "Microwave", 
+                        "Gas Stove", 
+                        "Electric Stove", 
+                        "Sofa", 
+                        "Bed", 
+                        "TV", 
+                        "Wardrobe", 
+                        "Washing Machine", 
+                        "Drying Machine", 
+                        "AC", 
+                        "Water Heater"
+                    ],
+                    "other_rooms" : [ 
+                        "None"
+                    ],
+                    "price_rent_yearly" : 55000000.0,
+                    "sell_comm" : 2.4,
+                    "certificate" : "HGB",
+                    "bathroom" : 3.0,
+                    "complex_id" : "5d6cc03278348f309a8cb30f",
+                    "fee_component" : [ 
+                        {
+                            "for" : "Rent",
+                            "from" : "price_rent",
+                            "percentage" : 3.0
+                        }, 
+                        {
+                            "for" : "Sell",
+                            "from" : "price_sell",
+                            "percentage" : 5.0
+                        }
+                    ],
+                    "internal_agent_email" : "singa.satu@spacestock.com",
+                    "other_pricing" : "[]",
+                    "listing_type" : "Sell",
+                    "price_rent" : 5000000.0,
+                    "price_sell" : 723000000.0,
+                    "size" : "76.5",
+                    "unit_no" : "MER-43",
+                    "images" : {
+                        "images_interior" : [ 
+                            {
+                                "alternate_text" : "Living Room",
+                                "priority" : 1.0,
+                                "url" : "building/203"
+                            }, 
+                            {
+                                "alternate_text" : "Master Bedroom",
+                                "priority" : 3.0,
+                                "url" : "building/201"
+                            }, 
+                            {
+                                "alternate_text" : "Master Bathroom",
+                                "priority" : 3.0,
+                                "url" : "building/204"
+                            }, 
+                            {
+                                "alternate_text" : "Bedroom",
+                                "priority" : 3.0,
+                                "url" : "building/202"
+                            }, 
+                            {
+                                "alternate_text" : "Kitchen",
+                                "priority" : 3.0,
+                                "url" : "building/205"
+                            }
+                        ],
+                        "video_link" : null,
+                        "images_360" : null,
+                        "images_brochure" : null,
+                        "images_exterior" : [ 
+                            {
+                                "alternate_text" : "Living Room",
+                                "priority" : 1.0,
+                                "url" : "building/005"
+                            }, 
+                            {
+                                "alternate_text" : "Master Bedroom",
+                                "priority" : 3.0,
+                                "url" : "building/001"
+                            }, 
+                            {
+                                "alternate_text" : "Master Bathroom",
+                                "priority" : 3.0,
+                                "url" : "building/009"
+                            }, 
+                            {
+                                "alternate_text" : "Bedroom",
+                                "priority" : 3.0,
+                                "url" : "building/001"
+                            }, 
+                            {
+                                "alternate_text" : "Kitchen",
+                                "priority" : 3.0,
+                                "url" : "building/009"
+                            }
+                        ],
+                        "images_floorplan" : null
+                    },
+                    "ownership" : "Secondary",
+                    "pic_type" : "Owner",
+                    "tower_id" : "5d611c2de7ae43ccb6f85fe3"
+                }
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 201,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : false,
+        "cache_as" : "",
+        "on_failure" : "exit",
+        "delay": "0s"
+    }
+}

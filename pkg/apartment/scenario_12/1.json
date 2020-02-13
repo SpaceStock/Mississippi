@@ -1,0 +1,35 @@
+{
+    "order" : 1,
+    "name" : "Notify Email + Attachment",
+    "description" : "This will send email to \"recipient\" along with an attachment",
+    "request" : {
+        "url" : "http://ec2-13-229-115-168.ap-southeast-1.compute.amazonaws.com:4151/pub?topic=notify.email",
+        "method" : "POST",
+        "headers" : null,
+        "payload" : {
+            "attachments" : [ 
+                {
+                    "content" : "VGhpcztUaGF0O1RoZXJlOzs7Ow0KOzs7Ozs7DQo=",
+                    "filename" : "report.csv",
+                    "name" : "Report",
+                    "type" : "text/csv"
+                }
+            ],
+            "content" : "This is attachment",
+            "recipient" : "robin.bastian@spacestock.com",
+            "sender" : "",
+            "subject" : "Attachment Test"
+        }
+    },
+    "expect" : {
+        "status_code" : 200,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : false,
+        "cache_as" : "",
+        "on_failure" : "exit",
+        "delay": "0s"
+    }
+}

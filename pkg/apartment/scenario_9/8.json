@@ -1,0 +1,24 @@
+{
+    "order" : 8,
+    "name" : "Get All Residential Contact",
+    "description" : "",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/contact?category=Residential",
+        "method" : "GET",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : null
+    },
+    "expect" : {
+        "status_code" : 200,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : false,
+        "cache_as" : "",
+        "on_failure" : "exit",
+        "delay": "0s"
+    }
+}

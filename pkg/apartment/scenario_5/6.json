@@ -1,0 +1,52 @@
+{
+    "order" : 6,
+    "name" : "Reject",
+    "description" : "",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/1.0/inquiries/{inqcreated.data.id}/reject?branch.id=5d6325dff47e63d3eaa78929&branch.assignee_id=matt1@spacestock.com",
+        "method" : "POST",
+        "headers" : {
+            "Authorization" : "{authMark.idToken}"
+        },
+        "payload" : {
+            "data" : {
+                "administration" : {
+                    "branch_candidates" : [ 
+                        {
+                            "rejected" : true,
+                            "id" : "5d6325dff47e63d3eaa78929",
+                            "name" : "Branch Mataram",
+                            "priority" : 1.0
+                        }, 
+                        {
+                            "id" : "5d63b76ef47e63d3eaa7892a",
+                            "name" : "Branch Singasari",
+                            "priority" : 2.0,
+                            "rejected" : false
+                        }
+                    ]
+                },
+                "branch" : {
+                    "assignee_id" : "matt1@spacestock.com",
+                    "assignee_name" : "Mataram Satu",
+                    "id" : "5d6325dff47e63d3eaa78929",
+                    "name" : "Branch Mataram"
+                },
+                "state" : "Assigned"
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 200.0,
+        "headers" : null,
+        "evaluate" : [ 
+            "data.state === 'Open'"
+        ]
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "",
+        "on_failure" : "exit",
+        "delay": "0s"
+    }
+}

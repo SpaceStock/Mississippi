@@ -1,0 +1,147 @@
+{
+    "order" : 8,
+    "name" : "Create Unit 7",
+    "description" : "",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/1.0/complex/apartment/5d6cc03278348f309a8cb30f/tower/5d611c2de7ae43ccb6f85fe3/unit",
+        "method" : "POST",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data" : {
+                "attributes" : {
+                    "images" : {
+                        "images_360" : null,
+                        "images_brochure" : null,
+                        "images_exterior" : [ 
+                            {
+                                "alternate_text" : "Living Room",
+                                "priority" : 1.0,
+                                "url" : "building/008"
+                            }, 
+                            {
+                                "alternate_text" : "Master Bedroom",
+                                "priority" : 3.0,
+                                "url" : "building/002"
+                            }, 
+                            {
+                                "alternate_text" : "Master Bathroom",
+                                "priority" : 3.0,
+                                "url" : "building/002"
+                            }, 
+                            {
+                                "alternate_text" : "Bedroom",
+                                "priority" : 3.0,
+                                "url" : "building/003"
+                            }, 
+                            {
+                                "alternate_text" : "Kitchen",
+                                "priority" : 3.0,
+                                "url" : "building/004"
+                            }
+                        ],
+                        "images_floorplan" : null,
+                        "images_interior" : [ 
+                            {
+                                "url" : "building/201",
+                                "alternate_text" : "Living Room",
+                                "priority" : 1.0
+                            }, 
+                            {
+                                "alternate_text" : "Master Bedroom",
+                                "priority" : 3.0,
+                                "url" : "building/201"
+                            }, 
+                            {
+                                "alternate_text" : "Master Bathroom",
+                                "priority" : 3.0,
+                                "url" : "building/204"
+                            }, 
+                            {
+                                "alternate_text" : "Bedroom",
+                                "priority" : 3.0,
+                                "url" : "building/203"
+                            }, 
+                            {
+                                "alternate_text" : "Kitchen",
+                                "priority" : 3.0,
+                                "url" : "building/202"
+                            }
+                        ],
+                        "video_link" : null
+                    },
+                    "listing_type" : "Sell",
+                    "other_pricing" : "[]",
+                    "other_rooms" : [ 
+                        "None"
+                    ],
+                    "tower_id" : "5d611c2de7ae43ccb6f85fe3",
+                    "type" : "2BR",
+                    "unit_no" : "MER-92",
+                    "views" : [ 
+                        "Sea"
+                    ],
+                    "amenities" : [ 
+                        "Kitchen Set", 
+                        "Dining Table", 
+                        "Refrigerator", 
+                        "Oven", 
+                        "Microwave", 
+                        "Gas Stove", 
+                        "Electric Stove", 
+                        "Sofa", 
+                        "Bed", 
+                        "TV", 
+                        "Wardrobe", 
+                        "Washing Machine", 
+                        "Drying Machine", 
+                        "AC", 
+                        "Water Heater"
+                    ],
+                    "facing" : [ 
+                        "South West"
+                    ],
+                    "ownership" : "Secondary",
+                    "pic" : "5d626f1886b640fdb4c7d86f",
+                    "certificate" : "HGB",
+                    "complex_id" : "5d6cc03278348f309a8cb30f",
+                    "fee_component" : [ 
+                        {
+                            "for" : "Rent",
+                            "from" : "price_rent",
+                            "percentage" : 3.0
+                        }, 
+                        {
+                            "for" : "Sell",
+                            "from" : "price_sell",
+                            "percentage" : 5.0
+                        }
+                    ],
+                    "internal_agent_email" : "singa.satu@spacestock.com",
+                    "pic_name" : "Farhan Unggul",
+                    "pic_type" : "Owner",
+                    "price_sell" : 723000000.0,
+                    "rent_comm" : 0.0,
+                    "sell_comm" : 2.4,
+                    "bathroom" : 1.0,
+                    "condition" : "Semi Furnished",
+                    "minimum_lease_term" : 0.0,
+                    "size" : "50",
+                    "zone" : "High"
+                }
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 201,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : false,
+        "cache_as" : "",
+        "on_failure" : "exit",
+        "delay": "0s"
+    }
+}

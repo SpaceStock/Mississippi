@@ -1,0 +1,36 @@
+{
+    "order" : 1,
+    "name" : "Notify Email + Attachment [Dupe From Case 1]",
+    "description" : "This will send email to \"recipient\" along with an attachment",
+    "request" : {
+        "url" : "http://ec2-13-229-115-168.ap-southeast-1.compute.amazonaws.com:4151/pub?topic=notify.email",
+        "method" : "POST",
+        "headers" : null,
+        "payload" : {
+            "subject" : "Weekly report area for housing segment",
+            "attachments" : [ 
+                {
+                    "name" : "ReportHousingArea-2019-09-18.csv",
+                    "type" : "text/csv",
+                    "filename" : "ReportHousingArea-2019-09-18.csv",
+                    "content_id" : "ReportHousingArea-2019-09-18.csv",
+                    "content" : "Q29tcGxleCBOYW1lLEFyZWEsQ29tcGxleElEClBlcnVtYWhhbiBTdWthaGF0aSwsNWQ3NzY3YTlmODEwYTIxZWQ3OGQyNjBkCktlbmNhbmEgUmVzaWRlbmNlLCw1ZDc3NjhjY2Y4MTBhMjFlZDc4ZDI2MTEKS29tcGxlayBHdWRhbmcgUGVsdXJ1LCw1ZDc4NmI0ZjU0N2JiMjYxYzUwNTExMmIKUGVydW1haGFuIENvbmRldCwsNWQ3ODZiZjA1NDdiYjI2MWM1MDUxMTJkClBlcnVtYWhhbiBDaWJ1YnVyIFRvd25ob3VzZSwsNWQ3ODc0ZTg1NDdiYjI2MWM1MDUxMTM1ClBlcnVtYWhhbiBLb21wYXMgSW5kYWggRXN0YXRlLCw1ZDc4Nzc1YTU0N2JiMjYxYzUwNTExM2YKUGVydW1haGFuIFRhbmFoIFNlcmVhbCwsNWQ3ODc4MTY1NDdiYjI2MWM1MDUxMTQxClBlcnVtYWhhbiBUYW1hbiBIYXJhcGFuIEluZGFoLCw1ZDc4N2E3NjU0N2JiMjYxYzUwNTExNDMKUGVydW1haGFuIEhheWFtIFd1cnVrLCw1ZDc4YmQ1MTU0N2JiMjYxYzUwNTExYTIKUHJlbWllciBNYW5zb24sLDVkNzlmZDI0ODM1ZjBjZGU3ZDdkZWUyNApWaW1hbGEgSGlsbHMsLDVkN2I1NDFhMDY1Y2EyZmYwZDI2NjlmOApTdXZhcm5hIFN1dGVyYSwsNWQ4MDVkZDhjNTVjYTVkYzc3NGUyZWE3ClNhbWFuYSBSZXNpZGVuY2UsLDVkODFkMzg0YzU1Y2E1ZGM3NzRlMmY1MQo="
+                }
+            ],
+            "content" : "Weekly Area Report",
+            "sender" : "",
+            "recipient" : "robin.bastian@spacestock.com"
+        }
+    },
+    "expect" : {
+        "status_code" : 200,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : false,
+        "cache_as" : "",
+        "on_failure" : "exit",
+        "delay": "0s"
+    }
+}

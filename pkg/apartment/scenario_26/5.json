@@ -1,0 +1,22 @@
+{
+    "order" : 5,
+    "name" : "",
+    "description" : "",
+    "request" : {
+        "url" : "",
+        "method" : "",
+        "headers" : null,
+        "payload" : null
+    },
+    "expect" : {
+        "status_code" : 200,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "",
+        "on_failure" : "exit",
+        "delay": "0s"
+    }
+}

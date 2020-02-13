@@ -1,0 +1,22 @@
+{
+    "order" : 12,
+    "name" : "Verify Data Discovery Complex",
+    "description" : "",
+    "request" : {
+        "url" : "https://staging-web.spacestock.com/api/discovery/1.0/complex/{newComplexup.data.id}",
+        "method" : "GET",
+        "headers" : null,
+        "payload" : null
+    },
+    "expect" : {
+        "status_code" : 200,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "",
+        "on_failure" : "exit",
+        "delay": "0s"
+    }
+}

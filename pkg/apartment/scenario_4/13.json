@@ -1,0 +1,140 @@
+{
+    "order" : 13,
+    "name" : "Create Unit 12",
+    "description" : "",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/1.0/complex/apartment/5d6cc03278348f309a8cb30f/tower/5d611c2de7ae43ccb6f85fe3/unit",
+        "method" : "POST",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data" : {
+                "attributes" : {
+                    "certificate" : "SHM",
+                    "images" : {
+                        "images_exterior" : [ 
+                            {
+                                "url" : "building/008",
+                                "alternate_text" : "Living Room",
+                                "priority" : 1.0
+                            }, 
+                            {
+                                "alternate_text" : "Master Bedroom",
+                                "priority" : 3.0,
+                                "url" : "building/009"
+                            }, 
+                            {
+                                "priority" : 3.0,
+                                "url" : "building/003",
+                                "alternate_text" : "Master Bathroom"
+                            }, 
+                            {
+                                "alternate_text" : "Bedroom",
+                                "priority" : 3.0,
+                                "url" : "building/004"
+                            }, 
+                            {
+                                "alternate_text" : "Kitchen",
+                                "priority" : 3.0,
+                                "url" : "building/005"
+                            }
+                        ],
+                        "images_floorplan" : null,
+                        "images_interior" : [ 
+                            {
+                                "alternate_text" : "Living Room",
+                                "priority" : 1.0,
+                                "url" : "building/202"
+                            }, 
+                            {
+                                "alternate_text" : "Master Bedroom",
+                                "priority" : 3.0,
+                                "url" : "building/203"
+                            }, 
+                            {
+                                "alternate_text" : "Master Bathroom",
+                                "priority" : 3.0,
+                                "url" : "building/202"
+                            }, 
+                            {
+                                "alternate_text" : "Bedroom",
+                                "priority" : 3.0,
+                                "url" : "building/203"
+                            }, 
+                            {
+                                "priority" : 3.0,
+                                "url" : "building/202",
+                                "alternate_text" : "Kitchen"
+                            }
+                        ],
+                        "video_link" : null,
+                        "images_360" : null,
+                        "images_brochure" : null
+                    },
+                    "pic_name" : "Aldira Zia",
+                    "views" : [ 
+                        "Lake"
+                    ],
+                    "other_pricing" : "[]",
+                    "ownership" : "Secondary",
+                    "amenities" : [ 
+                        "Sofa", 
+                        "Bed", 
+                        "TV", 
+                        "Wardrobe", 
+                        "Washing Machine", 
+                        "Drying Machine", 
+                        "AC", 
+                        "Water Heater"
+                    ],
+                    "bathroom" : 1.0,
+                    "fee_component" : [ 
+                        {
+                            "percentage" : 3.0,
+                            "for" : "Rent",
+                            "from" : "price_rent"
+                        }, 
+                        {
+                            "percentage" : 5.0,
+                            "for" : "Sell",
+                            "from" : "price_sell"
+                        }
+                    ],
+                    "internal_agent_email" : "singa.satu@spacestock.com",
+                    "listing_type" : "Sell",
+                    "minimum_lease_term" : 0.0,
+                    "pic" : "5d6269be86b640fdb4c7d869",
+                    "zone" : "High",
+                    "tower_id" : "5d611c2de7ae43ccb6f85fe3",
+                    "unit_no" : "MER-75",
+                    "complex_id" : "5d6cc03278348f309a8cb30f",
+                    "condition" : "Staged",
+                    "other_rooms" : [ 
+                        "None"
+                    ],
+                    "rent_comm" : 0.0,
+                    "sell_comm" : 2.4,
+                    "size" : "30",
+                    "facing" : [ 
+                        "North"
+                    ],
+                    "pic_type" : "Agent",
+                    "price_sell" : 723000000.0,
+                    "type" : "1BR"
+                }
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 201,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : false,
+        "cache_as" : "",
+        "on_failure" : "exit",
+        "delay": "0s"
+    }
+}

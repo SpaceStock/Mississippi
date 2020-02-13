@@ -1,0 +1,54 @@
+{
+    "order" : 3,
+    "name" : "Update Inquiry Housing with Size",
+    "description" : "",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/1.0/inquiries/{inq.data.id}",
+        "method" : "PATCH",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data" : {
+                "category" : [ 
+                    "Housing"
+                ],
+                "channel" : "Web Form",
+                "requester_message" : "test",
+                "requester_phone" : "",
+                "required_at" : "4 Month",
+                "interests" : [],
+                "preference" : {
+                    "unit_size" : 48.0,
+                    "area" : [],
+                    "budget" : {
+                        "max" : null
+                    },
+                    "building_size" : {
+                        "max" : 100.0,
+                        "min" : 30.0
+                    },
+                    "land_size" : {
+                        "max" : 100.0,
+                        "min" : 30.0
+                    }
+                },
+                "requester_email" : "",
+                "requester_name" : "Aisyah",
+                "requester_organization" : "",
+                "type" : []
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 200,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : false,
+        "cache_as" : "inq",
+        "on_failure" : "exit",
+        "delay": "0s"
+    }
+}

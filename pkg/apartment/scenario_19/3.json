@@ -1,0 +1,55 @@
+{
+    "order" : 3,
+    "name" : "User able to inquiries apartments",
+    "description" : "As a User, I able to inquiries apartments",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/1.1/inquiries",
+        "method" : "POST",
+        "headers" : null,
+        "payload" : {
+            "data" : {
+                "requester_name" : "sdsds",
+                "requester_phone" : "1131313",
+                "preference" : {
+                    "area" : [ 
+                        "Jakarta Pusat", 
+                        "Tanah Abang", 
+                        "Karet Tengsin"
+                    ]
+                },
+                "requester_email" : "asasa@fsfsf.com",
+                "interests" : [ 
+                    {
+                        "tower" : {},
+                        "unit" : {},
+                        "complex" : {
+                            "id" : "5d7a16cb2c815a9a3f5dfb8f",
+                            "name" : "Geri Cokolat"
+                        }
+                    }
+                ],
+                "requester_message" : "sdsdsd",
+                "type" : [ 
+                    "Buy", 
+                    "Rent"
+                ],
+                "url_referrer" : "https://staging-web.spacestock.com/kompleks-apartemen/geri-cokolat-di-tanah-abang-jakarta-pusat-5d7a16cb2c815a9a3f5dfb8f",
+                "category" : [ 
+                    "Apartment"
+                ],
+                "channel" : "Web Form"
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 201,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : false,
+        "cache_as" : "",
+        "on_failure" : "exit",
+        "delay": "0s"
+    }
+}

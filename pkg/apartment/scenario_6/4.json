@@ -1,0 +1,78 @@
+{
+    "order" : 4,
+    "name" : "Create Unit",
+    "description" : "",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/1.0/complex/apartment/{newComplex.data.id}/tower/{newTower.data.id}/unit",
+        "method" : "POST",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data" : {
+                "attributes" : {
+                    "views" : [ 
+                        "City"
+                    ],
+                    "bathroom" : 3.0,
+                    "facing" : [ 
+                        "West", 
+                        "North"
+                    ],
+                    "other_rooms" : [ 
+                        "Maid Room"
+                    ],
+                    "pic_name" : "Harry Simanjuntak",
+                    "sell_comm" : 2.4,
+                    "complex_id" : "{newComplex.data.id}",
+                    "other_pricing" : [],
+                    "size" : "60.65",
+                    "type" : "3BR",
+                    "zone" : "High",
+                    "pic" : "5d626f4786b640fdb4c7d871",
+                    "pic_type" : "Representative",
+                    "tower_id" : "{newTower.data.id}",
+                    "amenities" : [ 
+                        "Kitchen Set", 
+                        "Dining Table", 
+                        "Refrigerator", 
+                        "Oven", 
+                        "Microwave", 
+                        "Gas Stove"
+                    ],
+                    "condition" : "Semi Furnished",
+                    "fee_component" : [ 
+                        {
+                            "for" : "Rent",
+                            "from" : "price_rent",
+                            "percentage" : 0.0
+                        }, 
+                        {
+                            "for" : "Sell",
+                            "from" : "price_sell",
+                            "percentage" : 5.0
+                        }
+                    ],
+                    "listing_type" : "Sell",
+                    "ownership" : "Secondary",
+                    "certificate" : "PPJB",
+                    "internal_agent_email" : "singa.satu@spacestock.com",
+                    "level" : "17",
+                    "price_sell" : 3125000000.0,
+                    "unit_no" : "ICE-67"
+                }
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 201,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "newUnit",
+        "on_failure" : "exit",
+        "delay": "0s"
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "order" : 5,
+    "name" : "User able to filter price and  all facilities",
+    "description" : "As a User, able to Filter price and All Facilities",
+    "request" : {
+        "url" : "https://staging-web.spacestock.com/api/discovery/1.0/complex?size=12&page=1&facilities=basketball_court,access_card,atm_center,bbq_pit,drug_store,function_hall,jogging_track,laundry,mini_golf,gym,mini_market,restaurant,salon,private_lift,sauna,soccer_field,super_market,playground,swimming_pool,tennis_court,movie_theater&listing_type=buy&price=range(200000000,25000000000)",
+        "method" : "GET",
+        "headers" : null,
+        "payload" : null
+    },
+    "expect" : {
+        "status_code" : 200,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "",
+        "on_failure" : "exit",
+        "delay": "0s"
+    }
+}

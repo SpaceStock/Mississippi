@@ -1,0 +1,54 @@
+{
+    "order" : 4,
+    "name" : "Create Inquiry Housing without Size ",
+    "description" : "",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/1.1/inquiries",
+        "method" : "POST",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data" : {
+                "category" : [ 
+                    "Housing"
+                ],
+                "channel" : "Web Form",
+                "requester_email" : "",
+                "requester_name" : "Aisyah",
+                "requester_phone" : "",
+                "interests" : [],
+                "preference" : {
+                    "building_size" : {
+                        "max" : 0.0,
+                        "min" : 0.0
+                    },
+                    "land_size" : {
+                        "max" : 0.0,
+                        "min" : 0.0
+                    },
+                    "unit_size" : 48.0,
+                    "area" : [],
+                    "budget" : {
+                        "max" : null
+                    }
+                },
+                "requester_message" : "test",
+                "requester_organization" : "",
+                "required_at" : "4 Month",
+                "type" : []
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 201,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "inq",
+        "on_failure" : "exit",
+        "delay": "0s"
+    }
+}

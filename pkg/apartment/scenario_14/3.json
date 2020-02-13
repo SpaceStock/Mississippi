@@ -1,0 +1,46 @@
+{
+    "order" : 3,
+    "name" : "Administer",
+    "description" : "",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/1.0/inquiries/{inqcreated.data.id}/administer",
+        "method" : "POST",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data" : {
+                "administration" : {
+                    "assignee_id" : "admin.inquiry@spacestock.com",
+                    "assignee_name" : "Admin Inquiry",
+                    "branch_candidates" : [ 
+                        {
+                            "name" : "Branch Mataram",
+                            "priority" : 1.0,
+                            "rejected" : false,
+                            "id" : "5d6325dff47e63d3eaa78929"
+                        }, 
+                        {
+                            "id" : "5d63b76ef47e63d3eaa7892a",
+                            "name" : "Branch Singasari",
+                            "priority" : 2.0,
+                            "rejected" : false
+                        }
+                    ]
+                },
+                "state" : "Open"
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 200,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : false,
+        "cache_as" : "",
+        "on_failure" : "exit",
+        "delay": "0s"
+    }
+}

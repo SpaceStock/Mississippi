@@ -1,0 +1,147 @@
+{
+    "order" : 9,
+    "name" : "Create Unit 8",
+    "description" : "",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/1.0/complex/apartment/5d6cc03278348f309a8cb30f/tower/5d611c2de7ae43ccb6f85fe3/unit",
+        "method" : "POST",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data" : {
+                "attributes" : {
+                    "facing" : [ 
+                        "South West"
+                    ],
+                    "other_rooms" : [ 
+                        "None"
+                    ],
+                    "pic_type" : "Owner",
+                    "price_sell" : 723000000.0,
+                    "tower_id" : "5d611c2de7ae43ccb6f85fe3",
+                    "type" : "2BR",
+                    "condition" : "Semi Furnished",
+                    "bathroom" : 1.0,
+                    "internal_agent_email" : "singa.satu@spacestock.com",
+                    "minimum_lease_term" : 0.0,
+                    "pic_name" : "Farhan Unggul",
+                    "amenities" : [ 
+                        "Kitchen Set", 
+                        "Dining Table", 
+                        "Refrigerator", 
+                        "Oven", 
+                        "Microwave", 
+                        "Gas Stove", 
+                        "Electric Stove", 
+                        "Sofa", 
+                        "Bed", 
+                        "TV", 
+                        "Wardrobe", 
+                        "Washing Machine", 
+                        "Drying Machine", 
+                        "AC", 
+                        "Water Heater"
+                    ],
+                    "images" : {
+                        "images_360" : null,
+                        "images_brochure" : null,
+                        "images_exterior" : [ 
+                            {
+                                "alternate_text" : "Living Room",
+                                "priority" : 1.0,
+                                "url" : "building/008"
+                            }, 
+                            {
+                                "priority" : 3.0,
+                                "url" : "building/002",
+                                "alternate_text" : "Master Bedroom"
+                            }, 
+                            {
+                                "alternate_text" : "Master Bathroom",
+                                "priority" : 3.0,
+                                "url" : "building/002"
+                            }, 
+                            {
+                                "alternate_text" : "Bedroom",
+                                "priority" : 3.0,
+                                "url" : "building/003"
+                            }, 
+                            {
+                                "alternate_text" : "Kitchen",
+                                "priority" : 3.0,
+                                "url" : "building/004"
+                            }
+                        ],
+                        "images_floorplan" : null,
+                        "images_interior" : [ 
+                            {
+                                "alternate_text" : "Living Room",
+                                "priority" : 1.0,
+                                "url" : "building/201"
+                            }, 
+                            {
+                                "url" : "building/201",
+                                "alternate_text" : "Master Bedroom",
+                                "priority" : 3.0
+                            }, 
+                            {
+                                "alternate_text" : "Master Bathroom",
+                                "priority" : 3.0,
+                                "url" : "building/204"
+                            }, 
+                            {
+                                "alternate_text" : "Bedroom",
+                                "priority" : 3.0,
+                                "url" : "building/203"
+                            }, 
+                            {
+                                "alternate_text" : "Kitchen",
+                                "priority" : 3.0,
+                                "url" : "building/202"
+                            }
+                        ],
+                        "video_link" : null
+                    },
+                    "pic" : "5d626f1886b640fdb4c7d86f",
+                    "rent_comm" : 0.0,
+                    "sell_comm" : 2.4,
+                    "unit_no" : "MER-21",
+                    "views" : [ 
+                        "Sea"
+                    ],
+                    "fee_component" : [ 
+                        {
+                            "for" : "Rent",
+                            "from" : "price_rent",
+                            "percentage" : 3.0
+                        }, 
+                        {
+                            "percentage" : 5.0,
+                            "for" : "Sell",
+                            "from" : "price_sell"
+                        }
+                    ],
+                    "complex_id" : "5d6cc03278348f309a8cb30f",
+                    "listing_type" : "Sell",
+                    "other_pricing" : "[]",
+                    "ownership" : "Secondary",
+                    "size" : "50",
+                    "zone" : "High",
+                    "certificate" : "HGB"
+                }
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 201,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : false,
+        "cache_as" : "",
+        "on_failure" : "exit",
+        "delay": "0s"
+    }
+}

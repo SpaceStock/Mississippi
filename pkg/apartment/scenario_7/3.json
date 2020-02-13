@@ -1,0 +1,71 @@
+{
+    "order" : 3,
+    "name" : "Add Unit Landed House Primary",
+    "description" : "",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/housing/writer/1.0/unittemplate",
+        "method" : "POST",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data" : {
+                "building_alias" : "Kenanga",
+                "complex" : {
+                    "id" : "5d609011dfdc436a9d394739",
+                    "name" : "Complex Bintang"
+                },
+                "nearest_protocol_road" : "Jalan Cipete Raya",
+                "bedroom" : 2.0,
+                "general_specification" : {
+                    "electricity" : "2500",
+                    "installation" : "baja",
+                    "lamp" : "smart lamp",
+                    "sanitation" : "washtafel, bathup, shower",
+                    "water" : "PDAM"
+                },
+                "land_size" : 70.0,
+                "building_specification" : {
+                    "roof" : "baja ringan",
+                    "roof_tile" : "genteng tanah liat",
+                    "window" : "kaca",
+                    "door" : "jati",
+                    "floor" : "marmer",
+                    "foundation" : "ok",
+                    "wall" : "marmer",
+                    "ceiling" : "ok",
+                    "paint" : "nippon",
+                    "roof_truss" : "baja ringan"
+                },
+                "parking_capacity" : 2.0,
+                "house_size" : 70.0,
+                "building_type" : "Tipe 80",
+                "certificate" : "SHM",
+                "cluster" : {
+                    "name" : "Libra",
+                    "id" : "5d609f47dfdc436a9d39473f"
+                },
+                "pricing" : [ 
+                    {
+                        "for" : "minimum_price",
+                        "term" : "minimum_price",
+                        "amount" : 1230000000.0
+                    }
+                ],
+                "stories" : 1.0,
+                "bathroom" : 1.0
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 201,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "",
+        "on_failure" : "exit",
+        "delay": "0s"
+    }
+}

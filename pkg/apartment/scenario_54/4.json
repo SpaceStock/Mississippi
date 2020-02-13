@@ -1,0 +1,77 @@
+{
+    "order" : 4,
+    "name" : "Admin able to add Secondary Unit",
+    "description" : "As a Admin able to Add Secondary Unit",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/1.0/complex/apartment/5dd130d5bd387b29ae73cec7/tower/5dd1415ebd387b29ae73cece/unit",
+        "method" : "POST",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data" : {
+                "attributes" : {
+                    "price_rent_yearly" : 35000000.0,
+                    "sell_comm" : 2.0,
+                    "tower_id" : "5dd1415ebd387b29ae73cece",
+                    "complex_id" : "5dd130d5bd387b29ae73cec7",
+                    "type" : "2BR",
+                    "size" : "35",
+                    "rent_comm_type" : "Following Tenant Payment",
+                    "unit_no" : "Unit25Nov19",
+                    "condition" : "Semi Furnished",
+                    "pic_name" : "Karina",
+                    "bathroom" : 1.0,
+                    "service_type" : "Regular",
+                    "price_sell" : 1260000000.0,
+                    "price_rent" : 3000000.0,
+                    "amenities" : [ 
+                        "Sofa", 
+                        "Kitchen Set", 
+                        "AC", 
+                        "TV", 
+                        "Oven", 
+                        "Microwave", 
+                        "Dining Table", 
+                        "Bed"
+                    ],
+                    "minimum_lease_term" : 6.0,
+                    "premium_listing" : false,
+                    "pic_type" : "Agent",
+                    "internal_agent_email" : "anna.liffey@spacestock.com",
+                    "fee_component" : [ 
+                        {
+                            "for" : "Rent",
+                            "from" : "price_rent",
+                            "percentage" : 3.0
+                        }, 
+                        {
+                            "percentage" : 1.0,
+                            "for" : "Sell",
+                            "from" : "price_sell"
+                        }
+                    ],
+                    "pic" : "5d6025d486b640fdb4c7d867",
+                    "listing_type" : "Rent & Sell",
+                    "certificate" : "AJB",
+                    "rent_comm" : 3.0,
+                    "ownership" : "Secondary",
+                    "include_scsf" : false,
+                    "other_pricing" : [],
+                    "zone" : "Mid"
+                }
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 201,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "unitSecon",
+        "on_failure" : "exit",
+        "delay": "0s"
+    }
+}

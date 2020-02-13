@@ -1,0 +1,142 @@
+{
+    "order" : 3,
+    "name" : "Create Unit 2",
+    "description" : "",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/1.0/complex/apartment/5d6cc03278348f309a8cb30f/tower/5d611c2de7ae43ccb6f85fe3/units",
+        "method" : "POST",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data" : {
+                "attributes" : {
+                    "certificate" : "HGB",
+                    "condition" : "Standard",
+                    "fee_component" : [ 
+                        {
+                            "from" : "price_rent",
+                            "percentage" : 3.0,
+                            "for" : "Rent"
+                        }, 
+                        {
+                            "for" : "Sell",
+                            "from" : "price_sell",
+                            "percentage" : 5.0
+                        }
+                    ],
+                    "images" : {
+                        "images_360" : null,
+                        "images_brochure" : null,
+                        "images_exterior" : [ 
+                            {
+                                "priority" : 1.0,
+                                "url" : "building/004",
+                                "alternate_text" : "Living Room"
+                            }, 
+                            {
+                                "alternate_text" : "Master Bedroom",
+                                "priority" : 3.0,
+                                "url" : "building/001"
+                            }, 
+                            {
+                                "alternate_text" : "Master Bathroom",
+                                "priority" : 3.0,
+                                "url" : "building/003"
+                            }, 
+                            {
+                                "alternate_text" : "Bedroom",
+                                "priority" : 3.0,
+                                "url" : "building/006"
+                            }, 
+                            {
+                                "alternate_text" : "Kitchen",
+                                "priority" : 3.0,
+                                "url" : "building/002"
+                            }
+                        ],
+                        "images_floorplan" : null,
+                        "images_interior" : [ 
+                            {
+                                "alternate_text" : "Living Room",
+                                "priority" : 1.0,
+                                "url" : "building/204"
+                            }, 
+                            {
+                                "url" : "building/203",
+                                "alternate_text" : "Master Bedroom",
+                                "priority" : 3.0
+                            }, 
+                            {
+                                "alternate_text" : "Master Bathroom",
+                                "priority" : 3.0,
+                                "url" : "building/204"
+                            }, 
+                            {
+                                "alternate_text" : "Bedroom",
+                                "priority" : 3.0,
+                                "url" : "building/203"
+                            }, 
+                            {
+                                "alternate_text" : "Kitchen",
+                                "priority" : 3.0,
+                                "url" : "building/201"
+                            }
+                        ],
+                        "video_link" : null
+                    },
+                    "pic_name" : "Farhan Unggul",
+                    "price_sell" : 723000000.0,
+                    "rent_comm_type" : "Following Tenant Payment",
+                    "size" : "30",
+                    "amenities" : [ 
+                        "Kitchen Set", 
+                        "Dining Table", 
+                        "Refrigerator", 
+                        "Washing Machine", 
+                        "Drying Machine", 
+                        "AC", 
+                        "Water Heater"
+                    ],
+                    "minimum_lease_term" : 12.0,
+                    "unit_no" : "MER-20",
+                    "sell_comm" : 2.4,
+                    "other_rooms" : [ 
+                        "None"
+                    ],
+                    "rent_comm" : 1.4,
+                    "pic" : "5d626f1886b640fdb4c7d86f",
+                    "price_rent" : 5000000.0,
+                    "type" : "Studio",
+                    "views" : [ 
+                        "Golf"
+                    ],
+                    "complex_id" : "5d6cc03278348f309a8cb30f",
+                    "facing" : [ 
+                        "North"
+                    ],
+                    "bathroom" : 1.0,
+                    "tower_id" : "5d611c2de7ae43ccb6f85fe3",
+                    "internal_agent_email" : "singa.satu@spacestock.com",
+                    "listing_type" : "Rent & Sell",
+                    "other_pricing" : "[]",
+                    "ownership" : "Secondary",
+                    "pic_type" : "Agent",
+                    "price_rent_yearly" : 55000000.0,
+                    "zone" : "High"
+                }
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 201,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : false,
+        "cache_as" : "",
+        "on_failure" : "exit",
+        "delay": "0s"
+    }
+}

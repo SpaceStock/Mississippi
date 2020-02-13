@@ -1,0 +1,22 @@
+{
+    "order" : 2,
+    "name" : "User able to filter apartments by \"Harga Terendah\"",
+    "description" : "As a User, able to filter apartments by \"Harga Terendah\"",
+    "request" : {
+        "url" : "https://staging-web.spacestock.com/api/discovery/1.0/complex?size=12&page=1&sort=asc(price)&listing_type=buy",
+        "method" : "GET",
+        "headers" : null,
+        "payload" : null
+    },
+    "expect" : {
+        "status_code" : 200,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "",
+        "on_failure" : "exit",
+        "delay": "0s"
+    }
+}

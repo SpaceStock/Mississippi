@@ -1,0 +1,114 @@
+{
+    "order" : 3,
+    "name" : "Admin able to Edit Tower 1942",
+    "description" : "As a Admin, able to Edit Tower 1942",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/1.0/complex/apartment/5dd130d5bd387b29ae73cec7/tower/{newComTower.data.id}",
+        "method" : "PATCH",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data" : {
+                "attributes" : {
+                    "category" : "Apartment",
+                    "completed_estimation_year" : 1459443600.0,
+                    "completion_year" : null,
+                    "create_at" : 1573994846.0,
+                    "description" : {
+                        "id" : "",
+                        "en" : ""
+                    },
+                    "renovation_year" : null,
+                    "service_charge" : 1300000.0,
+                    "building_type" : [ 
+                        "Developer Buy", 
+                        "Strata Buy", 
+                        "Developer Rent", 
+                        "Strata Rent"
+                    ],
+                    "construction_year" : null,
+                    "fee_component" : [ 
+                        {
+                            "for" : "Rent",
+                            "from" : "price_rent",
+                            "percentage" : 1.0
+                        }, 
+                        {
+                            "for" : "Sell",
+                            "from" : "price_sell",
+                            "percentage" : 1.0
+                        }
+                    ],
+                    "internet" : [ 
+                        "Indihome", 
+                        "Biznet"
+                    ],
+                    "is_leads_agent" : false,
+                    "lift" : [ 
+                        {
+                            "serving" : "",
+                            "count" : 10.0,
+                            "name" : "Passenger"
+                        }, 
+                        {
+                            "count" : 2.0,
+                            "name" : "Service",
+                            "serving" : ""
+                        }
+                    ],
+                    "sell_commission" : 4.0,
+                    "selling_point" : {
+                        "id" : [ 
+                            {
+                                "description" : "Kondisi Bagus, Seperti Baru, Fasilitas Lengkap",
+                                "title" : "Bagus title"
+                            }
+                        ]
+                    },
+                    "auto_description" : true,
+                    "floor_count" : 65.0,
+                    "name" : "Tower 1942 Update",
+                    "rent_commission" : 4.0,
+                    "unit_total" : 50.0,
+                    "create_by" : "anna.liffey@spacestock.com",
+                    "complex" : {
+                        "primary_area" : null,
+                        "address_city" : "JAKARTA PUSAT",
+                        "id" : "5dd130d5bd387b29ae73cec7",
+                        "name" : "Complex 17112019 updates"
+                    },
+                    "complex_id" : "5dd130d5bd387b29ae73cec7",
+                    "parking" : [ 
+                        {
+                            "capacity" : 1.0,
+                            "name" : "Car Parking",
+                            "payment_term" : "Quarterly",
+                            "price" : 300000.0,
+                            "type" : "Car"
+                        }, 
+                        {
+                            "capacity" : 1.0,
+                            "name" : "Motorcycle Parking",
+                            "payment_term" : "Quarterly",
+                            "price" : 250000.0,
+                            "type" : "Motorcycle"
+                        }
+                    ],
+                    "certificate" : "AJB"
+                }
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 200,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "newComTowerup",
+        "on_failure" : "exit",
+        "delay": "0s"
+    }
+}

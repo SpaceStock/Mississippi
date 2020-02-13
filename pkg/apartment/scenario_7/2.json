@@ -1,0 +1,126 @@
+{
+    "order" : 2,
+    "name" : "Add Unit Landed House Secondary",
+    "description" : "",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/housing/writer/1.0/unit",
+        "method" : "POST",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data" : {
+                "internal_agent_email" : "sean.dempsey@spacestock.com",
+                "pic" : {
+                    "uid" : "5d6025d486b640fdb4c7d867",
+                    "name" : "Karina",
+                    "phone" : "+62896432135436"
+                },
+                "building_type" : "Hook",
+                "house_size" : 100.0,
+                "road_width_meter" : null,
+                "other_rooms" : [ 
+                    "None"
+                ],
+                "amenities" : [ 
+                    "Kitchen Set", 
+                    "Dining Table", 
+                    "Refrigerator", 
+                    "Oven", 
+                    "Microwave", 
+                    "Gas Stove", 
+                    "Electric Stove", 
+                    "Sofa", 
+                    "Bed", 
+                    "TV", 
+                    "Wardrobe", 
+                    "Washing Machine", 
+                    "Drying Machine", 
+                    "AC", 
+                    "Water Heater"
+                ],
+                "cluster" : {
+                    "id" : "5da51401bd2da0aa0603602d",
+                    "name" : "Green Forrest Premium"
+                },
+                "address" : {
+                    "province" : "DKI JAKARTA",
+                    "city" : "JAKARTA SELATAN",
+                    "district" : "KEBAYORAN BARU",
+                    "subdistrict" : "GUNUNG",
+                    "zip_code" : "12120",
+                    "street" : "Jl. Sanak Saudara",
+                    "number" : "12"
+                },
+                "land_size" : 120.0,
+                "geo_location" : {
+                    "type" : "Point",
+                    "coordinates" : [ 
+                        -6.17795609880081, 
+                        106.823610910457
+                    ]
+                },
+                "dimension" : {
+                    "length" : 0.0,
+                    "width" : 0.0
+                },
+                "complex" : {
+                    "id" : "5da512a6bd2da0aa06036017",
+                    "name" : "Green Nature Village"
+                },
+                "road_width_car" : 2.0,
+                "bedroom" : 2.0,
+                "condition" : "Full Furnished",
+                "description" : {},
+                "pricing" : [ 
+                    {
+                        "for" : "Rent",
+                        "term" : "Yearly",
+                        "amount" : 0.0,
+                        "currency" : "IDR"
+                    }, 
+                    {
+                        "for" : "Sell",
+                        "term" : "",
+                        "amount" : 2200320303.0,
+                        "currency" : "IDR"
+                    }
+                ],
+                "bathroom" : 2.0,
+                "parking_capacity" : 2.0,
+                "category" : "Housing",
+                "listing_type" : "Sell",
+                "certificate" : "SHG",
+                "stories" : 2.0,
+                "completion_date" : null,
+                "surrounding_area" : [],
+                "fee_component" : [ 
+                    {
+                        "percentage" : 3.44,
+                        "commission" : 3.22,
+                        "for" : "Sell",
+                        "billing" : ""
+                    }, 
+                    {
+                        "billing" : "",
+                        "percentage" : 0.0,
+                        "commission" : 0.0,
+                        "for" : "Rent"
+                    }
+                ],
+                "building_condition" : "Like New"
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 201,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "",
+        "on_failure" : "exit",
+        "delay": "0s"
+    }
+}

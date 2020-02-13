@@ -1,0 +1,24 @@
+{
+    "order" : 2,
+    "name" : "Reactivate",
+    "description" : "",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/1.0/complex/apartment/5d611768e7ae43ccb6f85fd1/tower/5d611768e7ae43ccb6f85fd3/unit/5dd2265e4df32c8dff0d4dca/activate",
+        "method" : "PATCH",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : null
+    },
+    "expect" : {
+        "status_code" : 204,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : false,
+        "cache_as" : "",
+        "on_failure" : "exit",
+        "delay": "0s"
+    }
+}
