@@ -11,4 +11,6 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Build Go App
-        run: docker build -t testsuite:1.0 .
+        run: docker build -t testsuite:latest .
+      - name: Run Docker Image
+        run: docker run testsuite:latest --domain=apartment
