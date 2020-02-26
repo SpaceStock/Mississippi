@@ -16,7 +16,7 @@
         "status_code" : 200,
         "headers" : null,
         "evaluate" : [
-            "!idToken"
+            "idToken !== ''"
         ]
     },
     "pipeline" : {
