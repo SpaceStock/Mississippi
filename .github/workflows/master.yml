@@ -9,6 +9,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v1
       - name: Build Go App
-        uses: actions/checkout@v1
         run: docker build -t testsuite:1.0 .
