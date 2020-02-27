@@ -78,7 +78,7 @@
         }
     },
     "expect" : {
-        "status_code" : 201.0,
+        "status_code" : 201,
         "headers" : null,
         "evaluate" : []
     },
