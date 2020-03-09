@@ -4,6 +4,8 @@ on:
     branches:
       - 'ci/cd'
   pull_request:
+  schedule:
+    - cron: '* 5,8 * * *'
 
 jobs:
   build:
