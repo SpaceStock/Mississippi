@@ -38,7 +38,7 @@
         "status_code" : 201,
         "headers" : null,
         "evaluate" : [ 
-            "!data.id"
+            "data.id !== ''"
         ]
     },
     "pipeline" : {
