@@ -1,28 +1,30 @@
 {
-    "order" : 3,
-    "name" : "Remove with Reason",
+    "order" : 5,
+    "name" : "Discontinue Reason",
     "description" : "",
     "request" : {
-        "url" : "https://stg-satpam.spacestock.com/1.0/inquiries/{inqcreated.data.id}/remove",
+        "url" : "https://stg-satpam.spacestock.com/1.0/inquiries/{inqcreated.data.id}/discontinue",
         "method" : "POST",
         "headers" : {
             "Authorization" : "{auth.idToken}"
         },
         "payload" : {
             "data" : {
-                "removed_reason" : "Spam. Mengganggu Ketertiban Inquiry..."
+                "discontinue_reason" : "Kagak Jadi"
             }
         }
     },
     "expect" : {
-        "status_code" : 204,
+        "status_code" : 200,
         "headers" : null,
-        "evaluate" : []
+        "evaluate" : [ 
+            "data.discontinue_reason === 'Kagak Jadi'"
+        ]
     },
     "pipeline" : {
         "cache" : false,
         "cache_as" : "",
-        "on_failure" : "fallthrough",
+        "on_failure" : "exit",
         "delay": "0s"
     }
 }

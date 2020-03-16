@@ -1,6 +1,6 @@
 {
     "order" : 3,
-    "name" : "Remove without Reason",
+    "name" : "Remove with Reason",
     "description" : "",
     "request" : {
         "url" : "https://stg-satpam.spacestock.com/1.0/inquiries/{inqcreated.data.id}/remove",
@@ -10,12 +10,12 @@
         },
         "payload" : {
             "data" : {
-                "removed_reason" : ""
+                "removed_reason" : "Spam. Mengganggu Ketertiban Inquiry..."
             }
         }
     },
     "expect" : {
-        "status_code" : 400,
+        "status_code" : 204,
         "headers" : null,
         "evaluate" : []
     },
