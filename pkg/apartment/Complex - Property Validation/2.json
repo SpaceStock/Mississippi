@@ -1,0 +1,30 @@
+{
+    "order" : 2,
+    "name" : "Property Name",
+    "description" : "",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/1.0/complex/apartment/5c6bb3e00e895b5371a0f95d",
+        "method" : "PATCH",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data": {
+                "attributes": {},
+                "id": "5c6bb3e00e895b5371a0f95d",
+                "type": "complex"
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 400,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : false,
+        "cache_as" : "",
+        "on_failure" : "exit",
+        "delay": "0s"
+    }
+}

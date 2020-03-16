@@ -1,0 +1,34 @@
+{
+    "order" : 4,
+    "name" : "Auto Assign Direct",
+    "description" : "",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/1.0/inquiries/{inqcreated.data.id}/assign",
+        "method" : "POST",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data": {
+              "branch": {
+                "assignee_id": "fr.thrt@spacestock.com",
+                "assignee_name": "FR Thrt",
+                "id": "5e3a6a651253ebbe4499d064",
+                "name": "pablo"
+              },
+              "state": "Handled"
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 200,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : false,
+        "cache_as" : "",
+        "on_failure" : "exit",
+        "delay": "0s"
+    }
+}

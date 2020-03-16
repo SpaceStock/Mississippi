@@ -1,0 +1,123 @@
+{
+    "order" : 2,
+    "name" : "create unit housing no complex bertype rent dengan service prime",
+    "description" : "",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/housing/writer/1.0/unit",
+        "method" : "POST",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data": {
+                "acknowledged_at": 0,
+                "acknowledged_by": "",
+                "acknowledgement_notes": "",
+                "acknowledgement_status": "unverified",
+                "address": {
+                    "city": "JAKARTA TIMUR",
+                    "district": "PULO GADUNG",
+                    "number": "123",
+                    "province": "DKI JAKARTA",
+                    "street": "Jl. Reg",
+                    "subdistrict": "KAYU PUTIH",
+                    "zip_code": "13210"
+                },
+                "amenities": [
+                    "Dining Table",
+                    "Sofa",
+                    "Wardrobe",
+                    "AC",
+                    "Washing Machine",
+                    "Electric Stove",
+                    "Bed",
+                    "Drying Machine",
+                    "TV",
+                    "Oven",
+                    "Water Heater",
+                    "Microwave",
+                    "Refrigerator",
+                    "Gas Stove",
+                    "Kitchen Set"
+                ],
+                "bathroom": 2,
+                "bedroom": 2,
+                "branches": [
+                    {
+                    "id": "5d75d7ad20e7d08393c565be",
+                    "name": "Branch Kutai"
+                    }
+                ],
+                "building_condition": "Newly Built",
+                "category": "Housing",
+                "certificate": "SHM",
+                "cluster": {},
+                "complex": {},
+                "condition": "Full Furnished",
+                "dimension": {},
+                "fee_component": [
+                    {
+                    "commission": 1,
+                    "for": "Sell",
+                    "percentage": 1
+                    },
+                    {
+                    "commission": 5,
+                    "for": "Rent",
+                    "percentage": 5
+                    }
+                ],
+                "geo_location": {
+                    "coordinates": [
+                    -6.18065809039764,
+                    106.81508064240917
+                    ],
+                    "type": "Point"
+                },
+                "house_size": 100,
+                "internal_agent_email": "kutai.super@spacestock.com",
+                "land_size": 130,
+                "listing_type": "Rent & Sell",
+                "minimum_lease_term": 1,
+                "other_rooms": [
+                    "Study Room"
+                ],
+                "parking_capacity": 2,
+                "pic": {
+                    "name": "Cindy Xie",
+                    "phone": "+6284123000003",
+                    "type": "Agent",
+                    "uid": "5d626e7986b640fdb4c7d86c"
+                },
+                "position": "Tusuk Sate",
+                "pricing": [
+                    {
+                    "amount": 2200000000,
+                    "currency": "IDR",
+                    "for": "Rent",
+                    "term": "Yearly"
+                    },
+                    {
+                    "amount": 10000000000,
+                    "currency": "IDR",
+                    "for": "Sell"
+                    }
+                ],
+                "road_width_car": 2,
+                "service_type": "Prime",
+                "stories": 2
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 201,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "",
+        "on_failure" : "exit",
+        "delay": "0s"
+    }
+}

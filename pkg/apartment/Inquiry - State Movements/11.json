@@ -1,0 +1,40 @@
+{
+    "order" : 11,
+    "name" : "Update State 3 (Scheduled to Site Visited)",
+    "description" : "",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/1.0/inquiries/{inqcreated.data.id}/next?branch.id=5d6325dff47e63d3eaa78929&branch.assignee_id=janggala.one@spacestock.com",
+        "method" : "POST",
+        "headers" : {
+            "Authorization" : "{authMark.idToken}"
+        },
+        "payload" : {
+            "data" : {
+                "visited" : {
+                    "units" : [ 
+                        {
+                            "type" : "3BR",
+                            "id" : "5d65c5531ac2284844d1667f",
+                            "number" : "CASS-67",
+                            "size" : "60.65"
+                        }
+                    ],
+                    "date" : 1565947398.0
+                }
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 200,
+        "headers" : null,
+        "evaluate" : [ 
+            "data.state === 'Site Visited'"
+        ]
+    },
+    "pipeline" : {
+        "cache" : false,
+        "cache_as" : "",
+        "on_failure" : "exit",
+        "delay": "0s"
+    }
+}

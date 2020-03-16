@@ -1,0 +1,62 @@
+{
+    "order" : 2,
+    "name" : "Create Complex Primary Area More Than 1",
+    "description" : "",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/housing/writer/1.0/complex",
+        "method" : "POST",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data": {
+                "address": {
+                    "city": "JAKARTA SELATAN",
+                    "country": "Indonesia",
+                    "district": "KEBAYORAN BARU",
+                    "province": "DKI JAKARTA",
+                    "street": "Jalan Raya",
+                    "subdistrict": "GUNUNG",
+                    "zip_code": "12120"
+                },
+                "developer": {
+                    "legal_name": "PT Rumah Idaman",
+                    "name": "Blablabla Dev"
+                },
+                "facilities": [
+                    "access_card"
+                ],
+                "geo_location": {
+                    "coordinates": [
+                    -6.16681097518642,
+                    106.806678771973
+                    ],
+                    "type": "Point"
+                },
+                "land_size": 10000,
+                "name": "Home Complex",
+                "primary_area": [
+                    "Alfa Indah",
+                    "Gandaria",
+                    "Sudirman"
+                ],
+                "surrounding_area": [
+                    "Alfa Indah",
+                    "Arjuna Selatan",
+                    "Asemka"
+                ]
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 400,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : false,
+        "cache_as" : "",
+        "on_failure" : "exit",
+        "delay": "0s"
+    }
+}

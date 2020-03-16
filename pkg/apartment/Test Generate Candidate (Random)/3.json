@@ -1,0 +1,32 @@
+{
+    "order" : 3,
+    "name" : "Administer",
+    "description" : "",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/1.0/inquiries/{inqcreated.data.id}/administer",
+        "method" : "POST",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data": {
+              "administration": {
+                "assignee_id": "admin.inquiry@spacestock.com",
+                "assignee_name": "Admin Inquiry"
+              },
+              "state": "Handled"
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 200,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "inqcreated",
+        "on_failure" : "exit",
+        "delay": "0s"
+    }
+}

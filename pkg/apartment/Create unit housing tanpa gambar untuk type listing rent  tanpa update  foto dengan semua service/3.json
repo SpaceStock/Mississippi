@@ -1,0 +1,149 @@
+{
+    "order" : 3,
+    "name" : "create unit housing no complex bertype rent dengan service regular",
+    "description" : "",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/housing/writer/1.0/unit",
+        "method" : "POST",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data": {
+                "acknowledged_at": 0,
+                "acknowledged_by": "",
+                "acknowledgement_notes": "",
+                "acknowledgement_status": "unverified",
+                "address": {
+                    "block": "3 ca",
+                    "city": "Bogor",
+                    "district": "Bogor Utara - Kota",
+                    "number": "13c",
+                    "province": "Jawa Barat",
+                    "sector": "cemara",
+                    "street": "Jl. bintang cemerlang",
+                    "subdistrict": "Bantarjati",
+                    "zip_code": "16153"
+                },
+                "amenities": [
+                    "Water Heater",
+                    "Sofa",
+                    "Dining Table",
+                    "Refrigerator",
+                    "Gas Stove",
+                    "AC",
+                    "Oven",
+                    "Microwave",
+                    "Electric Stove",
+                    "Washing Machine",
+                    "Wardrobe",
+                    "Bed",
+                    "TV",
+                    "Kitchen Set",
+                    "Drying Machine"
+                ],
+                "bathroom": 1,
+                "bedroom": 2,
+                "building_condition": "Like New",
+                "category": "Housing",
+                "certificate": "SHM",
+                "cluster": {},
+                "code": "BON160033",
+                "completion_date": 1517418000,
+                "complex": {},
+                "condition": "Full Furnished",
+                "create_at": 1581482554461749800,
+                "create_by_uid": "anna.liffey@spacestock.com",
+                "description": {
+                    "id": "<p>test panjang kali lebar&nbsp;</p>"
+                },
+                "dimension": {
+                    "length": 10,
+                    "width": 5
+                },
+                "electricity": 1300,
+                "facing": [
+                    "North East"
+                ],
+                "fee_component": [
+                    {
+                    "commission": 2,
+                    "for": "Sell",
+                    "percentage": 10
+                    },
+                    {
+                    "commission": 1,
+                    "for": "Rent",
+                    "percentage": 10
+                    }
+                ],
+                "geo_location": {
+                    "coordinates": [
+                    -6.5725992,
+                    106.8084991
+                    ],
+                    "type": "Point"
+                },
+                "house_size": 100,
+                "id": "5e43823ac219a18b9f1d7375",
+                "internal_agent_email": "anna.liffey@spacestock.com",
+                "land_size": 100,
+                "last_update_at": 1581482554461749800,
+                "last_update_by_uid": "anna.liffey@spacestock.com",
+                "listing_type": "Rent",
+                "minimum_lease_term": 12,
+                "other_rooms": [
+                    "Maid Room"
+                ],
+                "parking_capacity": 2,
+                "pic": {
+                    "name": "Aldira Zia",
+                    "phone": "+6284123000001",
+                    "type": "Agent",
+                    "uid": "5d6269be86b640fdb4c7d869"
+                },
+                "position": "Badan",
+                "pricing": [
+                    {
+                    "amount": 1200000000,
+                    "currency": "IDR",
+                    "for": "Rent",
+                    "term": "Yearly"
+                    },
+                    {
+                    "amount": 1200000000000,
+                    "currency": "IDR",
+                    "for": "Sell"
+                    }
+                ],
+                "primary_area": [
+                    "bantarjati"
+                ],
+                "published_at": 1581482554461749800,
+                "published_by": "anna.liffey@spacestock.com",
+                "published_state": "Unpublished",
+                "road_width_car": 2,
+                "road_width_meter": 1,
+                "service_type": "Regular",
+                "stories": 2,
+                "views": [
+                    "City"
+                ],
+                "water": [
+                    "PDAM"
+                ]
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 201,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "",
+        "on_failure" : "exit",
+        "delay": "0s"
+    }
+}
