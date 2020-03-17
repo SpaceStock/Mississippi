@@ -7,9 +7,9 @@
         "method" : "POST",
         "headers" : null,
         "payload" : {
-            "email": "superadmin@spacestock.com",
-            "password": "admin@123",
-            "returnSecureToken": true
+            "email" : "sean.dempsey@spacestock.com",
+            "password" : "sean.dempsey",
+            "returnSecureToken" : true
         }
     },
     "expect" : {

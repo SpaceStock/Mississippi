@@ -1,23 +1,21 @@
 {
     "order" : 1,
-    "name" : "Firebase Auth",
-    "description" : "",
+    "name" : "Auth",
+    "description" : "login masuk backoffice",
     "request" : {
         "url" : "https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyD-HHHsWb82AFmdXtm0t86Nb9uoMJutrU0",
         "method" : "POST",
         "headers" : null,
         "payload" : {
-            "email": "superadmin@spacestock.com",
-            "password": "admin@123",
+            "email": "anna.liffey@spacestock.com",
+            "password": "anna.liffey",
             "returnSecureToken": true
         }
     },
     "expect" : {
         "status_code" : 200,
         "headers" : null,
-        "evaluate" : [ 
-            "idToken !== ''"
-        ]
+        "evaluate" : []
     },
     "pipeline" : {
         "cache" : true,
