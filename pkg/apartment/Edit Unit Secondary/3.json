@@ -1,0 +1,134 @@
+{
+    "order" : 3,
+    "name" : "Edit Unit Draft to Unverified",
+    "description" : "draft -> unverified",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/1.0/complex/apartment/5d66337f983bfe288fb097b4/tower/5d664014983bfe288fb097db/unit/5e5f6865aa97e2ff4e896b94",
+        "method" : "PATCH",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data": {
+                "attributes": {
+                    "acknowledgement_status": "Unverified",
+                    "amenities": [
+                    "Microwave",
+                    "Dining Table",
+                    "Kitchen Set",
+                    "Gas Stove",
+                    "Bed",
+                    "AC",
+                    "Refrigerator",
+                    "TV",
+                    "Drying Machine",
+                    "Wardrobe",
+                    "Sofa",
+                    "Oven",
+                    "Electric Stove",
+                    "Water Heater",
+                    "Washing Machine"
+                    ],
+                    "bathroom": 4,
+                    "branches": [
+                    "5e3a6a651253ebbe4499d064",
+                    "5d64dcb4f47e63d3eaa7892b",
+                    "5de8904b7a838227d0decfee",
+                    "5d9460460e8c6be97c1aeae1",
+                    "5e2a60e6e3a64a55e14e112e",
+                    "5d8dc0e6da74266ddf02870e",
+                    "5e2a6fede3a64a55e14e1130",
+                    "5d775941f7a2e54dbd0b97c2",
+                    "5d63b76ef47e63d3eaa7892a",
+                    "5d770cbe3375fb24c2278d75",
+                    "5d75d52320e7d08393c565bb",
+                    "5d770d983375fb24c2278d76",
+                    "5e05aa4a56a3a749b3674788",
+                    "5da51bd8650248c245cd0d3a",
+                    "5da7df400d47a1cbc8710501",
+                    "5d8df2d591be4bdccccdf83f",
+                    "5e2a6fb5e3a64a55e14e112f"
+                    ],
+                    "category": "Apartment",
+                    "certificate": "HGB",
+                    "complex": {
+                    "address_city": "JAKARTA BARAT",
+                    "id": "5d66337f983bfe288fb097b4",
+                    "name": "Jeruk Manis Indah",
+                    "primary_area": {
+                        "Palmerah": true
+                    }
+                    },
+                    "complex_id": "5d66337f983bfe288fb097b4",
+                    "condition": "Standard",
+                    "create_at": 1583310949,
+                    "create_by": "superadmin@spacestock.com",
+                    "facing": [
+                    "North East"
+                    ],
+                    "fee_component": [
+                    {
+                        "for": "Rent",
+                        "from": "price_rent",
+                        "percentage": 4
+                    },
+                    {
+                        "for": "Sell",
+                        "from": "price_sell",
+                        "percentage": 0
+                    }
+                    ],
+                    "id": "5e5f6865aa97e2ff4e896b94",
+                    "inactive_period_rent": {
+                    "end_date": 0,
+                    "start_date": 0
+                    },
+                    "internal_agent_email": "crystal.one@spacestock.com",
+                    "level": "12",
+                    "listing_type": "Rent",
+                    "minimum_lease_term": 6,
+                    "other_pricing": [],
+                    "other_rooms": [
+                    "None"
+                    ],
+                    "ownership": "Secondary",
+                    "pic": "5d6025d486b640fdb4c7d867",
+                    "pic_name": "Karina",
+                    "pic_type": "Agent",
+                    "price_rent_yearly": 120000000,
+                    "published_state": "Unpublished",
+                    "rent_comm": 3,
+                    "rent_comm_type": "Following Tenant Payment",
+                    "service_type": "Regular",
+                    "size": "40",
+                    "tower": {
+                    "id": "5d664014983bfe288fb097db",
+                    "name": "Tower Manggis"
+                    },
+                    "tower_id": "5d664014983bfe288fb097db",
+                    "type": "1BR",
+                    "views": [
+                    "Tower"
+                    ],
+                    "zone": "Low"
+                },
+                "id": "5e5f6865aa97e2ff4e896b94",
+                "type": "unit"
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 200,
+        "headers" : null,
+        "evaluate" : [
+            "data.attributes.bathroom === 4",
+            "data.attributes.acknowledgement_status === 'Unverified'"
+        ]
+    },
+    "pipeline" : {
+        "cache" : false,
+        "cache_as" : "",
+        "on_failure" : "exit",
+        "delay": "0s"
+    }
+}

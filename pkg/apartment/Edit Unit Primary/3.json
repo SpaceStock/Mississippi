@@ -1,0 +1,120 @@
+{
+    "order" : 3,
+    "name" : "Edit Unit Draft to Unverified",
+    "description" : "draft -> unverified",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/1.0/complex/apartment/5d611768e7ae43ccb6f85fd1/tower/5d611768e7ae43ccb6f85fd3/unit/5e61f46068fbce6ee5d9b1a3",
+        "method" : "PATCH",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data": {
+                "attributes": {
+                    "acknowledgement_status": "Unverified",
+                    "amenities": [
+                    "Water Heater",
+                    "Dining Table",
+                    "Electric Stove",
+                    "Refrigerator",
+                    "Bed",
+                    "Kitchen Set",
+                    "Oven",
+                    "Sofa",
+                    "TV",
+                    "Drying Machine",
+                    "Washing Machine",
+                    "Gas Stove",
+                    "AC",
+                    "Microwave"
+                    ],
+                    "bathroom": 4,
+                    "branches": [
+                    "5d63b76ef47e63d3eaa7892a",
+                    "5d8dc0e6da74266ddf02870e",
+                    "5d770d983375fb24c2278d76",
+                    "5e2a6fede3a64a55e14e1130",
+                    "5e2a60e6e3a64a55e14e112e",
+                    "5de8904b7a838227d0decfee",
+                    "5da7df400d47a1cbc8710501",
+                    "5d75d75920e7d08393c565bd",
+                    "5da51bd8650248c245cd0d3a",
+                    "5e05aa4a56a3a749b3674788",
+                    "5d775941f7a2e54dbd0b97c2",
+                    "5d64dcb4f47e63d3eaa7892b",
+                    "5e2a6fb5e3a64a55e14e112f",
+                    "5d770cbe3375fb24c2278d75"
+                    ],
+                    "category": "Apartment",
+                    "certificate": "PPJB",
+                    "code": "ALMS200FC",
+                    "complex": {
+                    "address_city": "JAKARTA SELATAN",
+                    "id": "5d611768e7ae43ccb6f85fd1",
+                    "name": "Alam asri TEST",
+                    "primary_area": {
+                        "Arjuna Utara": true
+                    }
+                    },
+                    "complex_id": "5d611768e7ae43ccb6f85fd1",
+                    "create_at": 1583477856,
+                    "create_by": "superadmin@spacestock.com",
+                    "fee_component": [
+                    {
+                        "for": "Rent",
+                        "from": "price_rent",
+                        "percentage": 0
+                    },
+                    {
+                        "for": "Sell",
+                        "from": "price_sell",
+                        "percentage": 2
+                    }
+                    ],
+                    "id": "5e61f46068fbce6ee5d9b1a3",
+                    "inactive_period_rent": {
+                    "end_date": 0,
+                    "start_date": 0
+                    },
+                    "internal_agent_email": "superadmin@spacestock.com",
+                    "last_update_at": 1583477902,
+                    "last_update_by": "superadmin@spacestock.com",
+                    "listing_type": "Sell",
+                    "minimum_lease_term": 0,
+                    "other_pricing": [],
+                    "ownership": "Primary",
+                    "pic": "5df9e8dc5763c2e99df53728",
+                    "pic_name": "Knight",
+                    "pic_type": "Agent",
+                    "price_sell": 2700000000,
+                    "published_state": "Unpublished",
+                    "sell_comm": 3,
+                    "size": "65",
+                    "tower": {
+                    "id": "5d611768e7ae43ccb6f85fd3",
+                    "name": "Tower Cassia"
+                    },
+                    "tower_id": "5d611768e7ae43ccb6f85fd3",
+                    "type": "2BR",
+                    "unit_no": "GW test 02",
+                    "zone": "Mid"
+                },
+                "id": "5e61f46068fbce6ee5d9b1a3",
+                "type": "unit"
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 200,
+        "headers" : null,
+        "evaluate" : [
+            "data.attributes.bathroom === 4"
+        ]
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "draftUnv",
+        "on_failure" : "exit",
+        "delay": "0s"
+    }
+}

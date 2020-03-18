@@ -1,0 +1,121 @@
+{
+    "order" : 4,
+    "name" : "Edit Unit Unverified to Unverified",
+    "description" : "unverified-> unverified",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/1.0/complex/apartment/5d611768e7ae43ccb6f85fd1/tower/5d611b2ee7ae43ccb6f85fdb/unit/5e61fd0668fbce6ee5d9b1af",
+        "method" : "PATCH",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data": {
+                "attributes": {
+                    "acknowledgement_status": "Unverified",
+                    "amenities": [
+                    "Water Heater",
+                    "Drying Machine",
+                    "Kitchen Set",
+                    "Oven",
+                    "AC",
+                    "Gas Stove",
+                    "TV",
+                    "Refrigerator",
+                    "Dining Table",
+                    "Bed",
+                    "Washing Machine",
+                    "Sofa",
+                    "Microwave",
+                    "Electric Stove",
+                    "Wardrobe"
+                    ],
+                    "bathroom": 4,
+                    "branches": [
+                    "5d75d75920e7d08393c565bd",
+                    "5d8dc0e6da74266ddf02870e",
+                    "5e2a60e6e3a64a55e14e112e",
+                    "5d770cbe3375fb24c2278d75",
+                    "5d63b76ef47e63d3eaa7892a",
+                    "5da51bd8650248c245cd0d3a",
+                    "5d64dcb4f47e63d3eaa7892b",
+                    "5d770d983375fb24c2278d76",
+                    "5da7df400d47a1cbc8710501",
+                    "5de8904b7a838227d0decfee",
+                    "5e2a6fede3a64a55e14e1130",
+                    "5e05aa4a56a3a749b3674788",
+                    "5e2a6fb5e3a64a55e14e112f",
+                    "5d775941f7a2e54dbd0b97c2"
+                    ],
+                    "category": "Apartment",
+                    "certificate": "AJB",
+                    "code": "ALMS200FE",
+                    "complex": {
+                    "address_city": "JAKARTA SELATAN",
+                    "id": "5d611768e7ae43ccb6f85fd1",
+                    "name": "Alam asri TEST",
+                    "primary_area": {
+                        "Arjuna Utara": true
+                    }
+                    },
+                    "complex_id": "5d611768e7ae43ccb6f85fd1",
+                    "create_at": 1583480070,
+                    "create_by": "superadmin@spacestock.com",
+                    "fee_component": [
+                    {
+                        "for": "Rent",
+                        "from": "price_rent",
+                        "percentage": 0
+                    },
+                    {
+                        "for": "Sell",
+                        "from": "price_sell",
+                        "percentage": 2.49
+                    }
+                    ],
+                    "id": "5e61fd0668fbce6ee5d9b1af",
+                    "inactive_period_rent": {
+                    "end_date": 0,
+                    "start_date": 0
+                    },
+                    "internal_agent_email": "superadmin@spacestock.com",
+                    "last_update_at": 1583480158,
+                    "last_update_by": "superadmin@spacestock.com",
+                    "listing_type": "Sell",
+                    "minimum_lease_term": 0,
+                    "other_pricing": [],
+                    "ownership": "Primary",
+                    "pic": "5d626e9286b640fdb4c7d86d",
+                    "pic_name": "Dharma Winata",
+                    "pic_type": "Agent",
+                    "price_sell": 200000000,
+                    "published_state": "Unpublished",
+                    "sell_comm": 5,
+                    "size": "60",
+                    "tower": {
+                    "id": "5d611b2ee7ae43ccb6f85fdb",
+                    "name": "Tower Trambesi"
+                    },
+                    "tower_id": "5d611b2ee7ae43ccb6f85fdb",
+                    "type": "2BR",
+                    "unit_no": "GW Test 04",
+                    "zone": "Mid"
+                },
+                "id": "5e61fd0668fbce6ee5d9b1af",
+                "type": "unit"
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 200,
+        "headers" : null,
+        "evaluate" : [
+            "data.attributes.bathroom === 4"
+        ]
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "unvUnv",
+        "on_failure" : "exit",
+        "delay": "0s"
+    }
+}

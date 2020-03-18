@@ -15,7 +15,9 @@
     "expect" : {
         "status_code" : 200,
         "headers" : null,
-        "evaluate" : []
+        "evaluate" : [ 
+            "idToken !== ''"
+        ]
     },
     "pipeline" : {
         "cache" : true,
