@@ -1,0 +1,134 @@
+{
+    "order" : 5,
+    "name" : "Edit Unit Reject to Unverified",
+    "description" : "reject-> unverified",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/1.0/complex/apartment/5d66337f983bfe288fb097b4/tower/5d664014983bfe288fb097db/unit/5e60befc68fbce6ee5d9b14a",
+        "method" : "PATCH",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data": {
+                "attributes": {
+                    "acknowledged_at": 1582170001,
+                    "acknowledged_by": "sean.dempsey@spacestock.com",
+                    "acknowledgement_notes": "tidak lolos",
+                    "acknowledgement_status": "Rejected",
+                    "amenities": [
+                    "Wardrobe",
+                    "Kitchen Set",
+                    "Bed",
+                    "Water Heater",
+                    "Washing Machine",
+                    "Microwave",
+                    "Sofa",
+                    "AC",
+                    "Refrigerator",
+                    "TV",
+                    "Drying Machine",
+                    "Dining Table",
+                    "Gas Stove",
+                    "Electric Stove"
+                    ],
+                    "bathroom": 4,
+                    "branches": [
+                    "5e05aa4a56a3a749b3674788",
+                    "5e2a6fede3a64a55e14e1130",
+                    "5d770cbe3375fb24c2278d75",
+                    "5d9460460e8c6be97c1aeae1",
+                    "5de8904b7a838227d0decfee",
+                    "5da51bd8650248c245cd0d3a",
+                    "5d775941f7a2e54dbd0b97c2",
+                    "5d64dcb4f47e63d3eaa7892b",
+                    "5d63b76ef47e63d3eaa7892a",
+                    "5e3a6a651253ebbe4499d064",
+                    "5da7df400d47a1cbc8710501",
+                    "5e2a6fb5e3a64a55e14e112f",
+                    "5d770d983375fb24c2278d76",
+                    "5d8dc0e6da74266ddf02870e",
+                    "5e2a60e6e3a64a55e14e112e"
+                    ],
+                    "category": "Apartment",
+                    "certificate": "SHM",
+                    "complex": {
+                    "address_city": "BOGOR",
+                    "id": "5d6cee321c20052c5162925f",
+                    "name": "Ramayana",
+                    "primary_area": {
+                        "Bogor Nirwana Residence": true
+                    }
+                    },
+                    "complex_id": "5d6cee321c20052c5162925f",
+                    "condition": "Semi Furnished",
+                    "create_at": 1582102558,
+                    "create_by": "mawarhitam@spacestock.com",
+                    "facing": [
+                    "North East"
+                    ],
+                    "fee_component": [
+                    {
+                        "for": "Rent",
+                        "from": "price_rent",
+                        "percentage": 9
+                    },
+                    {
+                        "for": "Sell",
+                        "from": "price_sell",
+                        "percentage": 0
+                    }
+                    ],
+                    "id": "5e4cf81e1ee3d86ee350de28",
+                    "inactive_period_rent": {
+                    "end_date": 0,
+                    "start_date": 0
+                    },
+                    "include_scsf": true,
+                    "internal_agent_email": "mawarhitam@spacestock.com",
+                    "listing_type": "Rent",
+                    "minimum_lease_term": 6,
+                    "other_pricing": [],
+                    "other_rooms": [
+                    "Study Room"
+                    ],
+                    "ownership": "Secondary",
+                    "pic": "5e4cecc9343a4a3bc94092d7",
+                    "pic_name": "Sulaiman",
+                    "pic_type": "Owner",
+                    "price_rent_yearly": 80000000,
+                    "published_state": "Unpublished",
+                    "rent_comm": 9,
+                    "rent_comm_type": "Following Tenant Payment",
+                    "service_type": "Regular",
+                    "size": "255",
+                    "tower": {
+                    "id": "5e042ddfb7982d0a08a0ec25",
+                    "name": "Tower Sadewa"
+                    },
+                    "tower_id": "5e042ddfb7982d0a08a0ec25",
+                    "type": "3BR",
+                    "unit_no": "10",
+                    "views": [
+                    "City"
+                    ],
+                    "zone": "Mid"
+                },
+                "id": "5e4cf81e1ee3d86ee350de28",
+                "type": "unit"
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 200,
+        "headers" : null,
+        "evaluate" : [
+            "data.attributes.bathroom === 4"
+        ]
+    },
+    "pipeline" : {
+        "cache" : false,
+        "cache_as" : "",
+        "on_failure" : "exit",
+        "delay": "0s"
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "order" : 2,
+    "name" : "Create",
+    "description" : "",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/1.1/inquiries",
+        "method" : "POST",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data": {
+                "budget": {
+                    "max": 1200000000,
+                    "min": 0,
+                    "term": ""
+                },
+                "category": [
+                    "Apartment",
+                    "Office",
+                    "Housing",
+                    "Ruko"
+                ],
+                "channel": "Phone",
+                "preference": {
+                    "area": [
+                    "BSD"
+                    ],
+                    "unit_size": 120,
+                    "unit_type": "3BR"
+                },
+                "rent_period": 12,
+                "requester_email": "siti.aisyah@spacestock.com",
+                "requester_name": "Aisyah",
+                "requester_phone": "+6281527024850",
+                "type": [
+                    "Buy",
+                    "Rent",
+                    "For Sell",
+                    "For Rent"
+                ]
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 201,
+        "headers" : null,
+        "evaluate" : [
+            "data.administration.assignee_id === 'admin.inquiry@spacestock.com'",
+            "data.state === 'Handled'"
+        ]
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "inqcreated",
+        "on_failure" : "exit",
+        "delay": "0s"
+    }
+}

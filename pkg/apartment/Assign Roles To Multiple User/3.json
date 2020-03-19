@@ -1,0 +1,26 @@
+{
+    "order" : 3,
+    "name" : "Assign LH BM",
+    "description" : "",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/user/listing.branchmanager@spacestock.com/role",
+        "method" : "PUT",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "is_listing_branchmanager": true
+        }
+    },
+    "expect" : {
+        "status_code" : 204,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : false,
+        "cache_as" : "",
+        "on_failure" : "exit",
+        "delay": "0s"
+    }
+}

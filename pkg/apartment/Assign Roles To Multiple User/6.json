@@ -1,0 +1,26 @@
+{
+    "order" : 6,
+    "name" : "Assign Marketing Agent Commercial",
+    "description" : "",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/user/cbdoffice.two@spacestock.com/role",
+        "method" : "PUT",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "is_marketingagent": true
+        }
+    },
+    "expect" : {
+        "status_code" : 204,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : false,
+        "cache_as" : "",
+        "on_failure" : "exit",
+        "delay": "0s"
+    }
+}

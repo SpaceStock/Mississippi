@@ -1,0 +1,40 @@
+{
+    "order" : 5,
+    "name" : "Update Branch By ID",
+    "description" : "",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/1.0/branch/{branchCreate.data.id}",
+        "method" : "PATCH",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data": {
+                "attributes": {
+                    "address": "address",
+                    "branch_manager": "",
+                    "category": [
+                    "apartment"
+                    ],
+                    "complexs": [
+                    "5d611768e7ae43ccb6f85fd1"
+                    ],
+                    "name": "branch franchise",
+                    "type": "franchise",
+                    "user": []
+                }
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 200,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "",
+        "on_failure" : "exit",
+        "delay": "0s"
+    }
+}

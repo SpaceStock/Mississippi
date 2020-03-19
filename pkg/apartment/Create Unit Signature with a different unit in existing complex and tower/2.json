@@ -1,0 +1,146 @@
+{
+    "order" : 2,
+    "name" : "Create unit signature  with type unit Studio",
+    "description" : "Create unit signatute with unit type studio and service type signature",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/1.0/complex/apartment/5e6893e4cff958b1e7730f94/tower/5e7125370ecab76dc3d4e29b/unit",
+        "method" : "POST",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data": {
+                "attributes": {
+                    "acknowledgement_status": "Unverified",
+                    "amenities": [
+                    "Dining Table",
+                    "Bed",
+                    "Refrigerator",
+                    "Kitchen Set",
+                    "Sofa",
+                    "Drying Machine",
+                    "Wardrobe",
+                    "Microwave",
+                    "Electric Stove",
+                    "TV",
+                    "AC",
+                    "Water Heater",
+                    "Oven",
+                    "Gas Stove"
+                    ],
+                    "bathroom": 2,
+                    "category": "Apartment",
+                    "certificate": "PPJB",
+                    "complex": {
+                    "address_city": "TANGERANG SELATAN",
+                    "id": "5e6893e4cff958b1e7730f94",
+                    "name": "Bumi Indah Ilana",
+                    "primary_area": {
+                        "Gading Serpong": true
+                    }
+                    },
+                    "complex_id": "5e6893e4cff958b1e7730f94",
+                    "condition": "Semi Furnished",
+                    "facing": [
+                    "North",
+                    "North East",
+                    "East",
+                    "South East",
+                    "South",
+                    "South West",
+                    "West",
+                    "North West"
+                    ],
+                    "fee_component": [
+                    {
+                        "for": "Rent",
+                        "from": "price_rent",
+                        "percentage": 10
+                    },
+                    {
+                        "for": "Sell",
+                        "from": "price_sell",
+                        "percentage": 20
+                    }
+                    ],
+                    "images": {
+                    "images_360": null,
+                    "images_banner": null,
+                    "images_brochure": null,
+                    "images_developer": null,
+                    "images_exterior": null,
+                    "images_floorplan": [
+                        {
+                        "alternate_text": "Studio",
+                        "priority": 1,
+                        "url": "building/hgho7ws3hjgc9tvq6qrr"
+                        }
+                    ],
+                    "images_interior": [
+                        {
+                        "alternate_text": "Kitchen",
+                        "priority": 1,
+                        "url": "building/sdblubjir5zyudkxgqu7"
+                        }
+                    ],
+                    "video_link": null
+                    },
+                    "include_scsf": true,
+                    "internal_agent_email": "anna.liffey@spacestock.com",
+                    "level": "13",
+                    "listing_type": "Rent & Sell",
+                    "minimum_lease_term": 1,
+                    "other_rooms": [
+                    "Study Room",
+                    "Storage",
+                    "Service Area",
+                    "None",
+                    "Maid Room"
+                    ],
+                    "ownership": "Secondary",
+                    "pic": "5d6269be86b640fdb4c7d869",
+                    "pic_name": "Aldira Zia",
+                    "pic_type": "Agent",
+                    "price_rent_yearly": 3900000,
+                    "price_sell": 600000000,
+                    "published_state": "Unpublished",
+                    "rent_comm": 2,
+                    "rent_comm_type": "Full In Advance",
+                    "sell_comm": 4,
+                    "service_type": "Signature",
+                    "size": "32",
+                    "tower": {
+                    "id": "5e7125370ecab76dc3d4e29b",
+                    "name": "Signature permai indah"
+                    },
+                    "tower_id": "5e7125370ecab76dc3d4e29b",
+                    "type": "Studio",
+                    "unit_no": "29",
+                    "views": [
+                    "City",
+                    "Tower",
+                    "Lake",
+                    "Sea",
+                    "River",
+                    "Golf",
+                    "Pool",
+                    "None"
+                    ],
+                    "zone": "Low"
+                },
+                "type": "unit"
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 201,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "auth",
+        "on_failure" : "exit",
+        "delay": "0s"
+    }
+}

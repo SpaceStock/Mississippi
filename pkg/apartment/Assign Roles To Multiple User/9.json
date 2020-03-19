@@ -1,0 +1,29 @@
+{
+    "order" : 9,
+    "name" : "Assign Admin Inquiry Residential [Dupe From Case 2]",
+    "description" : "",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/user/lisda.annisa@spacestock.com/role",
+        "method" : "PUT",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "is_admbuilding_apt": true,
+            "is_admbuilding_office": true,
+            "is_adminquiry_apt": true,
+            "is_adminquiry_office": true
+        }
+    },
+    "expect" : {
+        "status_code" : 204,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : false,
+        "cache_as" : "",
+        "on_failure" : "exit",
+        "delay": "0s"
+    }
+}

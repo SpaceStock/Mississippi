@@ -1,0 +1,73 @@
+{
+    "order" : 3,
+    "name" : "Edit Contact Residensial",
+    "description" : "",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/contact/5d6025d486b640fdb4c7d867",
+        "method" : "PUT",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data": {
+                "bank_account": [
+                    {
+                    "account_number": "020202",
+                    "account_owner": "Karina W",
+                    "bank_name": "BCA"
+                    },
+                    {
+                    "account_number": "012345",
+                    "account_owner": "Karina W",
+                    "bank_name": "NOBU Bank"
+                    },
+                    {
+                    "account_number": "111000",
+                    "account_owner": "Karina W",
+                    "bank_name": "Permata Bank"
+                    }
+                ],
+                "category": "Residential",
+                "contact_notes": "Karina Karina",
+                "create_at": 1566582228,
+                "create_by_uid": "anna.liffey@spacestock.com",
+                "email": "karina.wijaya@spacestock.com",
+                "id": "5d6025d486b640fdb4c7d867",
+                "last_update_at": 1583308077,
+                "last_update_by_uid": "superadmin@spacestock.com",
+                "mobile_phone": "+6221191817",
+                "name": "Karina",
+                "nik": "1122334455667788",
+                "office_name": "spacestock gandaria",
+                "office_phone": "+62021843234",
+                "title": "Madam",
+                "towers_developer": [
+                    "5d609f47dfdc436a9d39473f",
+                    "5d611b2ee7ae43ccb6f85fdb",
+                    "5d611768e7ae43ccb6f85fd3",
+                    "5da51401bd2da0aa0603602d",
+                    "5da51401bd2da0aa0603602d",
+                    "5db2aee5e3829795719bdb09",
+                    "5db95e778863b397752778c3",
+                    "5e269324d5b16da182020123",
+                    "5e37cfd764f68293934c6360",
+                    "5d611c17e7ae43ccb6f85fe1",
+                    "5e5cd4350dfa78f2257f65bc",
+                    "5e5f2d31f331fcf4e4e50ca0",
+                    "5d663ac2983bfe288fb097c6"
+                ]
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 201,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : false,
+        "cache_as" : "",
+        "on_failure" : "fallthrough",
+        "delay": "0s"
+    }
+}

@@ -1,0 +1,92 @@
+{
+    "order" : 3,
+    "name" : "Create Unit in Spesific tower (Payload tanpa Ack Status)",
+    "description" : "ack_status=unverified",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/1.0/complex/apartment/5d66337f983bfe288fb097b4/tower/5d664014983bfe288fb097db/unit",
+        "method" : "POST",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data": {
+                "attributes": {
+                    "amenities": [
+                    "Kitchen Set",
+                    "Dining Table",
+                    "Refrigerator",
+                    "Oven",
+                    "Microwave",
+                    "Gas Stove",
+                    "Electric Stove",
+                    "Sofa",
+                    "Bed",
+                    "TV",
+                    "Wardrobe",
+                    "Washing Machine",
+                    "Drying Machine",
+                    "AC",
+                    "Water Heater"
+                    ],
+                    "bathroom": 1,
+                    "category_type": "Apartment",
+                    "certificate": "HGB",
+                    "complex_id": "5d66337f983bfe288fb097b4",
+                    "condition": "Standard",
+                    "facing": [
+                    "North East"
+                    ],
+                    "fee_component": [
+                    {
+                        "for": "Rent",
+                        "from": "price_rent",
+                        "percentage": 4
+                    },
+                    {
+                        "for": "Sell",
+                        "from": "price_sell"
+                    }
+                    ],
+                    "include_scsf": false,
+                    "internal_agent_email": "sean.dempsey@spacestock.com",
+                    "level": "12",
+                    "listing_type": "Rent",
+                    "minimum_lease_term": 6,
+                    "other_pricing": [],
+                    "other_rooms": [
+                    "None"
+                    ],
+                    "ownership": "Secondary",
+                    "pic": "5d6025d486b640fdb4c7d867",
+                    "pic_name": "Karina",
+                    "pic_type": "Agent",
+                    "premium_listing": false,
+                    "price_rent_yearly": 120000000,
+                    "price_sell": null,
+                    "rent_comm": 3,
+                    "rent_comm_type": "Following Tenant Payment",
+                    "service_type": "Regular",
+                    "size": "40",
+                    "tower_id": "5d664014983bfe288fb097db",
+                    "type": "1BR",
+                    "unit_no": "",
+                    "views": [
+                    "Tower"
+                    ],
+                    "zone": "Low"
+                }
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 201,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "kosong",
+        "on_failure" : "exit",
+        "delay": "0s"
+    }
+}

@@ -1,0 +1,77 @@
+{
+    "order" : 2,
+    "name" : "Create Inquiry",
+    "description" : "",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/1.1/inquiries",
+        "method" : "POST",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data": {
+                "budget": {
+                    "max": 123000000
+                },
+                "category": [
+                    "Apartment"
+                ],
+                "channel": "Walk in Branch",
+                "interests": [
+                    {
+                    "category": "Apartment",
+                    "complex": {
+                        "area": [
+                        "JAKARTA SELATAN"
+                        ],
+                        "id": "5dbaae2b31668f31112abdef",
+                        "name": "Mayora Jaya"
+                    },
+                    "tower": {
+                        "id": "5dd4da5669645d367a41010c",
+                        "name": "Turqouise Land"
+                    },
+                    "unit": {
+                        "code": "JAYA10005",
+                        "id": "5dd4e3a869645d367a410119",
+                        "number": "TQ-003",
+                        "size": 40,
+                        "type": "2BR"
+                    }
+                    }
+                ],
+                "preference": {
+                    "area": [
+                    "BSD"
+                    ],
+                    "building_size": {},
+                    "land_size": {},
+                    "unit_size": 30,
+                    "unit_type": "studio"
+                },
+                "requester_email": "",
+                "requester_message": "ok",
+                "requester_name": "Jane Sone",
+                "requester_organization": "",
+                "requester_phone": "+62824724728422",
+                "required_at": "More than 6 Months",
+                "type": [
+                    "Buy"
+                ]
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 201,
+        "headers" : null,
+        "evaluate" : [
+            "data.state === 'Handled'"
+        ]
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "inqcreated",
+        "on_failure" : "exit",
+        "delay": "0s"
+    }
+}

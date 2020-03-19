@@ -1,0 +1,33 @@
+{
+    "order" : 2,
+    "name" : "Add Contact Residensial",
+    "description" : "",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/contact",
+        "method" : "POST",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data": {
+                "category": "Residential",
+                "contact_notes": "Test",
+                "mobile_phone": "+6238434343003",
+                "name": "Aloaloha",
+                "office_phone": "+62",
+                "title": "Mister"
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 201,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : false,
+        "cache_as" : "",
+        "on_failure" : "fallthrough",
+        "delay": "0s"
+    }
+}

@@ -1,0 +1,77 @@
+{
+    "order" : 2,
+    "name" : "Create Inquiry",
+    "description" : "",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/1.1/inquiries",
+        "method" : "POST",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data": {
+                "budget": {
+                    "max": 2324240000
+                },
+                "category": [
+                    "Apartment"
+                ],
+                "channel": "Web Form",
+                "interests": [
+                    {
+                    "category": "Apartment",
+                    "complex": {
+                        "area": [
+                        "JAKARTA BARAT"
+                        ],
+                        "id": "5d66337f983bfe288fb097b4",
+                        "name": "Jeruk Manis Indah"
+                    },
+                    "tower": {
+                        "id": "5d664038983bfe288fb097dd",
+                        "name": "Tower Salak"
+                    },
+                    "unit": {
+                        "code": "",
+                        "id": "5e3cdacb3e411301e95ffb1e",
+                        "internal_agent_email": "mawarhitam@spacestock.com",
+                        "number": "4",
+                        "size": 300,
+                        "type": "2BR"
+                    }
+                    }
+                ],
+                "preference": {
+                    "area": [],
+                    "building_size": {},
+                    "land_size": {},
+                    "unit_size": 120,
+                    "unit_type": "2BR"
+                },
+                "requester_email": "",
+                "requester_message": "ok",
+                "requester_name": "Gogo",
+                "requester_organization": "",
+                "requester_phone": "+6289434478374",
+                "required_at": "4 Month",
+                "type": [
+                    "Buy"
+                ]
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 201,
+        "headers" : null,
+        "evaluate" : [
+            "data.state === 'Handled'",
+            "data.administration.assignee_id === 'admin.inquiry@spacestock.com'"
+        ]
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "inqcreated",
+        "on_failure" : "exit",
+        "delay": "0s"
+    }
+}
