@@ -1,0 +1,107 @@
+{
+    "order" : 5,
+    "name" : "Admin able to Edit Secondary Unit25Nov19Up",
+    "description" : "As a Admin able to Edit Secondary Unit25Nov19Up",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/1.0/complex/apartment/5dd130d5bd387b29ae73cec7/tower/5dd1415ebd387b29ae73cece/unit/{unitSecon.data.id}",
+        "method" : "PATCH",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data" : {
+                "type" : "unit",
+                "attributes" : {
+                    "category" : "Apartment",
+                    "listing_type" : "Rent & Sell",
+                    "code" : "90899020022",
+                    "tower_id" : "5dd1415ebd387b29ae73cece",
+                    "condition" : "Semi Furnished",
+                    "published_state" : "Unpublished",
+                    "certificate" : "AJB",
+                    "internal_agent_email" : "anna.liffey@spacestock.com",
+                    "include_scsf" : false,
+                    "ownership" : "Secondary",
+                    "rent_comm" : 3.0,
+                    "views" : [],
+                    "price_sell" : 1360000000.0,
+                    "create_at" : 1576139048.0,
+                    "pic_type" : "Agent",
+                    "fee_component" : [ 
+                        {
+                            "for" : "Rent",
+                            "percentage" : 3.0,
+                            "from" : "price_rent"
+                        }, 
+                        {
+                            "for" : "Sell",
+                            "percentage" : 1.0,
+                            "from" : "price_sell"
+                        }
+                    ],
+                    "rent_comm_type" : "Following Tenant Payment",
+                    "sell_comm" : 2.0,
+                    "size" : "35",
+                    "type" : "2BR",
+                    "inactive_period_rent" : {
+                        "start_date" : 0.0,
+                        "end_date" : 0.0
+                    },
+                    "pic" : "5d6025d486b640fdb4c7d867",
+                    "acknowledgement_status" : "Unverified",
+                    "price_rent" : 3000000.0,
+                    "amenities" : [ 
+                        "Kitchen Set", 
+                        "AC", 
+                        "TV", 
+                        "Oven", 
+                        "Microwave", 
+                        "Dining Table", 
+                        "Bed", 
+                        "Sofa"
+                    ],
+                    "service_type" : "Regular",
+                    "facing" : [ 
+                        "South West"
+                    ],
+                    "id" : "5df1f92836a3b9164372066b",
+                    "create_by" : "anna.liffey@spacestock.com",
+                    "zone" : "Mid",
+                    "complex" : {
+                        "id" : "5dd130d5bd387b29ae73cec7",
+                        "name" : "Complex 17112019 updates",
+                        "address_city" : "JAKARTA PUSAT",
+                        "primary_area" : {}
+                    },
+                    "complex_id" : "5dd130d5bd387b29ae73cec7",
+                    "minimum_lease_term" : 6.0,
+                    "other_pricing" : [],
+                    "pic_name" : "Karina",
+                    "unit_no" : "Unit25Nov19up",
+                    "price_rent_yearly" : 35000000.0,
+                    "bathroom" : 1.0,
+                    "tower" : {
+                        "id" : "5dd1415ebd387b29ae73cece",
+                        "name" : "Tower 1942 Update",
+                        "include_scsf" : false
+                    },
+                    "other_rooms" : [ 
+                        "Storage"
+                    ]
+                },
+                "id" : "5df1f92836a3b9164372066b"
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 200,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "",
+        "on_failure" : "exit",
+        "delay": "0s"
+    }
+}

@@ -1,0 +1,79 @@
+{
+    "order" : 5,
+    "name" : "Create Unit in Spesific tower Primary",
+    "description" : "ack_status=unverified",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/1.0/complex/apartment/5d66337f983bfe288fb097b4/tower/5d664014983bfe288fb097db/unit",
+        "method" : "POST",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data": {
+                "attributes": {
+                    "amenities": [
+                    "Kitchen Set",
+                    "Dining Table",
+                    "Refrigerator",
+                    "Oven",
+                    "Microwave",
+                    "Gas Stove",
+                    "Electric Stove",
+                    "Sofa",
+                    "Bed",
+                    "TV",
+                    "Wardrobe",
+                    "Washing Machine",
+                    "Drying Machine",
+                    "AC",
+                    "Water Heater"
+                    ],
+                    "bathroom": 1,
+                    "certificate": "AJB",
+                    "complex_id": "5d66337f983bfe288fb097b4",
+                    "condition": "Standard",
+                    "fee_component": [
+                    {
+                        "for": "Rent",
+                        "from": "price_rent",
+                        "percentage": 0
+                    },
+                    {
+                        "for": "Sell",
+                        "from": "price_sell",
+                        "percentage": 2.49
+                    }
+                    ],
+                    "internal_agent_email": "sean.dempsey@spacestock.com",
+                    "listing_type": "Sell",
+                    "other_pricing": [],
+                    "other_rooms": [
+                    "None"
+                    ],
+                    "ownership": "Primary",
+                    "pic": "5d786f8085323c6683084993",
+                    "pic_name": "Ilana Harin",
+                    "pic_type": "Agent",
+                    "price_sell": 13040000000,
+                    "sell_comm": 5,
+                    "size": "30",
+                    "tower_id": "5d664014983bfe288fb097db",
+                    "type": "Studio",
+                    "unit_no": "MGP-001",
+                    "zone": "Mid"
+                }
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 201,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "kosongPrimary",
+        "on_failure" : "exit",
+        "delay": "0s"
+    }
+}

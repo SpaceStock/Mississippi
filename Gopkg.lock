@@ -2,7 +2,8 @@
 
 
 [[projects]]
-  digest = "1:dc2d015cfab982234a7f9f8746495e8f0cc12b841d2c78b7b4f82620855a1e5e"
+  branch = "master"
+  digest = "1:92f215c7dc174ab4b22aa2d295e26501f767c3aac7bb49e69a96f55c47a2eb73"
   name = "github.com/SpaceStock/go-restify"
   packages = [
     ".",
@@ -10,64 +11,90 @@
     "enum/onfailure",
     "scenario",
   ]
-  pruneopts = "UT"
-  revision = "62e3a3bdc8c98e6f1a7495226b4fd5b7a0a69701"
-  version = "0.1.3"
+  pruneopts = ""
+  revision = "bb2605e1a9a9ddb8c4604f77fe9fe777aab0a7df"
 
 [[projects]]
   branch = "master"
-  digest = "1:2fb6dca0feee2d4ffcd4862878ea75df7a64701ec7b2fb6ce74a8c5d418fca9c"
+  digest = "1:6dfb0a0d2ffb4aed50b1101fab4a559cc690e85a6bb7bc865340d80571cbb908"
   name = "github.com/buger/jsonparser"
   packages = ["."]
-  pruneopts = "UT"
+  pruneopts = ""
   revision = "1a29609e0929ccd5666069e2e7213c2c69fa4ac2"
 
 [[projects]]
-  digest = "1:57ae8919194013fb07b8390fb8a32e700c12fdab96e8dc4bb15d5fe45dc43245"
+  digest = "1:cb4da2ebaa462221d042c164d42f424e0be25ac9583504cdea1f6ce2a8fb5612"
   name = "github.com/gobuffalo/envy"
   packages = ["."]
-  pruneopts = "UT"
-  revision = "dc9565002201aca1286f8d6262f5cd568226562a"
-  version = "v1.8.1"
+  pruneopts = ""
+  revision = "3dbe4c98c1c77e4a8fac053251c262a85e048f21"
+  version = "v1.9.0"
 
 [[projects]]
-  digest = "1:40849e8495ef81a84ff335ef65e23d33671b61e60e9db464fbab55f19f43f120"
+  digest = "1:fbdc3a1d97a00510a63d5d178be767e65389f7c16cdccf862bda5e66653abd69"
   name = "github.com/gobuffalo/packd"
   packages = [
     ".",
     "internal/takeon/github.com/markbates/errx",
   ]
-  pruneopts = "UT"
-  revision = "54ea459691466cfb630ccc276723fe3963f3e9d5"
-  version = "v0.3.0"
+  pruneopts = ""
+  revision = "128b5da43f114d0f9af8b4bba549b02e3496dfa8"
+  version = "v1.0.0"
 
 [[projects]]
-  digest = "1:daea0c7e054793bc2e85efdd1be3a2d7adcec08b8f7686d85220bbcab8cf3a39"
+  digest = "1:c1e4c42b2d9b881276f90dcecd439d65e2406aa1ea3076c3a50897e86281abcd"
   name = "github.com/gobuffalo/packr"
   packages = ["."]
-  pruneopts = "UT"
+  pruneopts = ""
   revision = "4b4a3c432a2e5a17b4f14c971179b40021c67530"
   version = "v2.7.1"
 
 [[projects]]
-  digest = "1:ecd9aa82687cf31d1585d4ac61d0ba180e42e8a6182b85bd785fcca8dfeefc1b"
+  digest = "1:7df5a9695a743c3e1626b28bb8741602c8c15527e1efaeaec48ab2ff9a23f74c"
   name = "github.com/joho/godotenv"
   packages = ["."]
-  pruneopts = "UT"
+  pruneopts = ""
   revision = "23d116af351c84513e1946b527c88823e476be13"
   version = "v1.3.0"
 
 [[projects]]
-  digest = "1:e09ada96a5a41deda4748b1659cc8953961799e798aea557257b56baee4ecaf3"
+  branch = "master"
+  digest = "1:7b5657b5d96ff04d04aeb4b313969a1bb9488de6aa062242365d7a422e58b642"
+  name = "github.com/robertkrimen/otto"
+  packages = [
+    ".",
+    "ast",
+    "dbg",
+    "file",
+    "parser",
+    "registry",
+    "token",
+  ]
+  pruneopts = ""
+  revision = "c382bd3c16ff2fef9b5fe0dd8bf4c4ec6bfe62c1"
+
+[[projects]]
+  digest = "1:a37196b129ef41e7321d2af4d5c347050e045c41c6d7703e9c638d281be250f3"
   name = "github.com/rogpeppe/go-internal"
   packages = [
     "modfile",
     "module",
     "semver",
   ]
-  pruneopts = "UT"
+  pruneopts = ""
   revision = "bc89b17ba21ce5b8a495fa55a94e3fe32ecf4ed8"
   version = "v1.5.2"
+
+[[projects]]
+  digest = "1:be5b8bdf182abbef3c4e0d0926bba912ef41b097f001259cb5d2187370bb2e5b"
+  name = "gopkg.in/sourcemap.v1"
+  packages = [
+    ".",
+    "base64vlq",
+  ]
+  pruneopts = ""
+  revision = "6e83acea0053641eff084973fee085f0c193c61a"
+  version = "v1.0.5"
 
 [solve-meta]
   analyzer-name = "dep"

@@ -1,0 +1,22 @@
+{
+    "order" : 4,
+    "name" : "User able to filter price and  facilities name (2 Word)",
+    "description" : "As a User able to filter price and facilities name ( 2 Word )",
+    "request" : {
+        "url" : "https://staging-web.spacestock.com/api/discovery/1.0/complex?size=12&page=1&facilities=access_card,atm_center,basketball_court,bbq_pit,drug_store,function_hall,jogging_track,mini_golf,mini_market,movie_theater,private_lift,soccer_field,super_market,swimming_pool,tennis_court&listing_type=rent",
+        "method" : "GET",
+        "headers" : null,
+        "payload" : null
+    },
+    "expect" : {
+        "status_code" : 200,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "",
+        "on_failure" : "exit",
+        "delay": "0s"
+    }
+}

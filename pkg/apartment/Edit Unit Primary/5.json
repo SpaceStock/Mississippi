@@ -1,0 +1,127 @@
+{
+    "order" : 5,
+    "name" : "Edit Unit Reject to Unverified",
+    "description" : "reject-> unverified",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/1.0/complex/apartment/5d66337f983bfe288fb097b4/tower/5d664014983bfe288fb097db/unit/5e60bc0068fbce6ee5d9b132",
+        "method" : "PATCH",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data": {
+                "attributes": {
+                    "acknowledged_at": 1583495696,
+                    "acknowledged_by": "sean.dempsey@spacestock.com",
+                    "acknowledgement_status": "Rejected",
+                    "amenities": [
+                    "Bed",
+                    "Dining Table",
+                    "AC",
+                    "Oven",
+                    "Microwave",
+                    "TV",
+                    "Washing Machine",
+                    "Drying Machine",
+                    "Electric Stove",
+                    "Refrigerator",
+                    "Wardrobe",
+                    "Gas Stove",
+                    "Kitchen Set",
+                    "Sofa",
+                    "Water Heater"
+                    ],
+                    "bathroom": 4,
+                    "branches": [
+                    "5d775941f7a2e54dbd0b97c2",
+                    "5d75d52320e7d08393c565bb",
+                    "5d8df2d591be4bdccccdf83f",
+                    "5e2a6fb5e3a64a55e14e112f",
+                    "5d63b76ef47e63d3eaa7892a",
+                    "5d770cbe3375fb24c2278d75",
+                    "5d64dcb4f47e63d3eaa7892b",
+                    "5d770d983375fb24c2278d76",
+                    "5d8dc0e6da74266ddf02870e",
+                    "5da7df400d47a1cbc8710501",
+                    "5e3a6a651253ebbe4499d064",
+                    "5da51bd8650248c245cd0d3a",
+                    "5e2a60e6e3a64a55e14e112e",
+                    "5d9460460e8c6be97c1aeae1",
+                    "5e05aa4a56a3a749b3674788",
+                    "5e2a6fede3a64a55e14e1130",
+                    "5de8904b7a838227d0decfee"
+                    ],
+                    "category": "Apartment",
+                    "certificate": "AJB",
+                    "complex": {
+                    "address_city": "JAKARTA BARAT",
+                    "id": "5d66337f983bfe288fb097b4",
+                    "name": "Jeruk Manis Indah",
+                    "primary_area": {
+                        "Palmerah": true
+                    }
+                    },
+                    "complex_id": "5d66337f983bfe288fb097b4",
+                    "condition": "Standard",
+                    "create_at": 1583397888,
+                    "create_by": "superadmin@spacestock.com",
+                    "fee_component": [
+                    {
+                        "for": "Rent",
+                        "from": "price_rent",
+                        "percentage": 0
+                    },
+                    {
+                        "for": "Sell",
+                        "from": "price_sell",
+                        "percentage": 2.49
+                    }
+                    ],
+                    "inactive_period_rent": {
+                    "end_date": 0,
+                    "start_date": 0
+                    },
+                    "internal_agent_email": "sean.dempsey@spacestock.com",
+                    "last_update_at": 1583398632,
+                    "last_update_by": "sean.dempsey@spacestock.com",
+                    "listing_type": "Sell",
+                    "minimum_lease_term": 0,
+                    "other_rooms": [
+                    "None"
+                    ],
+                    "ownership": "Primary",
+                    "pic": "5d786f8085323c6683084993",
+                    "pic_name": "Ilana Harin",
+                    "pic_type": "Agent",
+                    "price_sell": 13040000000,
+                    "published_state": "Unpublished",
+                    "sell_comm": 5,
+                    "size": "30",
+                    "tower": {
+                    "id": "5d664014983bfe288fb097db",
+                    "name": "Tower Manggis"
+                    },
+                    "tower_id": "5d664014983bfe288fb097db",
+                    "type": "Studio",
+                    "unit_no": "MGP-001",
+                    "zone": "Mid"
+                },
+                "id": "5e60bc0068fbce6ee5d9b132",
+                "type": "unit"
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 200,
+        "headers" : null,
+        "evaluate" : [
+            "data.attributes.bathroom === 4"
+        ]
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "rejUnv",
+        "on_failure" : "exit",
+        "delay": "0s"
+    }
+}

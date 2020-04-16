@@ -1,0 +1,131 @@
+{
+    "order" : 6,
+    "name" : "create unit housing no complex bertype rent dengan service SignaturePro",
+    "description" : "",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/housing/writer/1.0/unit",
+        "method" : "POST",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data": {
+                "acknowledged_at": 0,
+                "acknowledged_by": "",
+                "acknowledgement_notes": "",
+                "acknowledgement_status": "unverified",
+                "address": {
+                    "block": "A",
+                    "city": "JAKARTA SELATAN",
+                    "district": "KEBAYORAN BARU",
+                    "number": "12",
+                    "province": "DKI JAKARTA",
+                    "street": "Jl. Jayakarta",
+                    "subdistrict": "KRAMAT PELA",
+                    "zip_code": "12130"
+                },
+                "amenities": [
+                    "Microwave",
+                    "Refrigerator",
+                    "Drying Machine",
+                    "Washing Machine",
+                    "Electric Stove",
+                    "TV",
+                    "Wardrobe",
+                    "Oven",
+                    "Dining Table",
+                    "Gas Stove",
+                    "Bed",
+                    "Sofa",
+                    "AC",
+                    "Water Heater",
+                    "Kitchen Set"
+                ],
+                "bathroom": 2,
+                "bedroom": 2,
+                "building_condition": "Newly Built",
+                "category": "Housing",
+                "certificate": "HPL",
+                "cluster": {},
+                "complex": {},
+                "condition": "Full Furnished",
+                "dimension": {
+                    "length": 10,
+                    "width": 10
+                },
+                "electricity": 3500,
+                "facing": [
+                    "North East"
+                ],
+                "fee_component": [
+                    {
+                    "commission": 1,
+                    "for": "Sell",
+                    "percentage": 1
+                    },
+                    {
+                    "commission": 4,
+                    "for": "Rent",
+                    "percentage": 4
+                    }
+                ],
+                "geo_location": {
+                    "coordinates": [
+                    -6.177832652640559,
+                    106.8087291714619
+                    ],
+                    "type": "Point"
+                },
+                "house_size": 100,
+                "internal_agent_email": "anna.liffey@spacestock.com",
+                "land_size": 120,
+                "listing_type": "Rent & Sell",
+                "minimum_lease_term": 6,
+                "other_rooms": [
+                    "Maid Room"
+                ],
+                "parking_capacity": 3,
+                "pic": {
+                    "name": "Ellie Vidya",
+                    "phone": "+6284123000005",
+                    "type": "Owner",
+                    "uid": "5d626ee586b640fdb4c7d86e"
+                },
+                "position": "Hook",
+                "pricing": [
+                    {
+                    "amount": 133400000,
+                    "currency": "IDR",
+                    "for": "Rent",
+                    "term": "Yearly"
+                    },
+                    {
+                    "amount": 1230000000,
+                    "currency": "IDR",
+                    "for": "Sell"
+                    }
+                ],
+                "road_width_car": 2,
+                "service_type": "SignaturePro",
+                "stories": 2,
+                "views": [
+                    "City"
+                ],
+                "water": [
+                    "PDAM"
+                ]
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 201,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "",
+        "on_failure" : "exit",
+        "delay": "0s"
+    }
+}

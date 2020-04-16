@@ -1,0 +1,16 @@
+name: Master
+on:
+  push:
+    branches:
+      - 'ci/cd'
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Build Go App
+        run: docker build -t testsuite:latest .
+      - name: Run Docker Image
+        run: docker run testsuite:latest -domain=apartment

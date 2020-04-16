@@ -1,0 +1,59 @@
+{
+    "order" : 4,
+    "name" : "User able to inquiries \"Apartments Baru\"",
+    "description" : "As a User, aboe to Inquiries \"Apartments Baru\"",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/1.1/inquiries",
+        "method" : "POST",
+        "headers" : null,
+        "payload" : {
+            "data" : {
+                "requester_name" : "testing produk",
+                "category" : [ 
+                    "Apartment"
+                ],
+                "rent_period" : 6.0,
+                "requester_email" : "testproduk@gmail.com",
+                "requester_message" : "4898374",
+                "requester_phone" : "324242",
+                "required_at" : "2 Month",
+                "type" : [ 
+                    "Buy", 
+                    "Rent"
+                ],
+                "url_referrer" : "https://staging-web.spacestock.com/kompleks-apartemen/rainbrow-di-kebayoran-lama-jakarta-selatan-5d8209e764b561d7c42bc817",
+                "channel" : "Web Form",
+                "interests" : [ 
+                    {
+                        "complex" : {
+                            "id" : "5d8209e764b561d7c42bc817",
+                            "name" : "rainbrow"
+                        },
+                        "tower" : {},
+                        "unit" : {}
+                    }
+                ],
+                "preference" : {
+                    "area" : [ 
+                        "Jakarta Selatan", 
+                        "Kebayoran Lama", 
+                        "Kebayoran Lama Selatan", 
+                        "Kebayoran Lama Utara", 
+                        "Pondok Pinang"
+                    ]
+                }
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 201,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "",
+        "on_failure" : "exit",
+        "delay": "0s"
+    }
+}

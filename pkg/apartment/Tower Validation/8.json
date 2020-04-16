@@ -1,0 +1,116 @@
+{
+    "order" : 8,
+    "name" : "Add Tower Secondary Buy",
+    "description" : "Apabila type=secondary buy>> tidak ada yang mandatory fee dan comm-nya",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/1.0/complex/apartment/5d611768e7ae43ccb6f85fd1/tower",
+        "method" : "POST",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data": {
+                "attributes": {
+                    "architect": "Art-chitect Team",
+                    "auto_description": true,
+                    "building_type": [
+                    "Strata Buy"
+                    ],
+                    "category": "Apartment",
+                    "certificate": "AJB",
+                    "completed_estimation_year": 1558414097,
+                    "completion_year": 1558414030,
+                    "construction_year": 1486771200,
+                    "contractor": "PT. Tana Indonesia",
+                    "description": {
+                    "en": "<p>Charm, space and views! Located in the middle of BSD City, it offers a comfortable place to stay. </p>",
+                    "id": "<p>Pesona, ruang, dan pemandangan! Berada di tengah BSD City  ini menawarkan kenyamanan tempat tinggal. </p>"
+                    },
+                    "fee_component": [
+                    {
+                        "for": "Rent",
+                        "from": "price_rent",
+                        "percentage": 0
+                    },
+                    {
+                        "for": "Sell",
+                        "from": "price_sell",
+                        "percentage": 0
+                    }
+                    ],
+                    "floor_count": 18,
+                    "images": {
+                    "images_360": null,
+                    "images_banner": null,
+                    "images_brochure": null,
+                    "images_developer": null,
+                    "images_exterior": null,
+                    "images_floorplan": null,
+                    "images_interior": null,
+                    "video_link": null
+                    },
+                    "internet": [
+                    "Indihome",
+                    "Biznet"
+                    ],
+                    "is_leads_agent": false,
+                    "lift": [
+                    {
+                        "count": 15,
+                        "name": "Passenger",
+                        "serving": ""
+                    },
+                    {
+                        "count": 2,
+                        "name": "Service",
+                        "serving": ""
+                    }
+                    ],
+                    "name": "Tower SB",
+                    "parking": [
+                    {
+                        "capacity": 40,
+                        "name": "Car Parking",
+                        "payment_term": "Annually",
+                        "price": 5000000,
+                        "type": "Car"
+                    },
+                    {
+                        "capacity": 8,
+                        "name": "Motorcycle Parking",
+                        "payment_term": "Annually",
+                        "price": 1400000,
+                        "type": "Motorcycle"
+                    }
+                    ],
+                    "rent_commission": 0,
+                    "sell_commission": 0,
+                    "selling_point": {
+                    "id": [
+                        {
+                        "description": "Akses ke mana saja mudah, baik menggunakan transportasi umum ataupun pribadi. Bebas macet!",
+                        "title": "Kemudahan Akses"
+                        }
+                    ]
+                    },
+                    "service_charge": 1500000,
+                    "sinking_fund": 1000000,
+                    "unit_rent_count": 0,
+                    "unit_sell_count": 0,
+                    "unit_total": 20
+                }
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 201,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : false,
+        "cache_as" : "",
+        "on_failure" : "exit",
+        "delay": "0s"
+    }
+}

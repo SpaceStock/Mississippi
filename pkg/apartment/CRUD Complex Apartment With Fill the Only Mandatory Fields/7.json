@@ -1,0 +1,40 @@
+{
+    "order" : 7,
+    "name" : "Admin able to Select PIC Tower09Decup",
+    "description" : "As a Admin able to Select PIC Tower09Decup",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/contact/5d626f2d86b640fdb4c7d870",
+        "method" : "PUT",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data" : {
+                "complexCov" : [],
+                "create_at" : 1566732077.0,
+                "email" : "dummy@spacestock.com",
+                "id" : "5d626f2d86b640fdb4c7d870",
+                "name" : "Gracia Timothy",
+                "office_phone" : "+6221191817",
+                "create_by_uid" : "sean.dempsey@spacestock.com",
+                "mobile_phone" : "+6284123000007",
+                "office_name" : "Global Development",
+                "title" : "Madam",
+                "towers_developer" : [ 
+                    "5dede818d73e920b6644e8bd"
+                ]
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 201,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "",
+        "on_failure" : "exit",
+        "delay": "0s"
+    }
+}

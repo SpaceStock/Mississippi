@@ -1,0 +1,142 @@
+{
+    "order" : 4,
+    "name" : "Admin able to add Foto Tower",
+    "description" : "As a Admin, able to add Foto Tower",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/1.0/complex/apartment/5dd130d5bd387b29ae73cec7/tower/{newComTower.data.id}",
+        "method" : "PATCH",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data" : {
+                "attributes" : {
+                    "building_type" : [ 
+                        "Developer Buy", 
+                        "Strata Buy", 
+                        "Developer Rent", 
+                        "Strata Rent"
+                    ],
+                    "create_by" : "anna.liffey@spacestock.com",
+                    "images" : {
+                        "video_link" : null,
+                        "images_360" : null,
+                        "images_banner" : null,
+                        "images_brochure" : null,
+                        "images_developer" : null,
+                        "images_exterior" : [ 
+                            {
+                                "alternate_text" : "Tower Exterior",
+                                "priority" : 1.0,
+                                "url" : "building/reejobbwjah6vrnnvmkp"
+                            }
+                        ],
+                        "images_floorplan" : [ 
+                            {
+                                "priority" : 3.0,
+                                "url" : "building/kanv6xwruvknufpfkggm",
+                                "alternate_text" : "3BR"
+                            }
+                        ],
+                        "images_interior" : [ 
+                            {
+                                "alternate_text" : "Others",
+                                "priority" : 3.0,
+                                "url" : "building/hxcnyrctvpqzgbobcbzt"
+                            }
+                        ]
+                    },
+                    "last_update_by" : "anna.liffey@spacestock.com",
+                    "name" : "Tower 1942 Update",
+                    "selling_point" : {
+                        "id" : [ 
+                            {
+                                "description" : "Kondisi Bagus, Seperti Baru, Fasilitas Lengkap",
+                                "title" : "Bagus title"
+                            }
+                        ]
+                    },
+                    "completed_estimation_year" : 1459443600.0,
+                    "complex" : {
+                        "primary_area" : null,
+                        "address_city" : "JAKARTA PUSAT",
+                        "id" : "5dd130d5bd387b29ae73cec7",
+                        "name" : "Complex 17112019 updates"
+                    },
+                    "complex_id" : "5dd130d5bd387b29ae73cec7",
+                    "construction_year" : 0.0,
+                    "fee_component" : [ 
+                        {
+                            "for" : "Rent",
+                            "from" : "price_rent",
+                            "percentage" : 1.0
+                        }, 
+                        {
+                            "for" : "Sell",
+                            "from" : "price_sell",
+                            "percentage" : 1.0
+                        }
+                    ],
+                    "internet" : [ 
+                        "Biznet", 
+                        "Indihome"
+                    ],
+                    "auto_description" : true,
+                    "certificate" : "AJB",
+                    "description" : {
+                        "id" : "",
+                        "en" : ""
+                    },
+                    "last_update_at" : 1574062186.0,
+                    "parking" : [ 
+                        {
+                            "payment_term" : "Quarterly",
+                            "price" : 300000.0,
+                            "type" : "Car",
+                            "capacity" : 1.0,
+                            "name" : "Car Parking"
+                        }, 
+                        {
+                            "type" : "Motorcycle",
+                            "capacity" : 1.0,
+                            "name" : "Motorcycle Parking",
+                            "payment_term" : "Quarterly",
+                            "price" : 250000.0
+                        }
+                    ],
+                    "sell_commission" : 4.0,
+                    "service_charge" : 1300000.0,
+                    "category" : "Apartment",
+                    "create_at" : 1573994846.0,
+                    "floor_count" : 65.0,
+                    "is_leads_agent" : false,
+                    "lift" : [ 
+                        {
+                            "count" : 10.0,
+                            "name" : "Passenger",
+                            "serving" : ""
+                        }, 
+                        {
+                            "count" : 2.0,
+                            "name" : "Service",
+                            "serving" : ""
+                        }
+                    ],
+                    "rent_commission" : 4.0,
+                    "unit_total" : 50.0
+                }
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 200,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "",
+        "on_failure" : "exit",
+        "delay": "0s"
+    }
+}

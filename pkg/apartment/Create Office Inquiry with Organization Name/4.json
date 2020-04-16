@@ -1,0 +1,56 @@
+{
+    "order" : 4,
+    "name" : "Create Office Inquiry Empty Organization",
+    "description" : "",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/1.1/inquiries",
+        "method" : "POST",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data" : {
+                "preference" : {
+                    "area" : [],
+                    "office_type" : "Virtual Office",
+                    "unit_size" : 90000.0
+                },
+                "requester_email" : "",
+                "requester_name" : "Baymax",
+                "requester_phone" : "0874676476434",
+                "required_at" : "Immediately",
+                "budget" : {
+                    "max" : null
+                },
+                "channel" : "Handphone",
+                "interests" : [ 
+                    {
+                        "tower" : {
+                            "id" : "5d36abbf3d9e3cdf0fe66363",
+                            "name" : "Menara Bidakara 1"
+                        }
+                    }
+                ],
+                "type" : [ 
+                    "Rent"
+                ],
+                "category" : [ 
+                    "Office"
+                ],
+                "rent_period" : 12.0,
+                "requester_message" : "ok"
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 201,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : false,
+        "cache_as" : "inq",
+        "on_failure" : "exit",
+        "delay": "0s"
+    }
+}

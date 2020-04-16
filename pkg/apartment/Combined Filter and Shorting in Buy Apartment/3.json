@@ -1,0 +1,22 @@
+{
+    "order" : 3,
+    "name" : "User able to filter price and 2 facilities",
+    "description" : "As a User, able to Filter price and 2 Facilities",
+    "request" : {
+        "url" : "https://staging-web.spacestock.com/api/discovery/1.0/complex?size=12&page=1&facilities=gym,laundry&listing_type=buy&price=range(50000000,987630098000)",
+        "method" : "GET",
+        "headers" : null,
+        "payload" : null
+    },
+    "expect" : {
+        "status_code" : 200,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "",
+        "on_failure" : "exit",
+        "delay": "0s"
+    }
+}

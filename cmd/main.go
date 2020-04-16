@@ -81,6 +81,9 @@ func main() {
 	for _, scn := range scenarios {
 		log.Println("SCENARIOS", len(scn.Get().Cases()))
 		log.Println("RUNNING Scenario", scn.Get().Name())
-		scn.Run(os.Stdout)
+		sr := scn.Run(os.Stdout)
+		if sr.IsFailed() {
+			os.Exit(1)
+		}
 	}
 }

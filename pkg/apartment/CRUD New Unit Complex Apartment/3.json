@@ -1,0 +1,119 @@
+{
+    "order" : 3,
+    "name" : "Admin able to Edit Unit22Nov",
+    "description" : "As a Admin able to Edit Unit22Nov",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/1.0/complex/apartment/5dd130d5bd387b29ae73cec7/tower/5dd1415ebd387b29ae73cece/unit/{primnew.data.id}",
+        "method" : "PATCH",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data" : {
+                "type" : "unit",
+                "attributes" : {
+                    "last_update_at" : 1576217479.0,
+                    "images" : {
+                        "images_exterior" : null,
+                        "images_floorplan" : [ 
+                            {
+                                "url" : "building/ngrzfrbprbu2mgr3k2zt",
+                                "alternate_text" : "1BR",
+                                "priority" : 3.0
+                            }
+                        ],
+                        "images_360" : null,
+                        "video_link" : null,
+                        "images_developer" : null,
+                        "images_banner" : null,
+                        "images_brochure" : null,
+                        "images_interior" : [ 
+                            {
+                                "url" : "building/jo0puuvnjzymupyahwor",
+                                "alternate_text" : "Bedroom",
+                                "priority" : 1.0
+                            }
+                        ]
+                    },
+                    "create_by" : "anna.liffey@spacestock.com",
+                    "last_update_by" : "anna.liffey@spacestock.com",
+                    "listing_type" : "Sell",
+                    "code" : "90899010019",
+                    "inactive_period_rent" : {
+                        "start_date" : 0.0,
+                        "end_date" : 0.0
+                    },
+                    "ownership" : "Primary",
+                    "sell_comm" : 4.0,
+                    "certificate" : "AJB",
+                    "price_sell" : 1983000000.0,
+                    "id" : "5df1f18f36a3b91643720644",
+                    "type" : "1BR",
+                    "internal_agent_email" : "anna.liffey@spacestock.com",
+                    "other_pricing" : [],
+                    "other_rooms" : [ 
+                        "Service Area"
+                    ],
+                    "complex_id" : "5dd130d5bd387b29ae73cec7",
+                    "tower_id" : "5dd1415ebd387b29ae73cece",
+                    "fee_component" : [ 
+                        {
+                            "for" : "Rent",
+                            "percentage" : 0.0,
+                            "from" : "price_rent"
+                        }, 
+                        {
+                            "percentage" : 1.0,
+                            "from" : "price_sell",
+                            "for" : "Sell"
+                        }
+                    ],
+                    "unit_no" : "Nov2219up",
+                    "acknowledgement_status" : "Unverified",
+                    "bathroom" : 1.0,
+                    "tower" : {
+                        "include_scsf" : false,
+                        "id" : "5dd1415ebd387b29ae73cece",
+                        "name" : "Tower 1942 Update"
+                    },
+                    "pic" : "5d626b2886b640fdb4c7d86b",
+                    "pic_name" : "Brian Yulianto",
+                    "pic_type" : "Agent",
+                    "minimum_lease_term" : 0.0,
+                    "size" : "1235",
+                    "amenities" : [ 
+                        "Washing Machine", 
+                        "Water Heater", 
+                        "Sofa", 
+                        "Kitchen Set", 
+                        "AC", 
+                        "Bed"
+                    ],
+                    "complex" : {
+                        "id" : "5dd130d5bd387b29ae73cec7",
+                        "name" : "Complex 17112019 updates",
+                        "address_city" : "JAKARTA PUSAT",
+                        "primary_area" : {}
+                    },
+                    "category" : "Apartment",
+                    "create_at" : 1576137103.0,
+                    "zone" : "Mid",
+                    "condition" : "Semi Furnished",
+                    "published_state" : "Unpublished"
+                },
+                "id" : "5df1f18f36a3b91643720644"
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 200,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "",
+        "on_failure" : "exit",
+        "delay": "0s"
+    }
+}

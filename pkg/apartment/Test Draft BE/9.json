@@ -1,0 +1,26 @@
+{
+    "order" : 9,
+    "name" : "Get Unit yang baru di buat (kosong) Primary",
+    "description" : "ack_status=unverified",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/1.0/complex/apartment/5d66337f983bfe288fb097b4/tower/5d664014983bfe288fb097db/unit/{kosongPrimary.data.id}",
+        "method" : "GET",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : null
+    },
+    "expect" : {
+        "status_code" : 200,
+        "headers" : null,
+        "evaluate" : [ 
+            "data.attributes.acknowledgement_status === 'Unverified'"
+        ]
+    },
+    "pipeline" : {
+        "cache" : false,
+        "cache_as" : "",
+        "on_failure" : "exit",
+        "delay": "0s"
+    }
+}

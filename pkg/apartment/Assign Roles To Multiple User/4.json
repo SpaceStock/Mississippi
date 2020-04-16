@@ -1,0 +1,26 @@
+{
+    "order" : 4,
+    "name" : "Assign Admin User",
+    "description" : "",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/user/hanafi@spacestock.com/role",
+        "method" : "PUT",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "is_adminuser": true
+        }
+    },
+    "expect" : {
+        "status_code" : 204,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : false,
+        "cache_as" : "",
+        "on_failure" : "exit",
+        "delay": "0s"
+    }
+}

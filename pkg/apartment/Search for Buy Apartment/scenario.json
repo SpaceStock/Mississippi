@@ -1,0 +1,5 @@
+{
+    "name" : "Search for Buy Apartment",
+    "description" : "As a User, I able to see list of apartment",
+    "environment" : "Staging"
+}

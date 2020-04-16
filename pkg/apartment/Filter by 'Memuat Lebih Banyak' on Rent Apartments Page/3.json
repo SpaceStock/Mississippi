@@ -1,0 +1,22 @@
+{
+    "order" : 3,
+    "name" : "As a User, able to Filter Apartments by \"Memuat Lebih Banyak\" Page 2",
+    "description" : "As a User, able to Filter Apartments by \"Memuat Lebih Banyak\" Page 2",
+    "request" : {
+        "url" : "https://staging-web.spacestock.com/api/discovery/1.0/complex?size=12&page=2&listing_type=rent",
+        "method" : "GET",
+        "headers" : null,
+        "payload" : null
+    },
+    "expect" : {
+        "status_code" : 200,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "",
+        "on_failure" : "exit",
+        "delay": "0s"
+    }
+}

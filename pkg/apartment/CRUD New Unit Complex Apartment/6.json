@@ -1,0 +1,24 @@
+{
+    "order" : 6,
+    "name" : "Admin able to Publish Unit Complex Apartment",
+    "description" : "As a Admin able to Publish Unit Complex Apartment",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/1.0/complex/apartment/5dd130d5bd387b29ae73cec7/tower/5dd1415ebd387b29ae73cece/unit/{primnew.data.id}/publish",
+        "method" : "POST",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : null
+    },
+    "expect" : {
+        "status_code" : 200,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "",
+        "on_failure" : "exit",
+        "delay": "0s"
+    }
+}

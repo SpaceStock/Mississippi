@@ -1,0 +1,22 @@
+{
+    "order" : 1,
+    "name" : "User able to see list \"Apartments\" ",
+    "description" : "As a User, able to see list \"Apartments\"",
+    "request" : {
+        "url" : "https://staging-web.spacestock.com/api/discovery/1.0/complex",
+        "method" : "GET",
+        "headers" : null,
+        "payload" : null
+    },
+    "expect" : {
+        "status_code" : 200,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "",
+        "on_failure" : "exit",
+        "delay": "0s"
+    }
+}

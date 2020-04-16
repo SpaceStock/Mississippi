@@ -1,0 +1,116 @@
+{
+    "order" : 2,
+    "name" : "Admin able to Create Add Primary Unit",
+    "description" : "As a Admin, able to Create Primary Unit",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/1.0/complex/apartment/5dd130d5bd387b29ae73cec7/tower/5dd1415ebd387b29ae73cece/unit/",
+        "method" : "POST",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data" : {
+                "attributes" : {
+                    "bathroom" : 1.0,
+                    "create_at" : 1576137103.0,
+                    "fee_component" : [ 
+                        {
+                            "for" : "Rent",
+                            "from" : "price_rent",
+                            "percentage" : 0.0
+                        }, 
+                        {
+                            "for" : "Sell",
+                            "from" : "price_sell",
+                            "percentage" : 1.0
+                        }
+                    ],
+                    "id" : "5df1f18f36a3b91643720644",
+                    "sell_comm" : 4.0,
+                    "unit_no" : "Nov2219",
+                    "acknowledgement_status" : "Unverified",
+                    "category" : "Apartment",
+                    "code" : "90899010019",
+                    "complex_id" : "5dd130d5bd387b29ae73cec7",
+                    "images" : {
+                        "images_exterior" : null,
+                        "images_floorplan" : [ 
+                            {
+                                "alternate_text" : "1BR",
+                                "priority" : 3.0,
+                                "url" : "building/ngrzfrbprbu2mgr3k2zt"
+                            }
+                        ],
+                        "images_interior" : [ 
+                            {
+                                "alternate_text" : "Bedroom",
+                                "priority" : 1.0,
+                                "url" : "building/jo0puuvnjzymupyahwor"
+                            }
+                        ],
+                        "video_link" : null,
+                        "images_360" : null,
+                        "images_banner" : null,
+                        "images_brochure" : null,
+                        "images_developer" : null
+                    },
+                    "last_update_at" : 1574403442.0,
+                    "listing_type" : "Sell",
+                    "minimum_lease_term" : 0.0,
+                    "complex" : {
+                        "address_city" : "JAKARTA PUSAT",
+                        "id" : "5dd130d5bd387b29ae73cec7",
+                        "name" : "Complex 17112019 updates",
+                        "primary_area" : {}
+                    },
+                    "condition" : "Semi Furnished",
+                    "pic_name" : "Brian Yulianto",
+                    "price_sell" : 1983000000.0,
+                    "published_state" : "Unpublished",
+                    "tower_id" : "5dd1415ebd387b29ae73cece",
+                    "create_by" : "anna.liffey@spacestock.com",
+                    "internal_agent_email" : "anna.liffey@spacestock.com",
+                    "ownership" : "Primary",
+                    "pic" : "5d626b2886b640fdb4c7d86b",
+                    "pic_type" : "Agent",
+                    "size" : "1235",
+                    "last_update_by" : "anna.liffey@spacestock.com",
+                    "tower" : {
+                        "include_scsf" : false,
+                        "name" : "Tower 1942 Update",
+                        "id" : "5dd1415ebd387b29ae73cece"
+                    },
+                    "type" : "1BR",
+                    "amenities" : [ 
+                        "Water Heater", 
+                        "Sofa", 
+                        "Kitchen Set", 
+                        "AC", 
+                        "Bed", 
+                        "Washing Machine"
+                    ],
+                    "certificate" : "AJB",
+                    "inactive_period_rent" : {
+                        "end_date" : 0.0,
+                        "start_date" : 0.0
+                    },
+                    "other_pricing" : [],
+                    "zone" : "Mid"
+                },
+                "id" : "5df1f18f36a3b91643720644",
+                "type" : "unit"
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 201,
+        "headers" : null,
+        "evaluate" : []
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "primnew",
+        "on_failure" : "exit",
+        "delay": "0s"
+    }
+}

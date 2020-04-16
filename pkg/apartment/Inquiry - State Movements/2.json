@@ -1,0 +1,72 @@
+{
+    "order" : 2,
+    "name" : "Create Inquiry",
+    "description" : "",
+    "request" : {
+        "url" : "https://stg-satpam.spacestock.com/1.1/inquiries",
+        "method" : "POST",
+        "headers" : {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload" : {
+            "data" : {
+                "preference" : {
+                    "unit_type" : "3BR",
+                    "area" : [ 
+                        "BSD"
+                    ],
+                    "unit_size" : 120.0
+                },
+                "rent_period" : 12.0,
+                "requester_email" : "siti.aisyah@spacestock.com",
+                "requester_phone" : "+6281527024850",
+                "category" : [ 
+                    "Apartment"
+                ],
+                "channel" : "WhatsApp",
+                "requester_name" : "Theodore",
+                "type" : [ 
+                    "Buy", 
+                    "Rent", 
+                    "For Sell", 
+                    "For Rent"
+                ],
+                "budget" : {
+                    "max" : 100000000.0,
+                    "min" : 0.0,
+                    "term" : ""
+                },
+                "interests" : [ 
+                    {
+                        "tower" : {
+                            "id" : "5d611b2ee7ae43ccb6f85fdb",
+                            "name" : "Tower Trambesi"
+                        },
+                        "unit" : {
+                            "id" : "5d80715c63be1f4002c7d7ca"
+                        },
+                        "cluster" : {},
+                        "complex" : {
+                            "id" : "5d611768e7ae43ccb6f85fd1",
+                            "name" : "Alam Asri"
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "expect" : {
+        "status_code" : 201,
+        "headers" : null,
+        "evaluate" : [ 
+            "data.state === 'Handled'",
+            "data.administration.assignee_id === 'admin.inquiry@spacestock.com'"
+        ]
+    },
+    "pipeline" : {
+        "cache" : true,
+        "cache_as" : "inqcreated",
+        "on_failure" : "exit",
+        "delay": "0s"
+    }
+}
