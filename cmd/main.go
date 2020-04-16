@@ -57,7 +57,8 @@ func main() {
 
 			testScenario.Set().
 				Name(temp.Get().Name()).
-				Description(temp.Get().Description())
+				Description(temp.Get().Description()).
+				Environment(temp.Get().Environment())
 			return nil
 		}
 
