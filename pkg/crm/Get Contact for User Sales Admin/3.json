@@ -1,12 +1,12 @@
 {
-    "order": 2,
-    "name": "Get All \"Contact\" List",
-    "description": "Mengambil data contact untuk di verify 1 building list",
+    "order": 3,
+    "name": "Get contact by \"id\"",
+    "description": "Mengambil data keseluruhan \"Contact\" dengan \"id\"",
     "request": {
-        "url": "https://stg-satpam.spacestock.com/contact?page=1&size=0",
+        "url": "https://stg-satpam.spacestock.com/contact/5d6025d486b640fdb4c7d867",
         "method": "GET",
         "headers": {
-            "Authorization" : "{auth.idToken}"
+            "Authorization": "{auth.idToken}"
         },
         "payload": {
             "id": "5d6025d486b640fdb4c7d867",
@@ -19,8 +19,8 @@
             "office_phone": "+62021843234",
             "create_by_uid": "anna.liffey@spacestock.com",
             "create_at": 1566582228,
-            "last_update_at": 1587017064,
-            "associated_building" : [
+            "last_update_at": 1587021389,
+            "associated_building": [
                 {
                     "association_type": "owner",
                     "building_type": "unit",
@@ -112,12 +112,7 @@
                         }
                     ]
                 }
-            ],
-            "towers_developer": [
-                "5d663f93983bfe288fb097d7",
-                "5d7f12fb846c84bc61bc5d32"
-            ],
-            "category": "Residential"
+            ]
         }
     },
     "expect": {
