@@ -1,0 +1,133 @@
+{
+    "order": 1,
+    "name": "Get All \"Contact\" List",
+    "description": "Mengambil data contact untuk di verify 1 building list",
+    "request": {
+        "url": "https://stg-satpam.spacestock.com/contact?page=1&size=0",
+        "method": "GET",
+        "headers": {
+            "Authorization" : "{auth.idToken}"
+        },
+        "payload": {
+            "id": "5d6025d486b640fdb4c7d867",
+            "title": "Madam",
+            "name": "Karina",
+            "mobile_phone": "+6221191817",
+            "email": "karina.wijaya@spacestock.com",
+            "contact_notes": "Karina Karina",
+            "office_name": "spacestock gandaria",
+            "office_phone": "+62021843234",
+            "create_by_uid": "anna.liffey@spacestock.com",
+            "create_at": 1566582228,
+            "last_update_at": 1587017064,
+            "associated_building" : [
+                {
+                    "association_type": "owner",
+                    "building_type": "unit",
+                    "building_list": [
+                        {
+                            "id": "5e85af0caa755dabd22590e4",
+                            "name": "DN-003",
+                            "reference_id": "5d7f12fb846c84bc61bc5d32"
+                        },
+                        {
+                            "id": "5e848384aa755dabd2259036",
+                            "name": "2123QE",
+                            "reference_id": "5d611768e7ae43ccb6f85fd3"
+                        },
+                        {
+                            "id": "5e842e9c36da6e404288cb8c",
+                            "name": "RMY2202",
+                            "reference_id": "5d611768e7ae43ccb6f85fd3"
+                        },
+                        {
+                            "id": "5e831f53f9675f7114143bb1",
+                            "name": "CASS-19co",
+                            "reference_id": "5d611768e7ae43ccb6f85fd3"
+                        },
+                        {
+                            "id": "5e63a0d2e51cc8f883df090c",
+                            "name": "23",
+                            "reference_id": "5d611768e7ae43ccb6f85fd3"
+                        },
+                        {
+                            "id": "5e5f5bb1aa97e2ff4e896b71",
+                            "name": "MGG-022",
+                            "reference_id": "5d664014983bfe288fb097db"
+                        },
+                        {
+                            "id": "5e4bb2ef1ee3d86ee350ddb5",
+                            "name": "CASS-9391",
+                            "reference_id": "5d611768e7ae43ccb6f85fd3"
+                        },
+                        {
+                            "id": "5e4bb2ec1ee3d86ee350ddb2",
+                            "name": "CASS-0201",
+                            "reference_id": "5d611768e7ae43ccb6f85fd3"
+                        },
+                        {
+                            "id": "5e439c9f8b29f723501d8b5c",
+                            "name": "1",
+                            "reference_id": "5d611768e7ae43ccb6f85fd3"
+                        },
+                        {
+                            "id": "5e3d51d00e8d5f5d52eadebe",
+                            "name": "CASS-5557",
+                            "reference_id": "5d611768e7ae43ccb6f85fd3"
+                        },
+                        {
+                            "id": "5dc51bf2daa05c07b73b51e1",
+                            "name": "23B",
+                            "reference_id": "5d6cb94b60aa879b15cde0f8"
+                        },
+                        {
+                            "id": "5dc4085d3aa6fe7fad871572",
+                            "name": "123453",
+                            "reference_id": "5d611768e7ae43ccb6f85fd3"
+                        },
+                        {
+                            "id": "5dc2984de1aea65faf67e4c8",
+                            "name": "34A",
+                            "reference_id": "5d611768e7ae43ccb6f85fd3"
+                        },
+                        {
+                            "id": "5dc29439e1aea65faf67e4a3",
+                            "name": "7",
+                            "reference_id": "5d611768e7ae43ccb6f85fd3"
+                        },
+                        {
+                            "id": "5db128f5fec34b23b89a838e",
+                            "name": "CASS-76",
+                            "reference_id": "5d611768e7ae43ccb6f85fd3"
+                        },
+                        {
+                            "id": "5d9d94593abb257ede3c8c6d",
+                            "name": "AGT-001",
+                            "reference_id": "5d66389e983bfe288fb097c3"
+                        },
+                        {
+                            "id": "5d71ff8af073ad7a1c76bf13",
+                            "name": "CASS-120",
+                            "reference_id": "5d611768e7ae43ccb6f85fd3"
+                        }
+                    ]
+                }
+            ],
+            "towers_developer": [
+                "5d663f93983bfe288fb097d7",
+                "5d7f12fb846c84bc61bc5d32"
+            ],
+            "category": "Residential"
+        }
+    },
+    "expect": {
+        "status_code": 200,
+        "headers": null,
+        "evaluate": null
+    },
+    "pipeline": {
+        "cache": true,
+        "cache_as": "auth",
+        "on_failure": "exit"
+    }
+}
